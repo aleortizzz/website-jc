@@ -1,0 +1,4 @@
+Comando para incializar tailwindcss
+npx tailwindcss@3.4.17 -i ./src/css/input.css -o ./src/css/output.css --watch
+
+
