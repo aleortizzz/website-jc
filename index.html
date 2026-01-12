@@ -12,6 +12,16 @@
   <title>Document</title>
 </head>
 
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script>
+  (function () {
+    emailjs.init("yegPUG09JEFFWAJuF");
+  })();
+</script>
+
+
+
 <body class="font-sans bg-slate-900">
 
   <header class="relative h-screen bg-cover bg-center flex flex-col text-white"
@@ -25,7 +35,7 @@
         <img src="./src/imgs/logo-jc-blanco.png" class="w-28" alt="">
       </div>
 
-      <div class="flex justify-between items-center" >
+      <div class="flex justify-between items-center">
         <a class="hover:text-blue-600 transition-all cursor-pointer">Inicio</a>
         <a class="hover:text-blue-600 transition-all cursor-pointer">Modelos</a>
         <a class="hover:text-blue-600 transition-all cursor-pointer">Proyectos</a>
@@ -34,7 +44,16 @@
       </div>
 
       <div class="flex justify-end items-center">
-        <span>Ventas@jcherrajes.com</span>
+        <a href="mailto:ventas@jcherrajes.com
+  ?subject=Consulta%20desde%20la%20web%20-%20JC%20Barandas
+  &body=Hola,%0D%0A%0D%0A
+  Mi%20nombre%20es:%20%0D%0A
+  Estoy%20interesado%20en:%20%0D%0A
+  Mi%20ubicaci%C3%B3n%20es:%20%0D%0A
+  Detalles%20del%20proyecto:%20%0D%0A%0D%0A
+  Gracias." class="hover:text-blue-600 transition-all">
+          ventas@jcherrajes.com
+        </a>
       </div>
 
 
@@ -103,90 +122,136 @@
 
   <main class="mx-32 h-screen">
 
-  <!-- CONTENEDOR CON IMAGEN -->
-  <div
-    class="relative grid grid-cols-2 mt-40 h-[70vh] bg-cover bg-center rounded-xl"
-    style="background-image: url(./src/imgs/img-form.jpg);"
-  >
+    <!-- CONTENEDOR CON IMAGEN -->
+    <div class="relative grid grid-cols-2 mt-40 h-[80vh] bg-cover bg-center rounded-xl"
+      style="background-image: url(./src/imgs/img-form.jpg);">
 
-    <!-- OVERLAY SOLO DE LA IMAGEN -->
-    <div class="absolute inset-0 bg-black/60 z-0"></div>
+      <!-- OVERLAY SOLO DE LA IMAGEN -->
+      <div class="absolute inset-0 bg-black/60 z-0"></div>
 
-    <!-- COLUMNA IZQUIERDA -->
-    <div class="relative z-10 text-7xl text-white flex flex-col justify-center px-10" style="text-shadow: 0 4px 8px rgba(0,0,0,.6);">
-      <span class="font-semibold">Pedí tu <span class="text-blue-600">cotización</span></span>
-      <span class="text-4xl mt-4 text-white/80">
-        Un asesor se pondra en contacto pronto.
-      </span>
-    </div>
+      <!-- COLUMNA IZQUIERDA -->
+      <div class="relative z-10 text-7xl text-white flex flex-col justify-center px-10"
+        style="text-shadow: 0 4px 8px rgba(0,0,0,.6);">
+        <span class="font-semibold">Pedí tu <span class="text-blue-600">cotización</span></span>
+        <span class="text-4xl mt-4 text-white/80">
+          Un asesor se pondra en contacto pronto.
+        </span>
+      </div>
 
-    <!-- COLUMNA DERECHA -->
-    <div class="relative z-10 flex justify-center items-center">
-      <div class="relative w-[70%]">
+      <!-- COLUMNA DERECHA -->
+      <div class="relative z-10 flex justify-center items-center">
+        <div class="relative w-[70%]">
 
-        <!-- Degrade top -->
-        <div class="h-5 rounded-t-3xl bg-gradient-to-r from-blue-900 via-blue-600 to-blue-400"></div>
+          <!-- Degrade top -->
+          <div class="h-5 rounded-t-3xl bg-gradient-to-r from-blue-900 via-blue-600 to-blue-400"></div>
 
-        <!-- Card -->
+          <!-- Card -->
           <div class="bg-white/30 backdrop-blur-sm p-6 rounded-b-3xl hover:backdrop-blur-0 transition-all">
-            <form id="whatsapp-form" class="flex flex-col gap-4">
+            <form id="contact-form" class="flex flex-col gap-4">
 
-              <input id="nombre" class="p-2 rounded-3xl" type="text" placeholder="Nombre" required>
+              <input id="nombre" class="p-2 pl-4 rounded-3xl" type="text" placeholder="Nombre" required>
 
-              <select id="interes" class="p-2 rounded-3xl" required>
+              <select id="interes" class="p-2 pl-4 rounded-3xl" required>
                 <option value="">¿En qué estás interesado?</option>
                 <option value="Barandas">Barandas</option>
                 <option value="Pasamanos">Pasamanos</option>
                 <option value="Puertas de seguridad">Puertas de seguridad</option>
               </select>
 
-              <input id="ubicacion" class="p-2 rounded-3xl" type="text" placeholder="¿En qué zona estás?" required>
+              <input id="contacto" class="p-2 pl-4 rounded-3xl" type="number" placeholder="Dejanos un número o mail"
+                required>
+              <input id="ubicacion" class="p-2 pl-4 rounded-3xl" type="text" placeholder="¿En qué zona estás?" required>
 
-              <textarea id="mensaje" class="p-2 rounded-3xl h-40 " placeholder="Contanos un poco más del proyecto"
+              <textarea id="mensaje" class="p-2 pl-4 rounded-3xl h-40 " placeholder="Contanos un poco más del proyecto"
                 required></textarea>
 
-              <button class="bg-green-600 hover:bg-green-700 transition-all text-white py-3 rounded-xl">
-                Enviar por WhatsApp
-              </button>
+              <div class="flex justify-center gap-6">
+                <button type="button" id="btn-whatsapp"
+                  class="bg-green-600 hover:bg-green-700 p-6 transition-all text-white py-3 rounded-xl">
+                  Enviar por WhatsApp
+                </button>
+                <button class="bg-blue-600 hover:bg-blue-700 p-6 transition-all text-white py-3 rounded-xl">
+                  Enviar por e-mail
+                </button>
+              </div>
 
             </form>
           </div>
 
+        </div>
       </div>
+
     </div>
 
-  </div>
-
-</main>
+  </main>
 
 
 
 
 
   <script>
-    const form = document.getElementById("whatsapp-form");
+    const form = document.getElementById("contact-form");
 
     form.addEventListener("submit", function (e) {
       e.preventDefault();
 
-      const nombre = document.getElementById("nombre").value;
-      const interes = document.getElementById("interes").value;
-      const ubicacion = document.getElementById("ubicacion").value;
-      const mensaje = document.getElementById("mensaje").value;
+      const data = {
+        nombre: document.getElementById("nombre").value,
+        interes: document.getElementById("interes").value,
+        contacto: document.getElementById("contacto").value,
+        ubicacion: document.getElementById("ubicacion").value,
+        mensaje: document.getElementById("mensaje").value,
+      };
 
-      const texto = `
+      emailjs
+        .send(
+          "service_socgy8q",
+          "template_novurzk",
+          data
+        )
+        .then(() => {
+          alert("Consulta enviada correctamente");
+          form.reset();
+        })
+        .catch((error) => {
+          console.error(error);
+          alert("Error al enviar la consulta");
+        });
+    });
+
+
+
+  const btnWhatsapp = document.getElementById("btn-whatsapp");
+
+  btnWhatsapp.addEventListener("click", () => {
+    const nombre = document.getElementById("nombre").value;
+    const interes = document.getElementById("interes").value;
+    const contacto = document.getElementById("contacto").value;
+    const ubicacion = document.getElementById("ubicacion").value;
+    const mensaje = document.getElementById("mensaje").value;
+
+    if (!nombre || !interes || !contacto || !ubicacion || !mensaje) {
+      alert("Por favor completá todos los campos");
+      return;
+    }
+
+    const texto = `
 Hola, mi nombre es ${nombre}.
 Estoy interesado en: ${interes}.
-Mi ubicación es: ${ubicacion}.
-Mensaje: ${mensaje}
+Mi contacto es: ${contacto}.
+Ubicación: ${ubicacion}.
+
+Mensaje:
+${mensaje}
     `;
 
-      const numero = "5491153855217"; // WhatsApp con código país
-      const url = `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
+    const numero = "5491153855217"; // tu WhatsApp
+    const url = `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
 
-      window.open(url, "_blank");
-    });
+    window.open(url, "_blank");
+  });
   </script>
+
 
 
 </body>
