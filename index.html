@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="scroll-smooth" lang="es-AR">
 
 <head>
   <meta charset="UTF-8">
@@ -22,9 +22,10 @@
 
 
 
-<body class="font-sans bg-slate-900">
 
-  <header class="relative h-screen bg-cover bg-center flex flex-col text-white"
+<body class="font-sans text-white  bg-slate-900">
+
+  <header class="relative h-screen bg-cover bg-center flex flex-col "
     style="background-image: url(./src/imgs/jc-barandas-1920x1080-sin-bordes.png);">
 
     <div class="absolute inset-0 bg-black/60 z-0"></div>
@@ -40,18 +41,11 @@
         <a class="hover:text-blue-600 transition-all cursor-pointer">Modelos</a>
         <a class="hover:text-blue-600 transition-all cursor-pointer">Proyectos</a>
         <a class="hover:text-blue-600 transition-all cursor-pointer">Especificaciones</a>
-        <a class="hover:text-blue-600 transition-all cursor-pointer" class="font-semibold">Contactanos</a>
+        <a href="#section-contacto" class="hover:text-blue-600 transition-all cursor-pointer"
+          class="font-semibold">Contactanos</a>
       </div>
-
       <div class="flex justify-end items-center">
-        <a href="mailto:ventas@jcherrajes.com
-  ?subject=Consulta%20desde%20la%20web%20-%20JC%20Barandas
-  &body=Hola,%0D%0A%0D%0A
-  Mi%20nombre%20es:%20%0D%0A
-  Estoy%20interesado%20en:%20%0D%0A
-  Mi%20ubicaci%C3%B3n%20es:%20%0D%0A
-  Detalles%20del%20proyecto:%20%0D%0A%0D%0A
-  Gracias." class="hover:text-blue-600 transition-all">
+        <a href="#section-contacto">
           ventas@jcherrajes.com
         </a>
       </div>
@@ -71,9 +65,10 @@
             <button
               class="bg-white text-black animate-fade-up px-6 py-3 transition-all hover:bg-white/50 hover:text-white border-transparent rounded-xl">Ver
               proyectos</button>
-            <button
-              class="border-2 border-white animate-fade-up animate-delay-[0.1s] transition-all hover:bg-blue-600 hover:border-transparent px-6 py-3 rounded-xl">Solicitar
-              cotización</button>
+            <a href="#section-contacto">
+              <button
+                class="border-2 border-white animate-fade-up animate-delay-[0.1s] transition-all hover:bg-blue-600 hover:border-transparent px-6 py-3 rounded-xl">Solicitar
+                cotización</button></a>
           </div>
         </div>
 
@@ -114,74 +109,149 @@
 
     </section>
 
+
     </div>
   </header>
 
+  <main class="mx-32 ">
+
+<div id="sobre-nosotros" class="mt-20">
+<h2 class="text-3xl text-center font-semibold"> Sobre Nosotros </h2>
+      <div class="grid grid-cols-2 text-center mt-10 text-lg">
 
 
+        <div class="w-[80%] flex flex-col gap-6  border-r-2 border-blue-600">
+          <p> En <span class="text-blue-600">JC Barandas</span> nos especializamos en el diseño, fabricación e instalación de barandas, pasamanos y
+            estructuras
+            en acero inoxidable, combinando funcionalidad, seguridad y estética en cada proyecto.</p>
 
-  <main class="mx-32 h-screen">
+          <p>Contamos con taller propio, lo que nos permite controlar todo el proceso: desde la selección de materiales
+            hasta
+            la terminación final. Trabajamos con acero inoxidable de alta calidad y vidrios de seguridad, garantizando
+            durabilidad, resistencia y un acabado prolijo en cada detalle.</p>
+        </div>
 
-    <!-- CONTENEDOR CON IMAGEN -->
-    <div class="relative grid grid-cols-2 mt-40 h-[80vh] bg-cover bg-center rounded-xl"
-      style="background-image: url(./src/imgs/img-form.jpg);">
+        <div class="w-[80%] flex flex-col gap-6"> 
+          <p>Atendemos proyectos residenciales y comerciales, adaptándonos a las necesidades de cada cliente y brindando
+            asesoramiento personalizado desde la primera consulta. Creemos que cada espacio es único, por eso
+            desarrollamos
+            soluciones a medida, priorizando siempre la seguridad y el diseño.</p>
 
-      <!-- OVERLAY SOLO DE LA IMAGEN -->
-      <div class="absolute inset-0 bg-black/60 z-0"></div>
+          <p>Nos encontramos en Zona Norte, donde recibimos a nuestros clientes y coordinamos visitas para tomar medidas
+            y
+            evaluar cada proyecto en el lugar. Nuestro objetivo es ofrecer un servicio confiable, transparente y de
+            calidad,
+            respaldado por la experiencia y el compromiso con cada trabajo realizado.</p>
 
-      <!-- COLUMNA IZQUIERDA -->
-      <div class="relative z-10 text-7xl text-white flex flex-col justify-center px-10"
-        style="text-shadow: 0 4px 8px rgba(0,0,0,.6);">
-        <span class="font-semibold">Pedí tu <span class="text-blue-600">cotización</span></span>
-        <span class="text-4xl mt-4 text-white/80">
-          Un asesor se pondra en contacto pronto.
-        </span>
       </div>
+    </div>
+  </div>
 
-      <!-- COLUMNA DERECHA -->
-      <div class="relative z-10 flex justify-center items-center">
-        <div class="relative w-[70%]">
 
-          <!-- Degrade top -->
-          <div class="h-5 rounded-t-3xl bg-gradient-to-r from-blue-900 via-blue-600 to-blue-400"></div>
 
-          <!-- Card -->
-          <div class="bg-white/30 backdrop-blur-sm p-6 rounded-b-3xl hover:backdrop-blur-0 transition-all">
-            <form id="contact-form" class="flex flex-col gap-4">
 
-              <input id="nombre" class="p-2 pl-4 rounded-3xl" type="text" placeholder="Nombre" required>
+    <div id="section-contacto" class="mt-32">
+      <!-- CONTENEDOR CON IMAGEN -->
+      <div class="relative grid grid-cols-2  h-[80vh] bg-cover bg-center rounded-xl"
+        style="background-image: url(./src/imgs/img-form.jpg);">
 
-              <select id="interes" class="p-2 pl-4 rounded-3xl" required>
-                <option value="">¿En qué estás interesado?</option>
-                <option value="Barandas">Barandas</option>
-                <option value="Pasamanos">Pasamanos</option>
-                <option value="Puertas de seguridad">Puertas de seguridad</option>
-              </select>
+        <!-- OVERLAY SOLO DE LA IMAGEN -->
+        <div class="absolute inset-0 bg-black/60 z-0"></div>
 
-              <input id="contacto" class="p-2 pl-4 rounded-3xl" type="number" placeholder="Dejanos un número o mail"
-                required>
-              <input id="ubicacion" class="p-2 pl-4 rounded-3xl" type="text" placeholder="¿En qué zona estás?" required>
+        <!-- COLUMNA IZQUIERDA -->
+        <div class="relative z-10 text-7xl  flex flex-col justify-center px-10"
+          style="text-shadow: 0 4px 8px rgba(0,0,0,.6);">
+          <span class="font-semibold">Pedí tu <span class="text-blue-600">cotización</span></span>
+          <span class="text-4xl mt-4 text-white/80">
+            Un asesor se pondra en contacto pronto.
+          </span>
+        </div>
 
-              <textarea id="mensaje" class="p-2 pl-4 rounded-3xl h-40 " placeholder="Contanos un poco más del proyecto"
-                required></textarea>
+        <!-- COLUMNA DERECHA -->
+        <div class="relative z-10 flex justify-center items-center">
+          <div class="relative w-[70%]">
 
-              <div class="flex justify-center gap-6">
-                <button type="button" id="btn-whatsapp"
-                  class="bg-green-600 hover:bg-green-700 p-6 transition-all text-white py-3 rounded-xl">
-                  Enviar por WhatsApp
-                </button>
-                <button class="bg-blue-600 hover:bg-blue-700 p-6 transition-all text-white py-3 rounded-xl">
-                  Enviar por e-mail
-                </button>
-              </div>
+            <!-- Degrade top -->
+            <div class="h-5 rounded-t-3xl bg-gradient-to-r from-blue-900 via-blue-600 to-blue-400"></div>
 
-            </form>
+            <!-- Card -->
+            <div class="bg-white/30 backdrop-blur-sm p-6 rounded-b-3xl hover:backdrop-blur-0 transition-all">
+              <form id="contact-form" class="flex flex-col text-black gap-4">
+
+                <input id="nombre" class="p-2 pl-4 rounded-3xl" type="text" placeholder="Nombre" required>
+
+                <select id="interes" class="p-2 pl-4 rounded-3xl" required>
+                  <option value="">¿En qué estás interesado?</option>
+                  <option value="Barandas">Barandas</option>
+                  <option value="Pasamanos">Pasamanos</option>
+                  <option value="Puertas de seguridad">Puertas de seguridad</option>
+                </select>
+
+                <input id="contacto" class="p-2 pl-4 rounded-3xl" type="number" placeholder="Dejanos un número o mail"
+                  required>
+                <input id="ubicacion" class="p-2 pl-4 rounded-3xl" type="text" placeholder="¿En qué zona estás?"
+                  required>
+
+                <textarea id="mensaje" class="p-2 pl-4 rounded-3xl h-40 "
+                  placeholder="Contanos un poco más del proyecto" required></textarea>
+
+                <div class="flex justify-center gap-6">
+                  <button type="button" id="btn-whatsapp"
+                    class="bg-green-600 hover:bg-green-700 p-6 transition-all  py-3 rounded-xl">
+                    Enviar por WhatsApp
+                  </button>
+                  <button class="bg-blue-600 hover:bg-blue-700 p-6 transition-all py-3 rounded-xl">
+                    Enviar por e-mail
+                  </button>
+                </div>
+
+              </form>
+            </div>
+
           </div>
+        </div>
 
+      </div>
+    </div>
+
+
+
+    <div id="about-us" class="mt-32 h-screen">
+      <h2 class="text-3xl font-semibold text-blue-600 text-center mb-10">- Sobre nosotros -</h2>
+
+      <img class="h-40 w-[100vw] object-cover object-bottom rounded-xl mb-6" src="./src/imgs/taller.jpeg" alt="">
+
+      <div class="grid grid-cols-2">
+
+        <div class="flex justify-center">
+          <iframe class="w-3/4 rounded-xl h-[300px]"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3289.196682976468!2d-58.55842862432234!3d-34.47253445058188!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcbaaa21e7e401%3A0xb3d7bc1a894da626!2sIng.%20Marconi%202816%2C%20B1643FFJ%20B%C3%A9ccar%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1768261485016!5m2!1ses-419!2sar"
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+        <div class="text-center flex items-center text-lg ">
+          <div>
+            <p class="mb-2"> En <span class="text-blue-600 font-semibold">JC Barandas</span> diseñamos y fabricamos
+              barandas, pasamanos y estructuras en acero inoxidable, combinando
+              <span class="text-blue-600 font-semibold">seguridad, diseño y calidad.</span>
+            </p>
+
+            <p class="mb-2">Contamos con taller propio y trabajamos con materiales de primera línea, lo que nos permite
+              ofrecer
+              <span class="text-blue-600 font-semibold">soluciones a medida </span>para proyectos residenciales y
+              comerciales.
+            </p>
+
+            <p class="mb-2">Brindamos <span class="text-blue-600 font-semibold">asesoramiento personalizado </span>desde
+              el primer contacto, acompañando a cada cliente durante todo el
+              proceso para garantizar un resultado <span class="text-blue-600 font-semibold">duradero y
+                funcional.</span></p>
+          </div>
         </div>
       </div>
 
     </div>
+
 
   </main>
 
@@ -221,21 +291,21 @@
 
 
 
-  const btnWhatsapp = document.getElementById("btn-whatsapp");
+    const btnWhatsapp = document.getElementById("btn-whatsapp");
 
-  btnWhatsapp.addEventListener("click", () => {
-    const nombre = document.getElementById("nombre").value;
-    const interes = document.getElementById("interes").value;
-    const contacto = document.getElementById("contacto").value;
-    const ubicacion = document.getElementById("ubicacion").value;
-    const mensaje = document.getElementById("mensaje").value;
+    btnWhatsapp.addEventListener("click", () => {
+      const nombre = document.getElementById("nombre").value;
+      const interes = document.getElementById("interes").value;
+      const contacto = document.getElementById("contacto").value;
+      const ubicacion = document.getElementById("ubicacion").value;
+      const mensaje = document.getElementById("mensaje").value;
 
-    if (!nombre || !interes || !contacto || !ubicacion || !mensaje) {
-      alert("Por favor completá todos los campos");
-      return;
-    }
+      if (!nombre || !interes || !contacto || !ubicacion || !mensaje) {
+        alert("Por favor completá todos los campos");
+        return;
+      }
 
-    const texto = `
+      const texto = `
 Hola, mi nombre es ${nombre}.
 Estoy interesado en: ${interes}.
 Mi contacto es: ${contacto}.
@@ -245,11 +315,11 @@ Mensaje:
 ${mensaje}
     `;
 
-    const numero = "5491153855217"; // tu WhatsApp
-    const url = `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
+      const numero = "5491153855217"; // tu WhatsApp
+      const url = `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
 
-    window.open(url, "_blank");
-  });
+      window.open(url, "_blank");
+    });
   </script>
 
 
