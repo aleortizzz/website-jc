@@ -3,6 +3,7 @@ module.exports = {
   content: [
     "./index.html",
     "./src/**/*.{html,js}",
+    "./templates/**/*.html", // 👈 si usás Django, MUY importante
   ],
   theme: {
     extend: {
@@ -11,7 +12,12 @@ module.exports = {
       },
     },
   },
-    plugins: [
+  plugins: [
     require('tailwindcss-animated'),
+    require('daisyui'),
   ],
+
+  daisyui: {
+    themes: ["light"],
+  },
 }

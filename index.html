@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html class="scroll-smooth" lang="es-AR">
+<html class="scroll-smooth bg-slate-900" lang="es-AR">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700;800;900&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="src/output.css?v=3">
@@ -122,7 +123,7 @@
     <div id="sobre-nosotros" class="mt-20">
       <!-- <h2 class="text-3xl text-center font-semibold text-blue-600">• Sobre Nosotros •</h2> -->
       <h2 class="text-4xl font-semibold text-white text-center">Sobre Nosotros</h2>
-      
+
       <div class="flex gap-6 justify-center text-center mt-10 text-lg">
 
 
@@ -164,47 +165,6 @@
 
 
 
-<!-- 
-    <section class="mt-32">
-
-      <div class="max-w-6xl mx-auto rounded-2xl overflow-hidden border border-blue-600">
-
-        <div class="px-8 py-5 border-b border-white/10">
-          <h3 class="text-3xl text-center font-semibold">
-            Proyecto Cariló
-          </h3>
-        </div>
-
-        <div class="w-full h-[420px]">
-          <img src="./src/imgs/templado-botones-sin-pasamanos/img-principal2.jpeg" alt="Proyecto Cariló"
-            class="w-full h-full object-cover" />
-        </div>
-
-        <div class="flex justify-between px-8 py-6 text-white/80 text-sm">
-
-          <ul class="space-y-2">
-            <li><span class="text-white font-medium">Ubicación:</span> San Isidro</li>
-            <li><span class="text-white font-medium">Año:</span> 2024</li>
-          </ul>
-
-          <p class="leading-relaxed w-2/4">
-            Instalación de barandas de vidrio templado con fijaciones en acero
-            inoxidable, diseñadas a medida para escalera y entrepiso interior.
-          </p>
-
-          <ul class="space-y-2">
-            <li>• Vidrio templado</li>
-            <li>• Acero inoxidable</li>
-            <li>• Trabajo a medida</li>
-          </ul>
-
-        </div>
-
-      </div>
-
-    </section> -->
-
-
     <section id="proyectos" class="mt-40">
 
       <!-- TÍTULO -->
@@ -218,51 +178,142 @@
         </p>
       </div>
 
-      <!-- GRID DE PROYECTOS -->
-      <div class="max-w-7xl mx-auto px-10 grid grid-cols-1 md:grid-cols-2 gap-12">
 
-        <!-- PROYECTO -->
-        <div class="relative h-[60vh] rounded-2xl overflow-hidden group">
 
-          <!-- IMAGEN -->
-          <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
-            style="background-image: url(./src/imgs/templado-botones-sin-pasamanos/img-principal2.jpeg);"></div>
 
-          <!-- OVERLAY OSCURO -->
-          <div class="absolute inset-0 bg-black/50 group-hover:bg-black/60 transition-all"></div>
+      <div class="swiper mySwiper mb-10">
+        <div class="swiper-wrapper">
 
-          <!-- GRADIENT PARA TEXTO -->
-          <div class="absolute inset-x-0 bottom-0 h-56 bg-gradient-to-t from-black/80 to-transparent"></div>
+          <!-- SLIDE 1 -->
+          <div class="swiper-slide relative overflow-hidden rounded-xl">
 
-          <!-- CONTENIDO -->
-          <div class="absolute bottom-0 inset-x-0 p-8 z-10 text-white">
+            <img src="./src/imgs/Baranda-vidrio-laminado/img-principal.jpeg" class="w-full h-[450px] object-cover" />
 
-            <h3 class="text-2xl font-semibold">
-              Proyecto Cariló
-            </h3>
+            <div class="absolute inset-0 bg-black/50"></div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-4 text-sm text-white/80">
+            <!-- 🔝 TÍTULO ARRIBA -->
+            <div class="absolute top-0 left-0 p-6 text-white">
+              <h2 class="text-3xl font-bold">Proyecto San Isidro</h2>
+            </div>
 
-              <ul class="space-y-1">
-                <li><span class="text-white">Ubicación:</span> San Isidro</li>
-                <li><span class="text-white">Año:</span> 2024</li>
-              </ul>
+            <!-- 🔽 CONTENIDO ABAJO -->
+            <div class="absolute bottom-0 left-0 p-8 text-white">
 
-              <p class="leading-relaxed">
-                Instalación de barandas de vidrio templado con fijaciones en acero
-                inoxidable, diseñadas a medida para escalera y entrepiso interior.
+              <p class="text-white/80 mt-2">
+                Barandas modernas en vidrio laminado.
               </p>
 
-              <ul class="space-y-1">
-                <li>• Vidrio templado</li>
-                <li>• Acero inoxidable</li>
-                <li>• Trabajo a medida</li>
-              </ul>
+              <div class="flex gap-2 mt-4">
+                <span class="badge badge-outline">Vidrio</span>
+                <span class="badge badge-outline">Acero</span>
+              </div>
+
+              <a href="#">
+                <button
+                  class="border-2 mt-4 w-fit border-white transition-all hover:bg-blue-600 hover:border-transparent px-6 py-3 rounded-xl">
+                  Ver más imágenes
+                </button>
+              </a>
 
             </div>
 
           </div>
+
+
+
+          <!-- SLIDE 2 -->
+          <div class="swiper-slide relative overflow-hidden rounded-xl">
+
+            <img src="./src/imgs/templado-botones-sin-pasamanos/img-principal.jpeg"
+              class="w-full h-[450px] object-cover" />
+
+            <div class="absolute inset-0 bg-black/50"></div>
+
+            <!-- 🔝 TÍTULO ARRIBA -->
+            <div class="absolute top-0 left-0 p-6 text-white">
+              <h2 class="text-3xl font-bold">Proyecto CABA</h2>
+            </div>
+
+            <!-- 🔽 CONTENIDO ABAJO -->
+            <div class="absolute bottom-0 left-0 p-8 text-white">
+
+              <p class="text-white/80 mt-2">
+                Vidrio templado sin pasamanos
+              </p>
+
+              <div class="flex gap-2 mt-4">
+                <span class="badge badge-outline">Templado</span>
+                <span class="badge badge-outline">Minimalista</span>
+              </div>
+
+              <a href="#">
+                <button
+                  class="border-2 mt-4 w-fit border-white transition-all hover:bg-blue-600 hover:border-transparent px-6 py-3 rounded-xl">
+                  Ver más imágenes
+                </button>
+              </a>
+
+            </div>
+
+          </div>
+
+
+
+
+
         </div>
+
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+
+
+
+
+
+
+      <!-- GRID DE PROYECTOS -->
+      <div class="max-w-7xl mx-auto px-10 grid grid-cols-1 md:grid-cols-2 gap-12">
+
+
+
+        <!-- DUPLICÁ ESTE BLOQUE PARA OTRO PROYECTO -->
+        <div class="relative h-[60vh] rounded-2xl overflow-hidden group">
+
+          <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
+            style="background-image: url(./src/imgs/Baranda-vidrio-laminado/img-principal.jpeg);"></div>
+
+          <div class="absolute inset-0 bg-black/50 group-hover:bg-black/60 transition-all"></div>
+          <div class="absolute inset-x-0 bottom-0 h-56 bg-gradient-to-t from-black/80 to-transparent"></div>
+
+          <div class="absolute bottom-0 inset-x-0 p-8 z-10 text-white">
+            <h3 class="text-2xl font-semibold">Proyecto Cariló</h3>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-4 text-sm text-white/80">
+              <ul>
+                <li><span class="text-white">Ubicación:</span>San Isidro</li>
+                <li><span class="text-white">Año:</span> 2024</li>
+              </ul>
+
+              <p>
+                Vidrio templado con fijaciones en acero
+              </p>
+
+              <ul>
+                <li>• Vidrio laminado</li>
+                <li>• Estructura de acero</li>
+                <li>• Diseño a medida</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+
+
+
+
 
         <!-- DUPLICÁ ESTE BLOQUE PARA OTRO PROYECTO -->
         <div class="relative h-[60vh] rounded-2xl overflow-hidden group">
@@ -283,8 +334,7 @@
               </ul>
 
               <p>
-                Barandas de vidrio laminado con estructura y guías en acero inoxidable,
-                instaladas en balcón y escalera.
+                Vidrio laminado con estructura y guías en acero
               </p>
 
               <ul>
@@ -299,7 +349,7 @@
 
       </div>
 
-      
+
     </section>
 
 
@@ -694,8 +744,29 @@
 
 
 
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
   <script>
+    const swiper = new Swiper(".mySwiper", {
+      loop: true,
+
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+
+
     const form = document.getElementById("contact-form");
 
     form.addEventListener("submit", function (e) {
@@ -765,6 +836,7 @@ ${mensaje}
 
 
   </script>
+
 
 
 
