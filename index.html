@@ -168,7 +168,7 @@
     <section id="proyectos" class="mt-40">
 
       <!-- TÍTULO -->
-      <div class="max-w-7xl mx-auto px-10 mb-16">
+      <div class=" px-10 mb-16">
         <h2 class="text-4xl font-semibold text-white">
           Proyectos realizados
         </h2>
@@ -187,34 +187,39 @@
           <!-- SLIDE 1 -->
           <div class="swiper-slide relative overflow-hidden rounded-xl">
 
-            <img src="./src/imgs/Baranda-vidrio-laminado/img-principal.jpeg" class="w-full h-[450px] object-cover" />
+            <!-- IMAGEN -->
+            <img src="./src/imgs/Baranda-vidrio-laminado/img-principal.jpeg" class="w-full h-[600px] object-cover" />
 
+            <!-- OVERLAY -->
             <div class="absolute inset-0 bg-black/50"></div>
 
             <!-- 🔝 TÍTULO ARRIBA -->
-            <div class="absolute top-0 left-0 p-6 text-white">
+            <div class="absolute top-0 left-0 p-6 text-white z-10">
               <h2 class="text-3xl font-bold">Proyecto San Isidro</h2>
-            </div>
-
-            <!-- 🔽 CONTENIDO ABAJO -->
-            <div class="absolute bottom-0 left-0 p-8 text-white">
-
-              <p class="text-white/80 mt-2">
-                Barandas modernas en vidrio laminado.
-              </p>
 
               <div class="flex gap-2 mt-4">
                 <span class="badge badge-outline">Vidrio</span>
                 <span class="badge badge-outline">Acero</span>
               </div>
+            </div>
 
-              <a href="#">
+            <!-- 🟡 TEXTO CENTRADO EN EL MEDIO -->
+            <div class="absolute inset-0 flex items-center justify-center text-white z-10 px-6">
+              <p class="text-white/80 text-center w-[800px]">
+                Un proyecto que refleja elegancia y modernidad a través de barandas en vidrio laminado, combinadas con
+                detalles en acero de alta calidad. Diseñado para maximizar la luminosidad y brindar seguridad sin perder
+                ligereza visual.
+              </p>
+            </div>
+
+            <!-- 🔽 BOTÓN ABAJO -->
+            <div class="absolute bottom-0 left-0 w-full p-8 flex justify-center mb-6 z-10">
+              <a href="proyectos/sanisidro.html">
                 <button
-                  class="border-2 mt-4 w-fit border-white transition-all hover:bg-blue-600 hover:border-transparent px-6 py-3 rounded-xl">
-                  Ver más imágenes
+                  class="border-2 border-white transition-all hover:bg-blue-600 hover:border-transparent px-6 py-3 rounded-xl text-white">
+                  Ver más información
                 </button>
               </a>
-
             </div>
 
           </div>
@@ -225,7 +230,7 @@
           <div class="swiper-slide relative overflow-hidden rounded-xl">
 
             <img src="./src/imgs/templado-botones-sin-pasamanos/img-principal.jpeg"
-              class="w-full h-[450px] object-cover" />
+              class="w-full h-[600px] object-cover" />
 
             <div class="absolute inset-0 bg-black/50"></div>
 
@@ -249,7 +254,7 @@
               <a href="#">
                 <button
                   class="border-2 mt-4 w-fit border-white transition-all hover:bg-blue-600 hover:border-transparent px-6 py-3 rounded-xl">
-                  Ver más imágenes
+                  Ver más información
                 </button>
               </a>
 
