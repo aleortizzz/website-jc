@@ -2104,6 +2104,14 @@ html {
     flex-direction: column;
   }
 
+  .max-md\:p-2 {
+    padding: 0.5rem;
+  }
+
+  .max-md\:p-4 {
+    padding: 1rem;
+  }
+
   .max-md\:text-5xl {
     font-size: 3rem;
     line-height: 1;
@@ -2112,6 +2120,11 @@ html {
   .max-md\:text-sm {
     font-size: 0.875rem;
     line-height: 1.25rem;
+  }
+
+  .max-md\:text-xs {
+    font-size: 0.75rem;
+    line-height: 1rem;
   }
 }
 
