@@ -30,18 +30,19 @@
 
 
 
-  <header class="relative h-screen bg-cover bg-center flex flex-col "
-    style="background-image: url(./src/imgs/img-hero.png);">
+  <header
+  class="relative h-screen bg-cover bg-center bg-no-repeat flex flex-col"
+  style="background-image: url('./src/imgs/img-hero.png');">
 
     <div class="absolute inset-0 bg-black/60 z-0"></div>
 
     <nav class="relative grid grid-cols-3 px-10 pt-3">
 
       <div>
-        <img src="./src/imgs/logo-jc-blanco.png" class="w-36" alt="">
+        <img src="./src/imgs/logo-jc-blanco.png" class="w-36 max-md:w-20 max-md:mb-10" alt="">
       </div>
 
-      <div class="flex justify-between items-center">
+      <div class="flex justify-between items-center max-md:hidden">
         <a class="hover:text-blue-600 transition-all cursor-pointer">Inicio</a>
         <a href="#modelos" class="hover:text-blue-600 transition-all cursor-pointer">Modelos</a>
         <a class="hover:text-blue-600 transition-all cursor-pointer">Proyectos</a>
@@ -49,7 +50,7 @@
         <a href="#section-contacto" class="hover:text-blue-600 transition-all cursor-pointer"
           class="font-semibold">Contacto</a>
       </div>
-      <div class="flex justify-end items-center">
+      <div class="flex justify-end items-center max-md:hidden">
         <a href="#section-contacto">
           ventas@jcherrajes.com
         </a>
@@ -61,12 +62,12 @@
     <section class="relative z-10 flex-1 flex flex-col justify-center px-10">
 
 
-      <div class="grid grid-cols-2">
+      <div class="grid grid-cols-2 max-md:grid-cols-1">
         <div class="flex justify-center flex-col">
           <div class="animate-fade-down" style="text-shadow: 0 4px 8px rgba(0,0,0,.6);">
-            <h1 class="text-7xl"><span class="text-blue-600">Barandas</span> de Alta Calidad</h1>
+            <h1 class="text-7xl max-md:text-5xl"><span class="text-blue-600">Barandas</span> de Alta Calidad</h1>
           </div>
-          <div class="flex gap-6 mt-6">
+          <div class="flex gap-6 mt-6 max-md:flex-col">
             <button
               class="bg-white w-fit text-black animate-fade-up px-6 py-3 transition-all hover:bg-white/50 hover:text-white border-transparent rounded-xl">Ver
               proyectos</button>
@@ -78,7 +79,7 @@
         </div>
 
 
-        <div class="flex flex-col gap-6">
+        <div class="flex flex-col gap-6 max-md:mt-6 max-md:text-sm">
 
           <div class="animate-fade-right">
             <div
@@ -110,6 +111,8 @@
 
 
         </div>
+
+
       </div>
 
     </section>
