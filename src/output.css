@@ -1306,6 +1306,16 @@ html {
   margin-bottom: 1.5rem;
 }
 
+.mx-10 {
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
+}
+
+.mx-2 {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
 .mb-10 {
   margin-bottom: 2.5rem;
 }
@@ -1593,10 +1603,6 @@ html {
   align-items: center;
 }
 
-.justify-start {
-  justify-content: flex-start;
-}
-
 .justify-end {
   justify-content: flex-end;
 }
@@ -1767,11 +1773,6 @@ html {
   background-color: rgb(255 255 255 / 0.3);
 }
 
-.bg-red-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(239 68 68 / var(--tw-bg-opacity, 1));
-}
-
 .bg-\[radial-gradient\(25\%_35\%_at_20\%_60\%\2c rgba\(37\2c 99\2c 235\2c 0\.25\)_0\%\2c transparent_100\%\)\2c radial-gradient\(30\%_40\%_at_85\%_30\%\2c rgba\(29\2c 78\2c 216\2c 0\.25\)_0\%\2c transparent_100\%\)\2c radial-gradient\(45\%_55\%_at_50\%_80\%\2c rgba\(30\2c 64\2c 175\2c 0\.35\)_0\%\2c transparent_100\%\)\2c linear-gradient\(135deg\2c \#020617_0\%\2c \#020617_100\%\)\] {
   background-image: radial-gradient(25% 35% at 20% 60%,rgba(37,99,235,0.25) 0%,transparent 100%),radial-gradient(30% 40% at 85% 30%,rgba(29,78,216,0.25) 0%,transparent 100%),radial-gradient(45% 55% at 50% 80%,rgba(30,64,175,0.35) 0%,transparent 100%),linear-gradient(135deg,#020617 0%,#020617 100%);
 }
@@ -1874,11 +1875,6 @@ html {
 .py-3 {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
-}
-
-.px-1 {
-  padding-left: 0.25rem;
-  padding-right: 0.25rem;
 }
 
 .pl-4 {
@@ -2094,28 +2090,37 @@ html {
 }
 
 @media not all and (min-width: 768px) {
-  .max-md\:mb-10 {
-    margin-bottom: 2.5rem;
+  .max-md\:mx-0 {
+    margin-left: 0px;
+    margin-right: 0px;
   }
 
-  .max-md\:mt-6 {
-    margin-top: 1.5rem;
-  }
-
-  .max-md\:mt-2 {
-    margin-top: 0.5rem;
+  .max-md\:mb-2 {
+    margin-bottom: 0.5rem;
   }
 
   .max-md\:mt-4 {
     margin-top: 1rem;
   }
 
-  .max-md\:mb-6 {
-    margin-bottom: 1.5rem;
+  .max-md\:mt-6 {
+    margin-top: 1.5rem;
   }
 
-  .max-md\:mb-2 {
-    margin-bottom: 0.5rem;
+  .max-md\:mb-20 {
+    margin-bottom: 5rem;
+  }
+
+  .max-md\:mb-32 {
+    margin-bottom: 8rem;
+  }
+
+  .max-md\:mt-20 {
+    margin-top: 5rem;
+  }
+
+  .max-md\:mt-32 {
+    margin-top: 8rem;
   }
 
   .max-md\:hidden {
@@ -2134,12 +2139,24 @@ html {
     flex-direction: column;
   }
 
-  .max-md\:gap-2 {
-    gap: 0.5rem;
+  .max-md\:items-start {
+    align-items: flex-start;
   }
 
-  .max-md\:p-2 {
-    padding: 0.5rem;
+  .max-md\:items-center {
+    align-items: center;
+  }
+
+  .max-md\:justify-start {
+    justify-content: flex-start;
+  }
+
+  .max-md\:justify-center {
+    justify-content: center;
+  }
+
+  .max-md\:gap-2 {
+    gap: 0.5rem;
   }
 
   .max-md\:p-4 {
@@ -2149,6 +2166,11 @@ html {
   .max-md\:text-5xl {
     font-size: 3rem;
     line-height: 1;
+  }
+
+  .max-md\:text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 
   .max-md\:text-sm {
