@@ -28,9 +28,8 @@
 <body
   class="font-sans text-white bg-[radial-gradient(25%_35%_at_20%_60%,rgba(37,99,235,0.25)_0%,transparent_100%),radial-gradient(30%_40%_at_85%_30%,rgba(29,78,216,0.25)_0%,transparent_100%),radial-gradient(45%_55%_at_50%_80%,rgba(30,64,175,0.35)_0%,transparent_100%),linear-gradient(135deg,#020617_0%,#020617_100%)] bg-cover bg-no-repeat">
 
-  <header
-  class="relative h-screen bg-cover bg-center bg-no-repeat flex flex-col"
-  style="background-image: url('./src/imgs/img-hero.png');">
+  <header class="relative h-screen bg-cover bg-center bg-no-repeat flex flex-col"
+    style="background-image: url('./src/imgs/img-hero.png');">
 
     <div class="absolute inset-0 bg-black/60 z-0"></div>
 
@@ -83,7 +82,8 @@
             <div
               class="flex flex-col gap-2  bg-white/10 p-6 max-md:p-4 hover:backdrop-blur-sm hover:bg-blue-700/30 transition-all cursor-pointer rounded-xl transform hover:scale-[1.02]">
               <span class="text-2xl max-md:text-base">Asesoramiento personalizado</span>
-              <span class="text-xl max-md:text-xs">Diseñamos y fabricamos barandas, pasamanos y puertas de seguridad según las medidas y necesidades de
+              <span class="text-xl max-md:text-xs">Diseñamos y fabricamos barandas, pasamanos y puertas de seguridad
+                según las medidas y necesidades de
                 cada proyecto.</span>
             </div>
           </div>
@@ -91,8 +91,9 @@
           <div class="animate-fade-right animate-delay-[0.2s]">
             <div
               class="flex flex-col gap-2  bg-white/10 p-6 max-md:p-4 hover:backdrop-blur-sm hover:bg-blue-700/30 transition-all cursor-pointer rounded-xl transform hover:scale-[1.02]">
-             <span class="text-2xl max-md:text-base">Calidad y seguridad garantizadas</span>
-              <span class="text-xl max-md:text-xs">Trabajamos con acero inoxidable y vidrios de seguridad, garantizando resistencia, durabilidad y
+              <span class="text-2xl max-md:text-base">Calidad y seguridad garantizadas</span>
+              <span class="text-xl max-md:text-xs">Trabajamos con acero inoxidable y vidrios de seguridad, garantizando
+                resistencia, durabilidad y
                 excelente terminación.</span>
             </div>
           </div>
@@ -102,7 +103,8 @@
             <div
               class="flex flex-col gap-2   bg-white/10 p-6 max-md:p-4 hover:backdrop-blur-sm hover:bg-blue-700/30 transition-all cursor-pointer rounded-xl transform hover:scale-[1.02]">
               <span class="text-2xl max-md:text-base">Experiencia comprobada</span>
-             <span class="text-xl max-md:text-xs">Contamos con experiencia en obras residenciales y proyectos destacados en distintas
+              <span class="text-xl max-md:text-xs">Contamos con experiencia en obras residenciales y proyectos
+                destacados en distintas
                 localidades.</span>
             </div>
           </div>
@@ -205,7 +207,8 @@
             </div>
 
             <!-- 🟡 TEXTO CENTRADO EN EL MEDIO -->
-            <div class="absolute inset-0 flex items-center max-md:items-start max-md:mt-32  justify-center text-white z-10 px-6">
+            <div
+              class="absolute inset-0 flex items-center max-md:items-start max-md:mt-32  justify-center text-white z-10 px-6">
               <p class="text-white/80 text-center w-[800px]">
                 Un proyecto que refleja elegancia y modernidad a través de barandas en vidrio laminado, combinadas con
                 detalles en acero de alta calidad. Diseñado para maximizar la luminosidad y brindar seguridad sin perder
@@ -322,7 +325,7 @@
 
     <div id="caracteristicas" class="mt-24">
       <h2 class="text-4xl font-semibold text-white mb-10 text-center">Nos caracteriza</h2>
-      <div class="grid grid-cols-2 gap-6">
+      <div class="grid grid-cols-2 max-md:grid-cols-1 gap-6">
 
         <div class="flex justify-center">
           <div class="w-[80%] flex flex-col gap-6">
@@ -536,24 +539,24 @@
 
     <div id="section-contacto" class="mt-32">
       <!-- CONTENEDOR CON IMAGEN -->
-      <div class="relative grid grid-cols-2  h-[80vh] bg-cover bg-center rounded-xl"
+      <div class="relative grid grid-cols-2 max-md:grid-cols-1  h-[80vh] bg-cover bg-center rounded-xl"
         style="background-image: url(./src/imgs/img-form.jpg);">
 
         <!-- OVERLAY SOLO DE LA IMAGEN -->
         <div class="absolute inset-0 bg-black/60 z-0"></div>
 
         <!-- COLUMNA IZQUIERDA -->
-        <div class="relative z-10 text-7xl  flex flex-col justify-center px-10"
+        <div class="relative z-10 text-7xl max-md:text-5xl flex flex-col justify-center max-md:justify-start px-10 max-md:px-6 max-md:mt-6"
           style="text-shadow: 0 4px 8px rgba(0,0,0,.6);">
           <span class="font-semibold">Pedí tu <span class="text-blue-600">cotización</span></span>
-          <span class="text-4xl mt-4 text-white/80">
+          <span class="text-4xl max-md:text-2xl mt-4 max-md:mt-2 text-white/80">
             Un asesor se pondra en contacto pronto.
           </span>
         </div>
 
         <!-- COLUMNA DERECHA -->
-        <div class="relative z-10 flex justify-center items-center">
-          <div class="relative w-[70%]">
+        <div class="relative z-10 flex justify-center max-md:items-start items-center">
+          <div class="relative w-[70%] max-md:w-[90%]">
 
             <!-- Degrade top -->
             <div class="h-5 rounded-t-3xl bg-gradient-to-r from-blue-900 via-blue-600 to-blue-400"></div>
@@ -576,7 +579,7 @@
                 <input id="ubicacion" class="p-2 pl-4 rounded-3xl" type="text" placeholder="¿En qué zona estás?"
                   required>
 
-                <textarea id="mensaje" class="p-2 pl-4 rounded-3xl h-40 "
+                <textarea id="mensaje" class="p-2 pl-4 rounded-3xl h-40 max-md:h-20 "
                   placeholder="Contanos un poco más del proyecto" required></textarea>
 
                 <div class="flex justify-center gap-6">

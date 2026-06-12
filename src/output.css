@@ -1286,6 +1286,11 @@ html {
   grid-column: span 2 / span 2;
 }
 
+.mx-2 {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
 .mx-32 {
   margin-left: 8rem;
   margin-right: 8rem;
@@ -1304,16 +1309,6 @@ html {
 .my-6 {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
-}
-
-.mx-10 {
-  margin-left: 2.5rem;
-  margin-right: 2.5rem;
-}
-
-.mx-2 {
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
 }
 
 .mb-10 {
@@ -2099,6 +2094,10 @@ html {
     margin-bottom: 0.5rem;
   }
 
+  .max-md\:mt-32 {
+    margin-top: 8rem;
+  }
+
   .max-md\:mt-4 {
     margin-top: 1rem;
   }
@@ -2107,28 +2106,40 @@ html {
     margin-top: 1.5rem;
   }
 
-  .max-md\:mb-20 {
-    margin-bottom: 5rem;
+  .max-md\:mt-2 {
+    margin-top: 0.5rem;
   }
 
-  .max-md\:mb-32 {
-    margin-bottom: 8rem;
+  .max-md\:mb-6 {
+    margin-bottom: 1.5rem;
   }
 
-  .max-md\:mt-20 {
-    margin-top: 5rem;
+  .max-md\:mb-10 {
+    margin-bottom: 2.5rem;
   }
 
-  .max-md\:mt-32 {
-    margin-top: 8rem;
+  .max-md\:mb-0 {
+    margin-bottom: 0px;
   }
 
   .max-md\:hidden {
     display: none;
   }
 
+  .max-md\:h-10 {
+    height: 2.5rem;
+  }
+
+  .max-md\:h-20 {
+    height: 5rem;
+  }
+
   .max-md\:w-20 {
     width: 5rem;
+  }
+
+  .max-md\:w-\[90\%\] {
+    width: 90%;
   }
 
   .max-md\:grid-cols-1 {
@@ -2151,16 +2162,27 @@ html {
     justify-content: flex-start;
   }
 
-  .max-md\:justify-center {
-    justify-content: center;
-  }
-
   .max-md\:gap-2 {
     gap: 0.5rem;
   }
 
   .max-md\:p-4 {
     padding: 1rem;
+  }
+
+  .max-md\:px-2 {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  .max-md\:px-6 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .max-md\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 
   .max-md\:text-5xl {
