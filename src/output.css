@@ -1286,6 +1286,10 @@ html {
   grid-column: span 2 / span 2;
 }
 
+.col-span-3 {
+  grid-column: span 3 / span 3;
+}
+
 .mx-2 {
   margin-left: 0.5rem;
   margin-right: 0.5rem;
@@ -1309,11 +1313,6 @@ html {
 .my-6 {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
-}
-
-.mx-3 {
-  margin-left: 0.75rem;
-  margin-right: 0.75rem;
 }
 
 .mb-10 {
@@ -1493,6 +1492,10 @@ html {
   width: 100%;
 }
 
+.w-1\/4 {
+  width: 25%;
+}
+
 .max-w-3xl {
   max-width: 48rem;
 }
@@ -1605,6 +1608,10 @@ html {
 
 .grid-cols-5 {
   grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.grid-cols-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .flex-col {
@@ -1795,6 +1802,11 @@ html {
   background-color: rgb(255 255 255 / 0.3);
 }
 
+.bg-red-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(239 68 68 / var(--tw-bg-opacity, 1));
+}
+
 .bg-\[radial-gradient\(25\%_35\%_at_20\%_60\%\2c rgba\(37\2c 99\2c 235\2c 0\.25\)_0\%\2c transparent_100\%\)\2c radial-gradient\(30\%_40\%_at_85\%_30\%\2c rgba\(29\2c 78\2c 216\2c 0\.25\)_0\%\2c transparent_100\%\)\2c radial-gradient\(45\%_55\%_at_50\%_80\%\2c rgba\(30\2c 64\2c 175\2c 0\.35\)_0\%\2c transparent_100\%\)\2c linear-gradient\(135deg\2c \#020617_0\%\2c \#020617_100\%\)\] {
   background-image: radial-gradient(25% 35% at 20% 60%,rgba(37,99,235,0.25) 0%,transparent 100%),radial-gradient(30% 40% at 85% 30%,rgba(29,78,216,0.25) 0%,transparent 100%),radial-gradient(45% 55% at 50% 80%,rgba(30,64,175,0.35) 0%,transparent 100%),linear-gradient(135deg,#020617 0%,#020617 100%);
 }
@@ -1874,6 +1886,11 @@ html {
   padding-right: 2.5rem;
 }
 
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
 .px-6 {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
@@ -1902,11 +1919,6 @@ html {
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
-}
-
-.px-4 {
-  padding-left: 1rem;
-  padding-right: 1rem;
 }
 
 .pb-4 {
@@ -2176,6 +2188,10 @@ html {
 
   .max-md\:mt-6 {
     margin-top: 1.5rem;
+  }
+
+  .max-md\:block {
+    display: block;
   }
 
   .max-md\:hidden {
