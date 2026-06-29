@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700;800;900&display=swap"
     rel="stylesheet" />
-  <link rel="stylesheet" href="src/output.css?v=11">
+  <link rel="stylesheet" href="src/output.css?v=12">
   <link rel="icon" href="./src/imgs/faviconJC.png" type="image/x-icon">
   <title>JC Barandas</title>
 </head>
@@ -27,7 +27,6 @@
 
 
 
-  <!-- Header desktop -->
 
   <header class="relative h-screen bg-cover bg-center bg-no-repeat flex flex-col"
     style="background-image: url('./src/imgs/img-hero.png');">
@@ -36,7 +35,7 @@
 
 
     <!-- Nav mobile -->
-    <nav class="fixed items-center  w-full z-20 max-md:block hidden bg-black/20">
+    <nav class="fixed items-center  w-full z-20 max-md:block hidden bg-black/20 backdrop-blur-lg p-2">
 
 
       <div class="flex justify-between items-center w-full px-4">
@@ -45,7 +44,7 @@
           <img src="./src/imgs/logo-jc-blanco.png" class="w-20" alt="">
         </div>
 
-        <details>
+        <details id="mobile-menu">
           <summary class="list-none"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"
               fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
               class="lucide lucide-menu-icon lucide-menu">
@@ -55,99 +54,103 @@
             </svg></summary>
 
 
-<div class="absolute left-0 top-full w-full h-screen bg-gray-900 z-50">
+          <div class="absolute left-0 top-full w-full h-screen bg-gray-900 z-50">
 
-  <!-- Inicio -->
-  <a href="#"
-    class="flex items-center px-6 py-5 border-b border-gray-700 hover:bg-gray-800 transition-colors">
-    Inicio
-  </a>
+            <!-- Inicio -->
+            <a href="#"
+              class="flex items-center px-6 py-5 border-b border-gray-700 hover:bg-gray-800 transition-colors">
+              Inicio
+            </a>
 
-  <!-- Modelos -->
-  <details class="group border-b border-gray-700">
+            <!-- Modelos -->
+            <details class="group border-b border-gray-700">
 
-    <summary
-      class="flex justify-between items-center px-6 py-5 cursor-pointer list-none hover:bg-gray-800 transition-colors">
+              <summary
+                class="flex justify-between items-center px-6 py-5 cursor-pointer list-none hover:bg-gray-800 transition-colors">
 
-      <span>Modelos</span>
+                <span>Modelos</span>
 
-      <svg class="w-5 h-5 transition-transform group-open:rotate-180"
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor">
+                <svg class="w-5 h-5 transition-transform group-open:rotate-180" xmlns="http://www.w3.org/2000/svg"
+                  fill="none" viewBox="0 0 24 24" stroke="currentColor">
 
-        <path stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          d="M19 9l-7 7-7-7"/>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
 
-      </svg>
+                </svg>
 
-    </summary>
+              </summary>
 
-    <div class="bg-black/20">
+              <div class="bg-black/20">
 
-      <a href="#" class="block px-10 py-4 border-b border-gray-800 hover:bg-gray-800">
-        Vidrio templado y botones
-      </a>
+                <a href="#" class="block px-10 py-4 border-b border-gray-800 hover:bg-gray-800">
+                  Vidrio templado y botones
+                </a>
 
-      <a href="#" class="block px-10 py-4 border-b border-gray-800 hover:bg-gray-800">
-        Vidrio T. y minipostes
-      </a>
+                <a href="#" class="block px-10 py-4 border-b border-gray-800 hover:bg-gray-800">
+                  Vidrio T. y minipostes
+                </a>
 
-      <a href="#" class="block px-10 py-4 border-b border-gray-800 hover:bg-gray-800">
-        Vidrio T. y estructura inoxidable
-      </a>
+                <a href="#" class="block px-10 py-4 border-b border-gray-800 hover:bg-gray-800">
+                  Vidrio T. y estructura inoxidable
+                </a>
 
-      <a href="#" class="block px-10 py-4 border-b border-gray-800 hover:bg-gray-800">
-        Barandas de exterior
-      </a>
+                <a href="#" class="block px-10 py-4 border-b border-gray-800 hover:bg-gray-800">
+                  Barandas de exterior
+                </a>
 
-      <a href="#" class="block px-10 py-4 hover:bg-gray-800">
-        Otros
-      </a>
+                <a href="#" class="block px-10 py-4 hover:bg-gray-800">
+                  Otros
+                </a>
 
-    </div>
+              </div>
 
-  </details>
+            </details>
 
-  <!-- Resto -->
+            <!-- Resto -->
 
-  <a href="#"
-    class="flex items-center px-6 py-5 border-b border-gray-700 hover:bg-gray-800 transition-colors">
-    Proyectos
-  </a>
+            <a href="#"
+              class="flex items-center px-6 py-5 border-b border-gray-700 hover:bg-gray-800 transition-colors">
+              Proyectos
+            </a>
 
-  <a href="#"
-    class="flex items-center px-6 py-5 border-b border-gray-700 hover:bg-gray-800 transition-colors">
-    Especificaciones
-  </a>
+            <a href="#caracteristicas"
+              class="flex items-center px-6 py-5 border-b border-gray-700 hover:bg-gray-800 transition-colors">
+              Especificaciones
+            </a>
 
-  <a href="#"
-    class="flex items-center px-6 py-5 border-b border-gray-700 hover:bg-gray-800 transition-colors">
-    Contacto
-  </a>
+            <a href="#section-contacto"
+              class="flex items-center px-6 py-5 border-b border-gray-700 hover:bg-gray-800 transition-colors">
+              Contacto
+            </a>
 
-  <div class="mt-8 px-6">
+            <div class="mt-8 px-6">
 
-    <a href="mailto:ventas@jcherrajes.com"
-      class="block rounded-xl bg-black/20 px-5 py-4 text-center hover:bg-black/30 transition-colors">
+              <a href="mailto:ventas@jcherrajes.com"
+                class="block rounded-xl bg-black/20 px-5 py-4 text-center hover:bg-black/30 transition-colors">
 
-      ventas@jcherrajes.com
+                ventas@jcherrajes.com
 
-    </a>
+              </a>
 
-  </div>
+            </div>
 
-</div>
+          </div>
         </details>
       </div>
 
 
     </nav>
 
+<script>
+ const mobileMenu = document.getElementById("mobile-menu");
 
+mobileMenu.querySelectorAll("a").forEach(link => {
+  link.addEventListener("click", () => {
+    setTimeout(() => {
+      mobileMenu.removeAttribute("open");
+    }, 50);
+  });
+});
+</script>
 
 
     <!-- Nav desktop -->
@@ -1190,10 +1193,33 @@
 
         <ul class="pb-4 pl-2 space-y-3 text-sm text-white/70 text-center">
           <li><a class="hover:text-color-principal transition-colors" href="#">Inicio</a></li>
-          <li><a class="hover:text-color-principal transition-colors" href="#">Modelos</a></li>
           <li><a class="hover:text-color-principal transition-colors" href="#">Proyectos</a></li>
           <li><a class="hover:text-color-principal transition-colors" href="#">Especificaciones</a></li>
           <li><a class="hover:text-color-principal transition-colors" href="#">Contacto</a></li>
+        </ul>
+      </details>
+
+            <hr class="border-t border-white/10">
+
+       <details class="group">
+        <summary class="flex items-center justify-center py-4 cursor-pointer list-none font-medium gap-2">
+
+          <svg class="w-4 h-4 transition-transform duration-300 group-open:rotate-180"
+            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+
+          <span>Modelos</span>
+
+
+        </summary>
+
+        <ul class="pb-4 pl-2 space-y-3 text-sm text-white/70 text-center">
+          <li><a class="hover:text-color-principal transition-colors" href="#">Vidrio templado y botones</a></li>
+          <li><a class="hover:text-color-principal transition-colors" href="#">Vidrio T. y minipostes</a></li>
+          <li><a class="hover:text-color-principal transition-colors" href="#">Vidrio T. y estructura inoxidable</a></li>
+          <li><a class="hover:text-color-principal transition-colors" href="#">Barandas de exterior</a></li>
+          <li><a class="hover:text-color-principal transition-colors" href="#">Otros</a></li>
         </ul>
       </details>
 
