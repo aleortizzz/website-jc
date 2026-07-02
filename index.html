@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700;800;900&display=swap"
     rel="stylesheet" />
-  <link rel="stylesheet" href="src/output.css?v=12">
+  <link rel="stylesheet" href="src/output.css?v=14">
   <link rel="icon" href="./src/imgs/faviconJC.png" type="image/x-icon">
   <title>JC Barandas</title>
 </head>
@@ -140,17 +140,17 @@
 
     </nav>
 
-<script>
- const mobileMenu = document.getElementById("mobile-menu");
+    <script>
+      const mobileMenu = document.getElementById("mobile-menu");
 
-mobileMenu.querySelectorAll("a").forEach(link => {
-  link.addEventListener("click", () => {
-    setTimeout(() => {
-      mobileMenu.removeAttribute("open");
-    }, 50);
-  });
-});
-</script>
+      mobileMenu.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", () => {
+          setTimeout(() => {
+            mobileMenu.removeAttribute("open");
+          }, 50);
+        });
+      });
+    </script>
 
 
     <!-- Nav desktop -->
@@ -317,13 +317,9 @@ mobileMenu.querySelectorAll("a").forEach(link => {
       <h2 class="text-4xl font-semibold text-white text-center mb-6">Opiniones que hablan por nosotros</h2>
 
 
-      <div class="grid grid-cols-5 gap-6
-            max-2xl:grid-cols-4
-            max-xl:grid-cols-3
-            max-lg:grid-cols-2
-            max-md:grid-cols-1
+      <div class="flex flex-wrap gap-6
             max-md:px-5
-            max-md:justify-items-center">
+           items-center justify-center">
 
 
         <div class="bg-white w-72 h-64 rounded-xl p-6
@@ -611,8 +607,7 @@ mobileMenu.querySelectorAll("a").forEach(link => {
 
 
 
-    <div id="sobre-nosotros" class="mt-20">
-      <h2 class="text-4xl font-semibold text-white text-center">Sobre Nosotros</h2>
+    <div class="mt-20">
 
       <div class="flex max-md:flex-col max-md:items-center gap-6 justify-center text-center mt-10 text-lg">
 
@@ -1199,9 +1194,9 @@ mobileMenu.querySelectorAll("a").forEach(link => {
         </ul>
       </details>
 
-            <hr class="border-t border-white/10">
+      <hr class="border-t border-white/10">
 
-       <details class="group">
+      <details class="group">
         <summary class="flex items-center justify-center py-4 cursor-pointer list-none font-medium gap-2">
 
           <svg class="w-4 h-4 transition-transform duration-300 group-open:rotate-180"
@@ -1217,7 +1212,8 @@ mobileMenu.querySelectorAll("a").forEach(link => {
         <ul class="pb-4 pl-2 space-y-3 text-sm text-white/70 text-center">
           <li><a class="hover:text-color-principal transition-colors" href="#">Vidrio templado y botones</a></li>
           <li><a class="hover:text-color-principal transition-colors" href="#">Vidrio T. y minipostes</a></li>
-          <li><a class="hover:text-color-principal transition-colors" href="#">Vidrio T. y estructura inoxidable</a></li>
+          <li><a class="hover:text-color-principal transition-colors" href="#">Vidrio T. y estructura inoxidable</a>
+          </li>
           <li><a class="hover:text-color-principal transition-colors" href="#">Barandas de exterior</a></li>
           <li><a class="hover:text-color-principal transition-colors" href="#">Otros</a></li>
         </ul>
