@@ -41,7 +41,7 @@
       <div class="flex justify-between items-center w-full px-4">
 
         <div>
-          <img src="./src/imgs/logo-jc-blanco.png" class="w-20" alt="">
+          <a href="./index.html"><img src="./src/imgs/logo-jc-blanco.png" class="w-20" alt="Logo-Jc"></a>
         </div>
 
         <details id="mobile-menu">
@@ -57,7 +57,7 @@
           <div class="absolute left-0 top-full w-full h-screen bg-gray-900 z-50">
 
             <!-- Inicio -->
-            <a href="#"
+            <a href="#section-inicio"
               class="flex items-center px-6 py-5 border-b border-gray-700 hover:bg-gray-800 transition-colors">
               Inicio
             </a>
@@ -107,12 +107,12 @@
 
             <!-- Resto -->
 
-            <a href="#"
+            <a href="#section-proyectos"
               class="flex items-center px-6 py-5 border-b border-gray-700 hover:bg-gray-800 transition-colors">
               Proyectos
             </a>
 
-            <a href="#caracteristicas"
+            <a href="#section-especificaciones"
               class="flex items-center px-6 py-5 border-b border-gray-700 hover:bg-gray-800 transition-colors">
               Especificaciones
             </a>
@@ -158,11 +158,11 @@
 
       <div>
         <img id="imgheader" src="./src/imgs/logo-jc-blanco.png"
-          class="w-36 max-md:w-20 max-md:mb-2 transition-all duration-300" alt="">
+          class="w-36 max-md:w-20 max-md:mb-2 transition-all duration-300" alt="Logo JC barandas">
       </div>
 
       <div class="flex justify-between">
-        <a class="hover:text-blue-600 transition-all cursor-pointer">Inicio</a>
+        <a href="#section-inicio" class="hover:text-blue-600 transition-all cursor-pointer">Inicio</a>
 
         <div class="relative group">
           <button class="flex items-center gap-2 hover:text-blue-600 transition-all">
@@ -185,10 +185,9 @@
           </div>
         </div>
 
-        <a class="hover:text-blue-600 transition-all cursor-pointer">Proyectos</a>
-        <a href="#caracteristicas" class="hover:text-blue-600 transition-all cursor-pointer">Especificaciones</a>
-        <a href="#section-contacto" class="hover:text-blue-600 transition-all cursor-pointer"
-          class="font-semibold">Contacto</a>
+        <a href="#section-proyectos" class="hover:text-blue-600 transition-all cursor-pointer">Proyectos</a>
+        <a href="#section-especificaciones" class="hover:text-blue-600 transition-all cursor-pointer">Especificaciones</a>
+        <a href="#section-contacto" class="hover:text-blue-600 transition-all cursor-pointer font-semibold">Contacto</a>
       </div>
 
       <div class="flex justify-end  max-md:hidden">
@@ -246,7 +245,7 @@
 
 
 
-    <section class="relative z-10 flex-1 flex flex-col justify-center max-md:justify-start px-10 max-md:mt-6 ">
+    <section id="section-inicio" class="relative z-10 flex-1 flex flex-col justify-center max-md:justify-start px-10 max-md:mt-6 ">
 
 
       <div class="grid grid-cols-2 max-md:grid-cols-1 max-md:mt-32">
@@ -335,7 +334,7 @@
               <span class="text-black">Alejandro Laudicina</span>
             </div>
             <div>
-              <img class="w-4" src="/src/imgs/icono-google.png">
+              <img class="w-4" src="/src/imgs/icono-google.png" alt="Logo de Google">
             </div>
           </div>
 
@@ -386,7 +385,7 @@
               <span class="text-black">Gustavo Fontana</span>
             </div>
             <div>
-              <img class="w-4" src="/src/imgs/icono-google.png">
+              <img class="w-4" src="/src/imgs/icono-google.png" alt="Logo de Google">
             </div>
           </div>
 
@@ -444,7 +443,7 @@
               <span class="text-gray-700">Fran Copes</span>
             </div>
             <div>
-              <img class="w-4" src="/src/imgs/icono-google.png">
+              <img class="w-4" src="/src/imgs/icono-google.png" alt="Logo de Google">
             </div>
           </div>
 
@@ -498,7 +497,7 @@
               <span class="text-gray-700">Adriana Vzc</span>
             </div>
             <div>
-              <img class="w-4" src="/src/imgs/icono-google.png">
+              <img class="w-4" src="/src/imgs/icono-google.png" alt="Logo de Google">
             </div>
           </div>
 
@@ -554,7 +553,7 @@
               <span class="text-black">Guille Ruiz</span>
             </div>
             <div>
-              <img class="w-4" src="/src/imgs/icono-google.png">
+              <img class="w-4" src="/src/imgs/icono-google.png" alt="Logo de Google">
             </div>
           </div>
 
@@ -626,7 +625,7 @@
           </p>
         </div>
 
-        <div class=" border-r-2 border-blue-600"></div>
+        <div class="border-r-2 border-blue-600"></div>
 
         <div class="w-[80%] flex flex-col  gap-6">
           <p class="h-[50%]">Atendemos proyectos residenciales y comerciales,<span class="text-blue-600 font-semibold">
@@ -650,10 +649,10 @@
 
 
 
-    <section id="proyectos" class="mt-40">
+    <section id="section-proyectos" class="mt-40 scroll-mt-40">
 
       <!-- TÍTULO -->
-      <div class=" px-10 mb-16">
+      <div class="px-10 mb-16">
         <h2 class="text-4xl font-semibold text-white">
           Proyectos realizados
         </h2>
@@ -805,7 +804,7 @@
 
 
 
-    <div id="caracteristicas" class="mt-24">
+    <div id="section-especificaciones" class="mt-24 scroll-mt-24">
       <h2 class="text-4xl font-semibold text-white mb-10 text-center">Nos caracteriza</h2>
       <div class="grid grid-cols-2 max-md:grid-cols-1 gap-6">
 
@@ -830,7 +829,7 @@
             </div>
 
 
-            <div class=" rounded-xl p-6 border-2 border-blue-600 transform transition-all hover:scale-[1.02]">
+            <div class="rounded-xl p-6 border-2 border-blue-600 transform transition-all hover:scale-[1.02]">
               <div class="flex items-center gap-2">
                 <div class="p-2 bg-blue-500/10 rounded-lg">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -877,7 +876,7 @@
             </div>
 
 
-            <div class=" rounded-xl p-6 border-2 border-blue-600 transform transition-all hover:scale-[1.02]">
+            <div class="rounded-xl p-6 border-2 border-blue-600 transform transition-all hover:scale-[1.02]">
               <div class="flex items-center gap-2">
                 <div class="p-2 bg-blue-500/10 rounded-lg">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -1057,7 +1056,7 @@
                   <option value="Puertas de seguridad">Puertas de seguridad</option>
                 </select>
 
-                <input id="contacto" class="p-2 pl-4 rounded-3xl" type="number" placeholder="Dejanos un número o mail"
+                <input id="contacto" class="p-2 pl-4 rounded-3xl"  placeholder="Dejanos un número o mail"
                   required>
                 <input id="ubicacion" class="p-2 pl-4 rounded-3xl" type="text" placeholder="¿En qué zona estás?"
                   required>
@@ -1108,7 +1107,7 @@
 
     <!-- Footer desktop -->
     <div class="grid grid-cols-5 p-10 max-md:hidden">
-      <div class="flex flex-col col-span-2 w-2/4"> <img src="./src/imgs/logo-jc-blanco.png" class="w-28" alt="">
+      <div class="flex flex-col col-span-2 w-2/4"> <img src="./src/imgs/logo-jc-blanco.png" class="w-28" alt="Logo de JC Barandas">
         <div class="text-sm mt-3 ">
           <p>Barandas y estructuras en acero inoxidable y vidrio. </p>
           <p>Diseñamos soluciones seguras, funcionales y esteticas para cada proyecto</p>
@@ -1134,19 +1133,18 @@
                 d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z" />
             </svg></a> </div>
       </div>
-      <div class=" flex flex-col items-center">
+      <div class="flex flex-col items-center">
         <div class="w-2/4 ">
           <h3 class="font-semibold mb-2">Navegación</h3>
           <ul class="space-y-2 text-sm text-white/80">
-            <li><a class=" hover:text-blue-600 transition-all" href="#">Inicio</a></li>
-            <li><a class=" hover:text-blue-600 transition-all" href="#">Modelos</a></li>
-            <li><a class=" hover:text-blue-600 transition-all" href="#">Proyectos</a></li>
-            <li><a class=" hover:text-blue-600 transition-all" href="#">Especificaciones</a></li>
-            <li><a class=" hover:text-blue-600 transition-all" href="#">Contacto</a></li>
+            <li><a class="hover:text-blue-600 transition-all" href="#section-inicio">Inicio</a></li>
+            <li><a class="hover:text-blue-600 transition-all" href="#section-proyectos">Proyectos</a></li>
+            <li><a class="hover:text-blue-600 transition-all" href="#section-especificaciones">Especificaciones</a></li>
+            <li><a class="hover:text-blue-600 transition-all" href="#section-contacto">Contacto</a></li>
           </ul>
         </div>
       </div>
-      <div class=" flex flex-col items-center col-span-2">
+      <div class="flex flex-col items-center col-span-2">
         <div class="w-2/4 ">
           <h3 class="font-semibold mb-2">Contacto</h3>
           <ul class="space-y-2 text-sm text-white/80">
@@ -1155,9 +1153,9 @@
           </ul>
           <h3 class="font-semibold mt-10 mb-2">Telefonos de contacto</h3>
           <ul class="space-y-2 text-sm text-white/70">
-            <li> <a class=" hover:text-blue-600 transition-all" href="https://wa.me/5491164463400" target="_blank">+54 9
+            <li> <a class="hover:text-blue-600 transition-all" href="https://wa.me/5491164463400" target="_blank">+54 9
                 11 6446-3400</a></li>
-            <li> <a class=" hover:text-blue-600 transition-all" href="https://wa.me/5491130993400" target="_blank">+54 9
+            <li> <a class="hover:text-blue-600 transition-all" href="https://wa.me/5491130993400" target="_blank">+54 9
                 11 3099-3400</a></li>
           </ul>
         </div>
@@ -1187,10 +1185,10 @@
         </summary>
 
         <ul class="pb-4 pl-2 space-y-3 text-sm text-white/70 text-center">
-          <li><a class="hover:text-color-principal transition-colors" href="#">Inicio</a></li>
-          <li><a class="hover:text-color-principal transition-colors" href="#">Proyectos</a></li>
-          <li><a class="hover:text-color-principal transition-colors" href="#">Especificaciones</a></li>
-          <li><a class="hover:text-color-principal transition-colors" href="#">Contacto</a></li>
+          <li><a class="hover:text-color-principal transition-colors" href="#section-inicio">Inicio</a></li>
+          <li><a class="hover:text-color-principal transition-colors" href="#section-proyectos">Proyectos</a></li>
+          <li><a class="hover:text-color-principal transition-colors" href="#section-especificaciones">Especificaciones</a></li>
+          <li><a class="hover:text-color-principal transition-colors" href="#section-contacto">Contacto</a></li>
         </ul>
       </details>
 
@@ -1256,9 +1254,9 @@
         </summary>
 
         <ul class="pb-4 pl-2 space-y-3 text-sm text-white/70 text-center">
-          <li> <a class=" hover:text-blue-600 transition-all" href="https://wa.me/5491164463400" target="_blank">+54 9
+          <li> <a class="hover:text-blue-600 transition-all" href="https://wa.me/5491164463400" target="_blank">+54 9
               11 6446-3400</a></li>
-          <li> <a class=" hover:text-blue-600 transition-all" href="https://wa.me/5491130993400" target="_blank">+54 9
+          <li> <a class="hover:text-blue-600 transition-all" href="https://wa.me/5491130993400" target="_blank">+54 9
               11 3099-3400</a></li>
         </ul>
       </details>
@@ -1330,6 +1328,26 @@
 
     const form = document.getElementById("contact-form");
 
+  function mostrarToast(mensaje, tipo = "success") {
+    const toast = document.getElementById("toast");
+
+    toast.textContent = mensaje;
+
+    if (tipo === "success") {
+      toast.classList.remove("bg-red-600");
+      toast.classList.add("bg-green-600");
+    } else {
+      toast.classList.remove("bg-green-600");
+      toast.classList.add("bg-red-600");
+    }
+
+    toast.classList.remove("translate-x-[150%]");
+
+    setTimeout(() => {
+      toast.classList.add("translate-x-[150%]");
+    }, 3500);
+  }
+
     form.addEventListener("submit", function (e) {
       e.preventDefault();
 
@@ -1348,12 +1366,12 @@
           data
         )
         .then(() => {
-          alert("Consulta enviada correctamente");
+          mostrarToast("✅ Consulta enviada correctamente");
           form.reset();
         })
         .catch((error) => {
           console.error(error);
-          alert("Error al enviar la consulta");
+          mostrarToast("❌ Error al enviar la consulta", "error");
         });
     });
 
@@ -1369,7 +1387,7 @@
       const mensaje = document.getElementById("mensaje").value;
 
       if (!nombre || !interes || !contacto || !ubicacion || !mensaje) {
-        alert("Por favor completá todos los campos");
+        mostrarToast("⚠️ Completá todos los campos", "error");
         return;
       }
 
@@ -1434,7 +1452,9 @@ ${mensaje}
   </script>
 
 
-
+<div id="toast"
+  class="fixed top-6 right-6 translate-x-[150%] transition-all duration-300 rounded-xl px-6 py-4 text-white font-medium shadow-xl z-[9999]">
+</div>
 
 </body>
 
