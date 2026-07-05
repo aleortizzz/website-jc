@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700;800;900&display=swap"
     rel="stylesheet" />
-  <link rel="stylesheet" href="src/output.css?v=15">
+  <link rel="stylesheet" href="src/output.css?v=16">
   <link rel="icon" href="./src/imgs/faviconJC.png" type="image/x-icon">
   <title>JC Barandas</title>
 </head>
@@ -1069,7 +1069,7 @@
                     class="bg-green-600 text-white hover:bg-green-700 p-6 transition-all  py-3 rounded-xl">
                     Enviar por WhatsApp
                   </button>
-                  <button class="bg-blue-600 text-white hover:bg-blue-700 p-6 transition-all py-3 rounded-xl">
+                  <button  id="btn-email" class="bg-blue-600 text-white hover:bg-blue-700 p-6 transition-all py-3 rounded-xl">
                     Enviar por e-mail
                   </button>
                 </div>
@@ -1325,28 +1325,33 @@
       },
     });
 
-
-    const form = document.getElementById("contact-form");
-
-  function mostrarToast(mensaje, tipo = "success") {
+    function mostrarToast(mensaje, tipo = "success") {
     const toast = document.getElementById("toast");
 
-    toast.textContent = mensaje;
+  toast.textContent = mensaje;
 
-    if (tipo === "success") {
-      toast.classList.remove("bg-red-600");
-      toast.classList.add("bg-green-600");
-    } else {
-      toast.classList.remove("bg-green-600");
-      toast.classList.add("bg-red-600");
-    }
+  toast.classList.remove(
+    "bg-green-600",
+    "bg-red-600",
+    "opacity-0",
+    "translate-x-[150%]"
+  );
 
-    toast.classList.remove("translate-x-[150%]");
-
-    setTimeout(() => {
-      toast.classList.add("translate-x-[150%]");
-    }, 3500);
+  if (tipo === "success") {
+    toast.classList.add("bg-green-600");
+  } else {
+    toast.classList.add("bg-red-600");
   }
+
+  setTimeout(() => {
+    toast.classList.add("opacity-0", "translate-x-[150%]");
+  }, 3500);
+}
+
+
+    const form = document.getElementById("contact-form");
+    const btnEmail = document.getElementById("btn-email");
+
 
     form.addEventListener("submit", function (e) {
       e.preventDefault();
@@ -1359,6 +1364,9 @@
         mensaje: document.getElementById("mensaje").value,
       };
 
+          
+    btnEmail.disabled = true;
+    btnEmail.textContent = "Enviando...";
       emailjs
         .send(
           "service_socgy8q",
@@ -1366,12 +1374,19 @@
           data
         )
         .then(() => {
-          mostrarToast("✅ Consulta enviada correctamente");
-          form.reset();
-        })
+            mostrarToast("✅ Consulta enviada correctamente");
+            form.reset();
+
+            btnEmail.disabled = false;
+            btnEmail.textContent = "Enviar por e-mail";
+          })
         .catch((error) => {
           console.error(error);
+
           mostrarToast("❌ Error al enviar la consulta", "error");
+
+          btnEmail.disabled = false;
+          btnEmail.textContent = "Enviar por e-mail";
         });
     });
 
@@ -1451,9 +1466,8 @@ ${mensaje}
 
   </script>
 
-
 <div id="toast"
-  class="fixed top-6 right-6 translate-x-[150%] transition-all duration-300 rounded-xl px-6 py-4 text-white font-medium shadow-xl z-[9999]">
+  class="fixed top-6 right-6 translate-x-[150%] opacity-0 transition-all duration-300 rounded-xl px-5 py-4 text-white shadow-2xl z-[9999] font-medium">
 </div>
 
 </body>
