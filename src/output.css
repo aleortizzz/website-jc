@@ -2596,6 +2596,10 @@ html {
     margin-bottom: 0.5rem;
   }
 
+  .max-md\:mt-10 {
+    margin-top: 2.5rem;
+  }
+
   .max-md\:mt-2 {
     margin-top: 0.5rem;
   }
@@ -2618,6 +2622,10 @@ html {
 
   .max-md\:mt-6 {
     margin-top: 1.5rem;
+  }
+
+  .max-md\:mt-20 {
+    margin-top: 5rem;
   }
 
   .max-md\:block {
@@ -2692,10 +2700,6 @@ html {
   .max-md\:px-6 {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
-  }
-
-  .max-md\:text-left {
-    text-align: left;
   }
 
   .max-md\:text-center {
