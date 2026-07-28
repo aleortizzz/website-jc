@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Galería Premium</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="bg-neutral-950 text-white">
+    <section class="max-w-7xl mx-auto px-6 py-24">
+        <div class="text-center mb-16"><span class="text-blue-500 uppercase tracking-[.25em]">Galería</span>
+            <h2 class="text-5xl font-bold mt-3">Proyectos reales</h2>
+            <p class="text-neutral-400 mt-4 max-w-2xl mx-auto">Explorá cada detalle de nuestras instalaciones.</p>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-4 auto-rows-[220px] gap-5">
+            <div class="group row-span-2 overflow-hidden rounded-3xl"><img
+                    class="gallery-img w-full h-full object-cover duration-500 group-hover:scale-110 cursor-pointer"
+                    src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200"></div>
+            <div class="group overflow-hidden rounded-3xl"><img
+                    class="gallery-img w-full h-full object-cover duration-500 group-hover:scale-110 cursor-pointer"
+                    src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=1200"></div>
+            <div class="group overflow-hidden rounded-3xl"><img
+                    class="gallery-img w-full h-full object-cover duration-500 group-hover:scale-110 cursor-pointer"
+                    src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1200"></div>
+            <div class="group row-span-2 overflow-hidden rounded-3xl"><img
+                    class="gallery-img w-full h-full object-cover duration-500 group-hover:scale-110 cursor-pointer"
+                    src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?w=1200"></div>
+            <div class="group overflow-hidden rounded-3xl"><img
+                    class="gallery-img w-full h-full object-cover duration-500 group-hover:scale-110 cursor-pointer"
+                    src="https://images.unsplash.com/photo-1600585154084-4e5fe7c39198?w=1200"></div>
+            <div class="group overflow-hidden rounded-3xl"><img
+                    class="gallery-img w-full h-full object-cover duration-500 group-hover:scale-110 cursor-pointer"
+                    src="https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?w=1200"></div>
+        </div>
+    </section>
+    <div id="lightbox" class="fixed inset-0 bg-black/95 hidden items-center justify-center z-50">
+        <button id="close" class="absolute top-6 right-6 p-3 bg-white/10 rounded-full"><i data-lucide="x"></i></button>
+        <button id="prev" class="absolute left-6 p-3 bg-white/10 rounded-full"><i
+                data-lucide="chevron-left"></i></button>
+        <div class="w-full max-w-6xl px-6">
+            <div id="counter" class="mb-4 text-neutral-300"></div><img id="viewer"
+                class="max-h-[75vh] w-full object-contain rounded-2xl">
+            <div id="thumbs" class="flex gap-3 justify-center mt-5 flex-wrap"></div>
+        </div>
+        <button id="next" class="absolute right-6 p-3 bg-white/10 rounded-full"><i
+                data-lucide="chevron-right"></i></button>
+    </div>
+    <script>
+        lucide.createIcons();
+        const imgs = [...document.querySelectorAll('.gallery-img')], lb = document.getElementById('lightbox'), v = document.getElementById('viewer'), t = document.getElementById('thumbs'), c = document.getElementById('counter'); let cur = 0;
+        function draw() { v.src = imgs[cur].src; c.textContent = `${cur + 1} / ${imgs.length}`; t.innerHTML = ''; imgs.forEach((im, i) => { let x = document.createElement('img'); x.src = im.src; x.className = 'w-16 h-16 rounded-lg object-cover cursor-pointer border-2 ' + (i === cur ? 'border-blue-500' : 'border-transparent'); x.onclick = () => { cur = i; draw() }; t.appendChild(x); }); }
+        function open(i) { cur = i; draw(); lb.classList.remove('hidden'); lb.classList.add('flex'); }
+        function close() { lb.classList.add('hidden'); lb.classList.remove('flex'); }
+        imgs.forEach((im, i) => im.onclick = () => open(i));
+        close.onclick = close;
+        document.getElementById('prev').onclick = () => { cur = (cur - 1 + imgs.length) % imgs.length; draw(); };
+        document.getElementById('next').onclick = () => { cur = (cur + 1) % imgs.length; draw(); };
+        document.addEventListener('keydown', e => { if (lb.classList.contains('hidden')) return; if (e.key === 'Escape') close(); if (e.key === 'ArrowLeft') prev.click(); if (e.key === 'ArrowRight') next.click(); });
+    </script>
+</body>
+
+</html>

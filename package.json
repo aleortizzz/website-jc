@@ -27,6 +27,7 @@
   },
   "dependencies": {
     "daisyui": "^4.12.24",
+    "lucide": "^1.27.0",
     "swiper": "^12.1.2"
   }
 }
