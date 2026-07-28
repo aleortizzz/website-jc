@@ -10,56 +10,90 @@
 </head>
 
 <body class="bg-neutral-950 text-white">
-    <section class="max-w-7xl mx-auto px-6 py-24">
-        <div class="text-center mb-16"><span class="text-blue-500 uppercase tracking-[.25em]">Galería</span>
-            <h2 class="text-5xl font-bold mt-3">Proyectos reales</h2>
-            <p class="text-neutral-400 mt-4 max-w-2xl mx-auto">Explorá cada detalle de nuestras instalaciones.</p>
+
+    <section class="grid grid-cols-1">
+            <!-- Imagen -->
+            <div class="flex px-6 animate-fade-right bg-red-500">
+                <img class="w-[30vw] max-w-xl rounded-2xl object-cover max-h-[70vh]"
+                    src="/src/imgs/vid_tem_bot/vid_tem_bot_portada.jpg" alt="Vidrio templado y botones">
+            </div>
+
+            <!-- Contenido -->
+            <div class="px-6 lg:px-0 text-center lg:text-left bg-green-500">
+
+                <span class="text-blue-600 font-bold mb-2 block animate-fade-down">
+                    MODELO &bull;
+                </span>
+
+                <h1 class="text-4xl md:text-5xl font-semibold animate-fade-down">
+                    Vidrio Templado y Botones
+                </h1>
+
+                <p class="mt-8 text-white/80 leading-8 max-w-xl mx-auto lg:mx-0">
+                    Un diseño minimalista y moderno que destaca por su transparencia,
+                    seguridad y elegancia. El vidrio templado brinda máxima resistencia
+                    y una vista despejada, mientras que los botones de acero inoxidable
+                    aseguran un acabado limpio y sofisticado.
+                </p>
+
+                <!-- Características -->
+                <div class="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-8">
+
+                    <div class="flex flex-col items-center lg:items-start text-center lg:text-left animate-fade-right">
+                        <i data-lucide="shield-check" class="w-12 h-12 text-blue-600 mb-3"></i>
+                        <span class="font-semibold">Seguridad</span>
+                        <p class="text-sm text-white/70">
+                            Vidrio templado de alta resistencia.
+                        </p>
+                    </div>
+
+                    <div
+                        class="flex flex-col items-center lg:items-start text-center lg:text-left animate-fade-right animate-delay-150">
+                        <i data-lucide="eye" class="w-12 h-12 text-blue-600 mb-3"></i>
+                        <span class="font-semibold">Vista panorámica</span>
+                        <p class="text-sm text-white/70">
+                            Sin perfiles que obstruyan la vista.
+                        </p>
+                    </div>
+
+                    <div
+                        class="flex flex-col items-center lg:items-start text-center lg:text-left animate-fade-right animate-delay-300">
+                        <i data-lucide="gem" class="w-12 h-12 text-blue-600 mb-3"></i>
+                        <span class="font-semibold">Acabado premium</span>
+                        <p class="text-sm text-white/70">
+                            Botones de acero inoxidable.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- CTA -->
+            <div class="lg:col-span-2 flex justify-center  bg-blue-500">
+                <a href="#section-galeria"
+                    class="flex items-center gap-2 text-xl font-semibold hover:text-blue-500 transition">
+                    <span>Ver Galería</span>
+                    <i data-lucide="corner-right-down" class="w-6 h-6"></i>
+                </a>
+            </div>
+
+        </section>
+
+
+
+
+
+        <div class="grid grid-cols-2">
+            <div>Hola</div>
+            <div>Como</div>
+            <div>Estas</div>
         </div>
-        <div class="grid grid-cols-2 md:grid-cols-4 auto-rows-[220px] gap-5">
-            <div class="group row-span-2 overflow-hidden rounded-3xl"><img
-                    class="gallery-img w-full h-full object-cover duration-500 group-hover:scale-110 cursor-pointer"
-                    src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200"></div>
-            <div class="group overflow-hidden rounded-3xl"><img
-                    class="gallery-img w-full h-full object-cover duration-500 group-hover:scale-110 cursor-pointer"
-                    src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=1200"></div>
-            <div class="group overflow-hidden rounded-3xl"><img
-                    class="gallery-img w-full h-full object-cover duration-500 group-hover:scale-110 cursor-pointer"
-                    src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1200"></div>
-            <div class="group row-span-2 overflow-hidden rounded-3xl"><img
-                    class="gallery-img w-full h-full object-cover duration-500 group-hover:scale-110 cursor-pointer"
-                    src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?w=1200"></div>
-            <div class="group overflow-hidden rounded-3xl"><img
-                    class="gallery-img w-full h-full object-cover duration-500 group-hover:scale-110 cursor-pointer"
-                    src="https://images.unsplash.com/photo-1600585154084-4e5fe7c39198?w=1200"></div>
-            <div class="group overflow-hidden rounded-3xl"><img
-                    class="gallery-img w-full h-full object-cover duration-500 group-hover:scale-110 cursor-pointer"
-                    src="https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?w=1200"></div>
-        </div>
-    </section>
-    <div id="lightbox" class="fixed inset-0 bg-black/95 hidden items-center justify-center z-50">
-        <button id="close" class="absolute top-6 right-6 p-3 bg-white/10 rounded-full"><i data-lucide="x"></i></button>
-        <button id="prev" class="absolute left-6 p-3 bg-white/10 rounded-full"><i
-                data-lucide="chevron-left"></i></button>
-        <div class="w-full max-w-6xl px-6">
-            <div id="counter" class="mb-4 text-neutral-300"></div><img id="viewer"
-                class="max-h-[75vh] w-full object-contain rounded-2xl">
-            <div id="thumbs" class="flex gap-3 justify-center mt-5 flex-wrap"></div>
-        </div>
-        <button id="next" class="absolute right-6 p-3 bg-white/10 rounded-full"><i
-                data-lucide="chevron-right"></i></button>
-    </div>
-    <script>
-        lucide.createIcons();
-        const imgs = [...document.querySelectorAll('.gallery-img')], lb = document.getElementById('lightbox'), v = document.getElementById('viewer'), t = document.getElementById('thumbs'), c = document.getElementById('counter'); let cur = 0;
-        function draw() { v.src = imgs[cur].src; c.textContent = `${cur + 1} / ${imgs.length}`; t.innerHTML = ''; imgs.forEach((im, i) => { let x = document.createElement('img'); x.src = im.src; x.className = 'w-16 h-16 rounded-lg object-cover cursor-pointer border-2 ' + (i === cur ? 'border-blue-500' : 'border-transparent'); x.onclick = () => { cur = i; draw() }; t.appendChild(x); }); }
-        function open(i) { cur = i; draw(); lb.classList.remove('hidden'); lb.classList.add('flex'); }
-        function close() { lb.classList.add('hidden'); lb.classList.remove('flex'); }
-        imgs.forEach((im, i) => im.onclick = () => open(i));
-        close.onclick = close;
-        document.getElementById('prev').onclick = () => { cur = (cur - 1 + imgs.length) % imgs.length; draw(); };
-        document.getElementById('next').onclick = () => { cur = (cur + 1) % imgs.length; draw(); };
-        document.addEventListener('keydown', e => { if (lb.classList.contains('hidden')) return; if (e.key === 'Escape') close(); if (e.key === 'ArrowLeft') prev.click(); if (e.key === 'ArrowRight') next.click(); });
-    </script>
 </body>
+
+
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>lucide.createIcons();</script>
+
 
 </html>
