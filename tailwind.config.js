@@ -3,6 +3,7 @@ module.exports = {
   content: [
   "./*.html",
   "./**/*.html",   // 👈 CLAVE
+  "./partials/**/*.inc",
   "./src/**/*.{html,js}",
   "./templates/**/*.html",
 ],

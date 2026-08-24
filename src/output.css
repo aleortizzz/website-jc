@@ -2580,6 +2580,16 @@ html {
   opacity: 1;
 }
 
+@media not all and (min-width: 1280px) {
+  .max-xl\:block {
+    display: block;
+  }
+
+  .max-xl\:hidden {
+    display: none;
+  }
+}
+
 @media not all and (min-width: 1024px) {
   .max-lg\:justify-center {
     justify-content: center;
@@ -2604,6 +2614,10 @@ html {
     margin-top: 0.5rem;
   }
 
+  .max-md\:mt-20 {
+    margin-top: 5rem;
+  }
+
   .max-md\:mt-32 {
     margin-top: 8rem;
   }
@@ -2622,10 +2636,6 @@ html {
 
   .max-md\:mt-6 {
     margin-top: 1.5rem;
-  }
-
-  .max-md\:mt-20 {
-    margin-top: 5rem;
   }
 
   .max-md\:block {
