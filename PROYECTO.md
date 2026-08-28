@@ -65,7 +65,9 @@ npm run tailwind   # Compila y observa cambios en el CSS (input.css -> output.cs
 ## Notas
 
 - Repo en GitHub: `aleortizzz/website-jc`
-- **Deploy**: hosting en **DonWeb** (cPanel), vía **Git Version Control**. cPanel hace `git pull` del repo dentro de `public_html`, así que **todo el repo se sirve como web pública**. El pull es automático al hacer `git push` (webhook ya configurado; el sitio cambia solo en 1-2 min). Como se sirve el repo entero, `.htaccess` bloquea el acceso web a archivos internos (`PROYECTO.md`, `notes.txt`, `package.json`, configs, `.git/`).
+- **Hosting**: **DonWeb / panel Ferozo**, servidor **Windows / IIS** (IP `200.58.122.207`). Cuenta `w1750584`. Raíz web: `public_html`. Todos los dominios del plan sirven esa misma carpeta. Es la cuenta que ya tenía los correos de `jcherrajes.com` (mismo cliente; "JC Herrajes" es el nombre viejo, ahora "JC Barandas"). La web vieja de jcherrajes.com que estaba en `public_html` se respaldó y se reemplaza por este sitio.
+- **Deploy**: **GitHub Actions → FTP** (`.github/workflows/deploy.yml`). La integración Git nativa de DonWeb no funciona en este plan Windows. En cada `push` a `main`, el workflow sube el sitio por FTPS a `public_html` con `SamKirkland/FTP-Deploy-Action`. Secrets en GitHub (Settings → Secrets and variables → Actions): `FTP_SERVER=w1750584.ferozo.com`, `FTP_USERNAME=w1750584@jcherrajes.com`, `FTP_PASSWORD=<la del panel Ferozo>`. El workflow excluye del upload la tooling y las docs internas (`PROYECTO.md`, `notes.txt`, `package*.json`, configs, `.github/`, etc.), así que esos archivos **no llegan al servidor**.
+- **Config de servidor**: `web.config` (IIS), reemplaza al `.htaccess` (Windows no usa `.htaccess`). Hoy tiene solo lo mínimo (default document + caché). El bloque CUTOVER (forzar HTTPS + dominio canónico + bloquear internos) está comentado adentro del `web.config` y se descomenta al migrar; necesita el módulo "URL Rewrite" de IIS (si tira 500, pedirlo a soporte DonWeb).
 - El formulario de contacto envía los mails vía **EmailJS** (service/template configurados en el `<script>` de [index.html](index.html)); no hay backend propio.
 - El header/footer compartido (`partials/`) se carga con `fetch()`, que **no funciona abriendo el HTML directo desde el explorador de archivos** (`file://...`). Para probar en local hace falta un servidor HTTP simple (ej. extensión "Live Server" de VS Code, o `npx serve`). En Hostinger va a andar normal porque ahí sí se sirve por HTTP.
 - Los links del nav/footer a secciones de la home (Inicio, Proyectos, etc.) ahora apuntan siempre a `/index.html#section-...`, incluso estando ya en la home — antes hacían scroll suave sin recargar. Es la contra de tener un solo header compartido; si se nota molesto se puede revisar más adelante.
@@ -98,15 +100,28 @@ Regla del proyecto: **toda imagen nueva que se suba al sitio pasa por esto antes
 
 ## Pendientes antes de entregar al cliente
 
-### Bloqueantes al migrar al dominio final
+### Dominio final: `jcbarandas.com.ar` (decidido)
 
-- [ ] **⚠️ Cambiar la cuenta de EmailJS del formulario de contacto.** Hoy en `index.html` está configurado con el **mail personal del desarrollador** (era para pruebas): `emailjs.init("yegPUG09JEFFWAJuF")`, `service_socgy8q`, `template_novurzk`. Antes/al pasar a producción hay que apuntarlo a la casilla real del cliente (o cambiar el template de EmailJS para que envíe ahí) y subir el cambio. Mientras tanto los mails de prueba llegan al dev; el tráfico es bajo así que no se pierden leads, pero **no olvidarse de esto**.
-- [ ] Antes de lanzar: **probar el formulario de punta a punta** y confirmar que el mail llega a la casilla correcta. Sumar un campo *honeypot* anti-bot y activar "allowed origins" en el panel de EmailJS (que solo acepte envíos desde el dominio del cliente).
-- [ ] **Quitar el `<meta name="robots" content="noindex, nofollow">`** de todas las páginas (`index.html`, `modelos/*.html`, `proyectos/*.html`). Se agregó porque el sitio está en Hostinger bajo una URL temporal y no queremos que Google la indexe antes de la entrega. Buscar el comentario `<!-- TEMPORAL: ... -->` en cada archivo.
-- [ ] **Cambiar las URLs hardcodeadas de la temporal `website-jc.tizdigital.com`** → dominio final. Están en `og:url`, `og:image` y el `schema.org` de la home (≈12 archivos).
-- [ ] Verificar el `<link rel="canonical">` en el dominio final. En `index.html` es `href="/"`; en el resto son rutas relativas. Idealmente pasarlas a URLs absolutas del dominio real.
-- [ ] Agregar `robots.txt` y `sitemap.xml` con las URLs del dominio final. Dar de alta el dominio en Google Search Console y enviar el sitemap.
-- [ ] En `.htaccess`, **descomentar el bloque de "PENDIENTE"** (forzar HTTPS + caché de estáticos). Ojo: si Hostinger ya dejó un `.htaccess` propio en `public_html`, combinar reglas, no pisarlo.
+Dominio **principal**: `https://jcbarandas.com.ar` (sin `www`). El otro dominio del cliente, `jcbarandas.com`, hace **redirect 301** a `jcbarandas.com.ar`. Ambos registrados en DonWeb, hoy sin apuntar a ningún lado.
+
+**Setup en el panel (progreso):**
+1. [x] `jcbarandas.com.ar` asociado al hosting Ferozo → "CONFIGURADO CORRECTAMENTE". Sirve `public_html`.
+2. [x] Web vieja de `jcherrajes.com` (en `public_html`) respaldada a `.zip`.
+3. [ ] Vaciar `public_html` desde el Administrador de archivos (backup ya hecho).
+4. [ ] Crear los 3 secrets FTP en GitHub y correr el primer deploy (`.github/workflows/deploy.yml`).
+5. [ ] Agregar `jcbarandas.com` al hosting (hoy solo está `.com.ar`).
+6. [ ] SSL Let's Encrypt para `jcbarandas.com.ar` + `www` (panel Ferozo → "Certificados SSL"), esperar a que emita.
+7. [ ] Confirmar que `https://jcbarandas.com.ar` abre el sitio con candado antes del cutover de código.
+
+### Bloqueantes de código (hacer todos juntos en el cutover, cuando el dominio ya resuelve con SSL)
+
+- [ ] **⚠️ Cambiar la cuenta de EmailJS del formulario.** Hoy en `index.html` apunta al **mail personal del desarrollador** (pruebas): `emailjs.init("yegPUG09JEFFWAJuF")`, `service_socgy8q`, `template_novurzk`. Apuntarlo a la casilla real del cliente (o cambiar el template en EmailJS) y activar "allowed origins" = `jcbarandas.com.ar`.
+- [ ] **Probar el formulario de punta a punta** y confirmar que el mail llega. (Opcional: sumar honeypot anti-bot.)
+- [ ] **Quitar `<meta name="robots" content="noindex, nofollow">`** de las 13 páginas (buscar el comentario `<!-- TEMPORAL: ... -->`). **Solo en el cutover** — mientras el sitio viva en la URL temporal, el noindex se queda.
+- [ ] **Cambiar `website-jc.tizdigital.com` → `jcbarandas.com.ar`** en `og:url`, `og:image` y el `schema.org` de la home (≈12 archivos). `sed -i 's#website-jc.tizdigital.com#jcbarandas.com.ar#g'`.
+- [ ] **`<link rel="canonical">` a URLs absolutas** de `https://jcbarandas.com.ar` en las 13 páginas (hoy en `index.html` es `href="/"`, en el resto relativas).
+- [ ] **Crear `robots.txt` y `sitemap.xml`** con URLs de `https://jcbarandas.com.ar`. Después: alta del dominio en Google Search Console + enviar sitemap.
+- [ ] **`web.config`: descomentar el bloque CUTOVER** (forzar HTTPS + dominio canónico + bloquear internos). Solo después de confirmar que el SSL de `jcbarandas.com.ar` funciona. Si tira error 500 = falta el módulo "URL Rewrite" en IIS → pedirlo a soporte DonWeb.
 
 ### Otros
 
