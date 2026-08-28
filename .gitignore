@@ -1,0 +1,20 @@
+# Dependencias (se instalan con `npm install`, no van al repo)
+node_modules/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# Editores / IDEs
+.vscode/
+.idea/
+*.swp
+
+# Archivos temporales de trabajo (previews, capturas, etc.)
+_*.png
+_preview.html
+scratchpad/

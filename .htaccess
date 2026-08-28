@@ -1,0 +1,31 @@
+# ─────────────────────────────────────────────────────────────
+# JC Barandas — reglas de servidor (Apache / Hostinger)
+# ─────────────────────────────────────────────────────────────
+
+# Bloquear acceso web a archivos internos / de desarrollo.
+# Siguen en el repo y se despliegan, pero devuelven 403 si alguien los pide.
+<FilesMatch "^(PROYECTO\.md|notes\.txt|\.gitignore|\.gitattributes|package\.json|package-lock\.json|tailwind\.config\.js|postcss\.config\.js|README(\.md)?)$">
+    Require all denied
+</FilesMatch>
+
+# Bloquear la carpeta .git por si el deploy la deja expuesta.
+RedirectMatch 404 /\.git(/|$)
+
+# ─────────────────────────────────────────────────────────────
+# PENDIENTE al migrar al dominio final (descomentar entonces):
+#
+# # Forzar HTTPS
+# RewriteEngine On
+# RewriteCond %{HTTPS} off
+# RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+#
+# # Caché de estáticos
+# <IfModule mod_expires.c>
+#   ExpiresActive On
+#   ExpiresByType image/jpeg "access plus 1 month"
+#   ExpiresByType image/png "access plus 1 month"
+#   ExpiresByType image/webp "access plus 1 month"
+#   ExpiresByType text/css "access plus 1 week"
+#   ExpiresByType application/javascript "access plus 1 week"
+# </IfModule>
+# ─────────────────────────────────────────────────────────────

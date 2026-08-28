@@ -66,6 +66,7 @@ npm run tailwind   # Compila y observa cambios en el CSS (input.css -> output.cs
 ## Notas
 
 - Repo en GitHub: `aleortizzz/website-jc`
+- **Deploy**: Hostinger **hPanel → Git**. Hostinger hace `git pull` del repo dentro de `public_html`, así que **todo el repo se sirve como web pública**. Después de `git push` hay que disparar el deploy (webhook automático, o botón "Deploy" en hPanel → sitio → Avanzado → Git — verificar cuál está configurado). Como se sirve el repo entero, `.htaccess` bloquea el acceso web a archivos internos (`PROYECTO.md`, `notes.txt`, `package.json`, configs, `.git/`).
 - El formulario de contacto envía los mails vía **EmailJS** (service/template configurados en el `<script>` de [index.html](index.html)); no hay backend propio.
 - El header/footer compartido (`partials/`) se carga con `fetch()`, que **no funciona abriendo el HTML directo desde el explorador de archivos** (`file://...`). Para probar en local hace falta un servidor HTTP simple (ej. extensión "Live Server" de VS Code, o `npx serve`). En Hostinger va a andar normal porque ahí sí se sirve por HTTP.
 - Los links del nav/footer a secciones de la home (Inicio, Proyectos, etc.) ahora apuntan siempre a `/index.html#section-...`, incluso estando ya en la home — antes hacían scroll suave sin recargar. Es la contra de tener un solo header compartido; si se nota molesto se puede revisar más adelante.
@@ -99,13 +100,22 @@ Regla del proyecto: **toda imagen nueva que se suba al sitio pasa por esto antes
 
 ## Pendientes antes de entregar al cliente
 
-- [ ] **Quitar el `<meta name="robots" content="noindex, nofollow">`** agregado en todas las páginas (`index.html`, `modelos/*.html`, `proyectos/*.html`). Se agregó porque el sitio está publicado en Hostinger bajo una URL temporal (no la del cliente) y no queremos que Google la indexe antes de la entrega final. Buscar el comentario `<!-- TEMPORAL: ... -->` en cada archivo.
-- [ ] Verificar que el `<link rel="canonical">` (agregado como ruta relativa, ej. `/modelos/galeria.html`) siga siendo correcto una vez migrado al dominio final del cliente — al ser relativo no debería requerir cambios, pero conviene confirmarlo.
-- [ ] Evaluar agregar `robots.txt` y `sitemap.xml` recién en el dominio final del cliente (no tiene sentido crearlos para la URL temporal de Hostinger).
-- [ ] Decidir si reemplazar `vid_tem_bot_portada_4.jpg` (tiene marca de agua de IA) por una foto real.
-- [ ] Decidir si borrar las imágenes sin uso (`img-hero.png`, `jc-barandas-1920x1080-sin-bordes.png`, `img-caracteristicas.jpg`, `taller.jpeg`, `templado-botones-sin-pasamanos/img-principal2.jpeg`, `logojc-negro.png` viejo).
-- [ ] **Rehacer `index.html` sección `section-proyectos`**: hoy tiene contenido placeholder — el carrusel muestra "Proyecto San Isidro" (con botón "Ver más información" que apuntaba a `proyectos/sanisidro.html`, **página ya eliminada → link roto**), y el grid tiene "Proyecto Cariló" (con "Ubicación: San Isidro") y "Proyecto Andina" (CABA 2023), todos con la misma imagen `Baranda-vidrio-laminado/img-principal.jpeg`. Reemplazar por los 6 proyectos reales (Cariló, Costa Esmeralda, Haras Santa María, Tigre, Edificio Tenaris, Talar del Lago 2), cada tarjeta linkeando a su página en `proyectos/` y con su foto de banner real.
+### Bloqueantes al migrar al dominio final
+
+- [ ] **⚠️ Cambiar la cuenta de EmailJS del formulario de contacto.** Hoy en `index.html` está configurado con el **mail personal del desarrollador** (era para pruebas): `emailjs.init("yegPUG09JEFFWAJuF")`, `service_socgy8q`, `template_novurzk`. Antes/al pasar a producción hay que apuntarlo a la casilla real del cliente (o cambiar el template de EmailJS para que envíe ahí) y subir el cambio. Mientras tanto los mails de prueba llegan al dev; el tráfico es bajo así que no se pierden leads, pero **no olvidarse de esto**.
+- [ ] Antes de lanzar: **probar el formulario de punta a punta** y confirmar que el mail llega a la casilla correcta. Sumar un campo *honeypot* anti-bot y activar "allowed origins" en el panel de EmailJS (que solo acepte envíos desde el dominio del cliente).
+- [ ] **Quitar el `<meta name="robots" content="noindex, nofollow">`** de todas las páginas (`index.html`, `modelos/*.html`, `proyectos/*.html`). Se agregó porque el sitio está en Hostinger bajo una URL temporal y no queremos que Google la indexe antes de la entrega. Buscar el comentario `<!-- TEMPORAL: ... -->` en cada archivo.
+- [ ] **Cambiar las URLs hardcodeadas de la temporal `website-jc.tizdigital.com`** → dominio final. Están en `og:url`, `og:image` y el `schema.org` de la home (≈12 archivos).
+- [ ] Verificar el `<link rel="canonical">` en el dominio final. En `index.html` es `href="/"`; en el resto son rutas relativas. Idealmente pasarlas a URLs absolutas del dominio real.
+- [ ] Agregar `robots.txt` y `sitemap.xml` con las URLs del dominio final. Dar de alta el dominio en Google Search Console y enviar el sitemap.
+- [ ] En `.htaccess`, **descomentar el bloque de "PENDIENTE"** (forzar HTTPS + caché de estáticos). Ojo: si Hostinger ya dejó un `.htaccess` propio en `public_html`, combinar reglas, no pisarlo.
+
+### Otros
+
+- [ ] Decidir si reemplazar `vid_tem_bot_portada_4.jpg` (marca de agua de IA) por una foto real. — *por ahora se deja como está.*
+- [x] ~~Rehacer `index.html` sección `section-proyectos`~~ — hecho: carrusel nuevo (Swiper, tipo "peek") con los 6 proyectos reales, cada card con su foto de banner y link a su página.
 - [x] Los 6 proyectos reales están armados: Cariló, Costa Esmeralda, Haras Santa María, Tigre, Edificio Tenaris, Talar del Lago 2.
-- [x] "Proyectos" en el nav (desktop y mobile) ya es un desplegable con los 6 proyectos, igual que "Modelos".
-- [ ] Sobra una foto sin usar en `src/imgs/proyecto_talar_del_lago_2/IMG_20230312_220001.jpg` — decidir si se usa (habría que agregarla a la página) o se borra.
-- [ ] El link "Proyectos" del footer (columna Navegación) sigue apuntando a `#section-proyectos` de la home, no al desplegable — decidir si conviene armarlo también ahí.
+- [x] "Proyectos" en el nav (desktop y mobile) es un desplegable con los 6 proyectos, igual que "Modelos".
+- [x] "Proyectos" en el footer también es desplegable/lista de los 6 proyectos (columna propia en desktop, acordeón en mobile), igual que "Modelos".
+- [x] Borradas las imágenes sin uso (`img-hero.png`, `jc-barandas-1920x1080-sin-bordes.png`, `img-caracteristicas.jpg`, `taller.jpeg`, `logo.png`, `logojc-negro.png` viejo, `templado-botones-sin-pasamanos/img-principal2.jpeg`, `proyecto_talar_del_lago_2/IMG_20230312_220001.jpg`, 2 fotos crudas de Tenaris). `src/imgs` bajó de ~21 MB a ~14 MB.
+- [x] Agregado `.gitignore` y `node_modules` sacado del control de versiones (sigue en disco, se reinstala con `npm install`).

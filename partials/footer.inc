@@ -1,7 +1,7 @@
 <footer class="bg-slate-900">
 
   <!-- Footer desktop -->
-  <div class="grid grid-cols-5 p-10 max-md:hidden">
+  <div class="grid grid-cols-6 p-10 max-md:hidden">
     <div class="flex flex-col col-span-2 w-2/4">
       <a href="/index.html">
         <img loading="lazy" src="/src/imgs/logo-jc-blanco.png" class="w-28" alt="Logo Jc barandas">
@@ -36,9 +36,22 @@
         <h3 class="font-semibold mb-2">Navegación</h3>
         <ul class="space-y-2 text-sm text-white/80">
           <li><a class=" hover:text-blue-600 transition-all" href="/index.html#section-inicio">Inicio</a></li>
-          <li><a class=" hover:text-blue-600 transition-all" href="/index.html#section-proyectos">Proyectos</a></li>
           <li><a class=" hover:text-blue-600 transition-all" href="/index.html#section-especificaciones">Especificaciones</a></li>
           <li><a class=" hover:text-blue-600 transition-all" href="/index.html#section-contacto">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class=" flex flex-col items-center">
+      <div class="w-3/4 ">
+        <h3 class="font-semibold mb-2">Proyectos</h3>
+        <ul class="space-y-2 text-sm text-white/80">
+          <li><a class=" hover:text-blue-600 transition-all" href="/proyectos/carilo.html">Cariló</a></li>
+          <li><a class=" hover:text-blue-600 transition-all" href="/proyectos/costa_esmeralda.html">Costa Esmeralda</a></li>
+          <li><a class=" hover:text-blue-600 transition-all" href="/proyectos/haras_santa_maria.html">Haras Santa María</a></li>
+          <li><a class=" hover:text-blue-600 transition-all" href="/proyectos/tigre.html">Tigre</a></li>
+          <li><a class=" hover:text-blue-600 transition-all" href="/proyectos/tenaris.html">Edificio Tenaris</a></li>
+          <li><a class=" hover:text-blue-600 transition-all" href="/proyectos/talar_del_lago_2.html">Talar del Lago 2</a></li>
         </ul>
       </div>
     </div>
@@ -116,6 +129,31 @@
         </li>
         <li><a class="hover:text-color-principal transition-colors" href="/modelos/barandas_exterior.html">Barandas de exterior</a></li>
         <li><a class="hover:text-color-principal transition-colors" href="/modelos/otros.html">Otros</a></li>
+      </ul>
+    </details>
+
+    <hr class="border-t border-white/10">
+
+    <details class="group">
+      <summary class="flex items-center justify-center py-4 cursor-pointer list-none font-medium gap-2">
+
+        <svg class="w-4 h-4 transition-transform duration-300 group-open:rotate-180"
+          xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+
+        <span>Proyectos</span>
+
+
+      </summary>
+
+      <ul class="pb-4 pl-2 space-y-3 text-sm text-white/70 text-center">
+        <li><a class="hover:text-color-principal transition-colors" href="/proyectos/carilo.html">Cariló</a></li>
+        <li><a class="hover:text-color-principal transition-colors" href="/proyectos/costa_esmeralda.html">Costa Esmeralda</a></li>
+        <li><a class="hover:text-color-principal transition-colors" href="/proyectos/haras_santa_maria.html">Haras Santa María</a></li>
+        <li><a class="hover:text-color-principal transition-colors" href="/proyectos/tigre.html">Tigre</a></li>
+        <li><a class="hover:text-color-principal transition-colors" href="/proyectos/tenaris.html">Edificio Tenaris</a></li>
+        <li><a class="hover:text-color-principal transition-colors" href="/proyectos/talar_del_lago_2.html">Talar del Lago 2</a></li>
       </ul>
     </details>
 
