@@ -22,7 +22,8 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          protocol: ftps
+          # Ferozo hace FTPS con TLS viejo -> "ftps-legacy" lo tolera (sigue encriptado)
+          protocol: ftps-legacy
           port: 21
           # La cuenta FTP w1750584@jcherrajes.com ya cae dentro de /public_html/
           server-dir: ./
