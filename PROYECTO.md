@@ -18,7 +18,6 @@ Landing page comercial pensada para captar clientes: muestra el trabajo de la em
   - Footer con redes sociales (Instagram, WhatsApp, Facebook)
 
 - **[modelos/](modelos/)** — Páginas de detalle de modelos de barandas (son las que aparecen en el desplegable "Modelos" del nav):
-  - [galeria.html](modelos/galeria.html) — Galería premium de fotos
   - [vid_tem_bot.html](modelos/vid_tem_bot.html) — Vidrio templado y botones
   - [vid_tem_minipostes.html](modelos/vid_tem_minipostes.html) — Vidrio templado y minipostes
   - [vid_tem_estructura.html](modelos/vid_tem_estructura.html) — Vidrio templado y estructura de acero inoxidable
@@ -66,11 +65,10 @@ npm run tailwind   # Compila y observa cambios en el CSS (input.css -> output.cs
 ## Notas
 
 - Repo en GitHub: `aleortizzz/website-jc`
-- **Deploy**: Hostinger **hPanel → Git**. Hostinger hace `git pull` del repo dentro de `public_html`, así que **todo el repo se sirve como web pública**. Después de `git push` hay que disparar el deploy (webhook automático, o botón "Deploy" en hPanel → sitio → Avanzado → Git — verificar cuál está configurado). Como se sirve el repo entero, `.htaccess` bloquea el acceso web a archivos internos (`PROYECTO.md`, `notes.txt`, `package.json`, configs, `.git/`).
+- **Deploy**: hosting en **DonWeb** (cPanel), vía **Git Version Control**. cPanel hace `git pull` del repo dentro de `public_html`, así que **todo el repo se sirve como web pública**. El pull es automático al hacer `git push` (webhook ya configurado; el sitio cambia solo en 1-2 min). Como se sirve el repo entero, `.htaccess` bloquea el acceso web a archivos internos (`PROYECTO.md`, `notes.txt`, `package.json`, configs, `.git/`).
 - El formulario de contacto envía los mails vía **EmailJS** (service/template configurados en el `<script>` de [index.html](index.html)); no hay backend propio.
 - El header/footer compartido (`partials/`) se carga con `fetch()`, que **no funciona abriendo el HTML directo desde el explorador de archivos** (`file://...`). Para probar en local hace falta un servidor HTTP simple (ej. extensión "Live Server" de VS Code, o `npx serve`). En Hostinger va a andar normal porque ahí sí se sirve por HTTP.
 - Los links del nav/footer a secciones de la home (Inicio, Proyectos, etc.) ahora apuntan siempre a `/index.html#section-...`, incluso estando ya en la home — antes hacían scroll suave sin recargar. Es la contra de tener un solo header compartido; si se nota molesto se puede revisar más adelante.
-- `modelos/galeria.html` no tiene header/footer (parece pensada como página standalone) — se dejó como estaba, sin el include.
 - El nav de escritorio (con los 5 modelos + Proyectos + Especificaciones + Contacto + mail) necesita bastante ancho para no amontonarse. Por eso el menú hamburguesa se usa hasta los 1280px de ancho de pantalla, y recién de ahí para arriba se ve el menú horizontal completo.
 - `vid_tem_minipostes.html` ya tiene sus fotos reales (`src/imgs/vid_tem_minpostes/`, nota: la carpeta quedó con ese typo — falta la "i" de "minipostes" — no lo corregí para no romper los links, se puede renombrar más adelante si se quiere prolijo).
 - `vid_tem_estructura.html` ya tiene sus fotos reales (`src/imgs/vid_tem_estructura/`, esta carpeta sin typo).
@@ -113,6 +111,12 @@ Regla del proyecto: **toda imagen nueva que se suba al sitio pasa por esto antes
 ### Otros
 
 - [ ] Decidir si reemplazar `vid_tem_bot_portada_4.jpg` (marca de agua de IA) por una foto real. — *por ahora se deja como está.*
+- [ ] **`unpkg.com/lucide@latest`** en 13 páginas (íconos): pinear una versión concreta y, si se puede, mover a cdnjs. `@latest` sin fijar puede romper los íconos si sale una versión con cambios. — *dejado así por ahora.*
+- [ ] **Avatares de testimonios hotlinkeados de Google** (`lh3.googleusercontent.com`, 5 imágenes en la home): descargar, optimizar y servir localmente. Esas URLs de Google pueden expirar. — *dejado así por ahora.*
+- [x] QA: los botones "Ver más imágenes" de la home (sección modelos) apuntaban a `href="#"` (muertos) → ahora van a `vid_tem_bot.html` y `vid_tem_estructura.html`.
+- [x] QA: el botón "Ver proyectos" del hero no hacía nada → ahora scrollea a `#section-proyectos` (el carrusel).
+- [x] QA: `modelos/galeria.html` borrada — era una prueba a medio hacer (clases de debug, Tailwind Play CDN, sin linkear desde ningún lado), como `sanisidro.html`.
+- [x] QA: headers de las 6 páginas de proyecto — título/subtítulo con `text-center max-w-3xl` y `h1` responsive (`text-3xl md:text-4xl`).
 - [x] ~~Rehacer `index.html` sección `section-proyectos`~~ — hecho: carrusel nuevo (Swiper, tipo "peek") con los 6 proyectos reales, cada card con su foto de banner y link a su página.
 - [x] Los 6 proyectos reales están armados: Cariló, Costa Esmeralda, Haras Santa María, Tigre, Edificio Tenaris, Talar del Lago 2.
 - [x] "Proyectos" en el nav (desktop y mobile) es un desplegable con los 6 proyectos, igual que "Modelos".
