@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700;800;900&display=swap"
     rel="stylesheet" />
-  <link rel="stylesheet" href="src/output.css?v=17">
+  <link rel="stylesheet" href="src/output.css?v=18">
   <link rel="icon" href="./src/imgs/faviconJC.png" type="image/x-icon">
 <title>JC Barandas | Barandas de Acero Inoxidable y Vidrio templado</title>
 
@@ -67,6 +67,44 @@
     ]
   }
   </script>
+
+  <style>
+    /* Carrusel de proyectos realizados */
+    .projects-swiper .swiper-slide {
+      height: auto;
+      opacity: .4;
+      transform: scale(.92);
+      transition: opacity .55s ease, transform .55s ease;
+    }
+
+    .projects-swiper .swiper-slide-active {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .projects-pagination {
+      position: static !important;
+      width: auto !important;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .projects-pagination .swiper-pagination-bullet {
+      width: 22px;
+      height: 4px;
+      margin: 0 !important;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, .22);
+      opacity: 1;
+      transition: background .3s ease, width .3s ease;
+    }
+
+    .projects-pagination .swiper-pagination-bullet-active {
+      width: 40px;
+      background: #2563eb;
+    }
+  </style>
 
 </head>
 
@@ -504,153 +542,222 @@
     <section id="section-proyectos" class="mt-40 scroll-mt-40">
 
       <!-- TÍTULO -->
-      <div class="px-10 mb-16">
-        <h2 class="text-4xl font-semibold text-white">
+      <div class="max-w-7xl mx-auto px-10 mb-14">
+        <span class="text-sm font-semibold uppercase tracking-[0.2em] text-blue-500">Portfolio</span>
+        <h2 class="text-3xl md:text-4xl font-semibold text-white mt-3">
           Proyectos realizados
         </h2>
-        <p class="text-white/70 mt-2 max-w-xl">
-          Algunos de los trabajos realizados en vidrio templado y acero inoxidable,
-          diseñados a medida para cada espacio.
+        <p class="text-white/70 mt-3 max-w-xl">
+          Una selección de trabajos en vidrio templado y acero inoxidable,
+          diseñados e instalados a medida para cada espacio.
         </p>
       </div>
 
-
-
-
-      <div class="swiper mySwiper mb-10 mx-2 px-6">
+      <!-- CARRUSEL -->
+      <div class="swiper projects-swiper max-w-7xl mx-auto px-6 !py-2">
         <div class="swiper-wrapper">
 
-          <!-- SLIDE 1 -->
-          <div class="swiper-slide relative overflow-hidden rounded-xl">
+          <!-- Cariló -->
+          <div class="swiper-slide">
+            <article class="group relative overflow-hidden rounded-3xl border border-white/10 bg-slate-950">
+              <img loading="lazy" src="/src/imgs/proyecto_carilo/carilo_banner.jpg"
+                alt="Baranda de vidrio templado sin marco en el balcón de una vivienda en Cariló"
+                class="h-[420px] md:h-[520px] w-full object-cover transition-transform duration-700 group-hover:scale-105" />
+              <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/80 to-transparent"></div>
 
-            <!-- IMAGEN -->
-            <img loading="lazy"  src="./src/imgs/Baranda-vidrio-laminado/img-principal.jpeg" class="w-full h-[600px] object-cover" alt="Proyecto realizado en san isidro de barandas de vidrio templado"/>
-
-            <!-- OVERLAY -->
-            <div class="absolute inset-0 bg-black/50"></div>
-
-            <!-- 🔝 TÍTULO ARRIBA -->
-            <div class="absolute top-0 left-0 p-6 text-white z-10">
-              <h2 class="text-3xl font-bold">Proyecto San Isidro</h2>
-
-              <div class="flex gap-2 mt-4">
-                <span class="badge badge-outline">Vidrio</span>
-                <span class="badge badge-outline">Acero</span>
+              <div class="absolute inset-x-0 bottom-0 p-7 md:p-10">
+                <div class="mb-3 flex items-center gap-1.5 text-sm text-white/60">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
+                  <span>Cariló, Buenos Aires</span>
+                </div>
+                <h3 class="text-2xl md:text-3xl font-bold text-white">Proyecto Cariló</h3>
+                <p class="mt-3 max-w-xl leading-relaxed text-white/70 max-md:hidden">
+                  Barandas de vidrio templado sin marco en balcones y terrazas, sin perfiles que
+                  corten la vista y con una terminación preparada para la intemperie del bosque.
+                </p>
+                <div class="mt-5 flex flex-wrap gap-2">
+                  <span class="rounded-full border border-blue-600/50 px-3 py-1 text-xs font-medium text-blue-400">Vidrio templado</span>
+                  <span class="rounded-full border border-blue-600/50 px-3 py-1 text-xs font-medium text-blue-400">Sin marco</span>
+                </div>
+                <a href="proyectos/carilo.html"
+                  class="mt-6 inline-flex items-center gap-2 rounded-xl bg-blue-600 px-5 py-2.5 font-medium text-white transition-all hover:bg-blue-500">
+                  Ver proyecto
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </a>
               </div>
-            </div>
-
-            <!-- 🟡 TEXTO CENTRADO EN EL MEDIO -->
-            <div
-              class="absolute inset-0 flex items-center max-md:items-start max-md:mt-32  justify-center text-white z-10 px-6">
-              <p class="text-white/80 text-center w-[800px]">
-                Un proyecto que refleja elegancia y modernidad a través de barandas en vidrio laminado, combinadas con
-                detalles en acero de alta calidad. Diseñado para maximizar la luminosidad y brindar seguridad sin perder
-                ligereza visual.
-              </p>
-            </div>
-
-            <!-- 🔽 BOTÓN ABAJO -->
-            <div class="absolute bottom-0 left-0 w-full p-8 flex justify-center mb-6 z-10">
-              <a href="proyectos/sanisidro.html">
-                <button
-                  class="border-2 border-white transition-all hover:bg-blue-600 hover:border-transparent px-6 py-3 rounded-xl text-white">
-                  Ver más información
-                </button>
-              </a>
-            </div>
-
+            </article>
           </div>
 
+          <!-- Costa Esmeralda -->
+          <div class="swiper-slide">
+            <article class="group relative overflow-hidden rounded-3xl border border-white/10 bg-slate-950">
+              <img loading="lazy" src="/src/imgs/proyecto_costa_esmeralda/costa_esmeralda_banner.jpg"
+                alt="Baranda de vidrio templado con estructura de acero inoxidable en la terraza de una vivienda en Costa Esmeralda"
+                class="h-[420px] md:h-[520px] w-full object-cover transition-transform duration-700 group-hover:scale-105" />
+              <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/80 to-transparent"></div>
 
+              <div class="absolute inset-x-0 bottom-0 p-7 md:p-10">
+                <div class="mb-3 flex items-center gap-1.5 text-sm text-white/60">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
+                  <span>Costa Esmeralda, Buenos Aires</span>
+                </div>
+                <h3 class="text-2xl md:text-3xl font-bold text-white">Proyecto Costa Esmeralda</h3>
+                <p class="mt-3 max-w-xl leading-relaxed text-white/70 max-md:hidden">
+                  Barandas de vidrio templado combinadas con estructura de acero inoxidable en balcones
+                  y terrazas, resistentes al viento y la salinidad de la costa sin resignar la vista.
+                </p>
+                <div class="mt-5 flex flex-wrap gap-2">
+                  <span class="rounded-full border border-blue-600/50 px-3 py-1 text-xs font-medium text-blue-400">Vidrio templado</span>
+                  <span class="rounded-full border border-blue-600/50 px-3 py-1 text-xs font-medium text-blue-400">Acero inoxidable</span>
+                </div>
+                <a href="proyectos/costa_esmeralda.html"
+                  class="mt-6 inline-flex items-center gap-2 rounded-xl bg-blue-600 px-5 py-2.5 font-medium text-white transition-all hover:bg-blue-500">
+                  Ver proyecto
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </a>
+              </div>
+            </article>
+          </div>
+
+          <!-- Haras Santa María -->
+          <div class="swiper-slide">
+            <article class="group relative overflow-hidden rounded-3xl border border-white/10 bg-slate-950">
+              <img loading="lazy" src="/src/imgs/proyecto_haras_santa_maria/haras_santa_maria_banner.jpg"
+                alt="Baranda de acero inoxidable con paneles de vidrio en el entrepiso de una vivienda en Haras Santa María"
+                class="h-[420px] md:h-[520px] w-full object-cover transition-transform duration-700 group-hover:scale-105" />
+              <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/80 to-transparent"></div>
+
+              <div class="absolute inset-x-0 bottom-0 p-7 md:p-10">
+                <div class="mb-3 flex items-center gap-1.5 text-sm text-white/60">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
+                  <span>Haras Santa María, Buenos Aires</span>
+                </div>
+                <h3 class="text-2xl md:text-3xl font-bold text-white">Proyecto Haras Santa María</h3>
+                <p class="mt-3 max-w-xl leading-relaxed text-white/70 max-md:hidden">
+                  Baranda de acero inoxidable con paneles de vidrio en el entrepiso y la escalera
+                  interior, con pasamanos y postes que no interrumpen la amplitud visual del living.
+                </p>
+                <div class="mt-5 flex flex-wrap gap-2">
+                  <span class="rounded-full border border-blue-600/50 px-3 py-1 text-xs font-medium text-blue-400">Acero inoxidable</span>
+                  <span class="rounded-full border border-blue-600/50 px-3 py-1 text-xs font-medium text-blue-400">Vidrio</span>
+                </div>
+                <a href="proyectos/haras_santa_maria.html"
+                  class="mt-6 inline-flex items-center gap-2 rounded-xl bg-blue-600 px-5 py-2.5 font-medium text-white transition-all hover:bg-blue-500">
+                  Ver proyecto
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </a>
+              </div>
+            </article>
+          </div>
+
+          <!-- Tigre -->
+          <div class="swiper-slide">
+            <article class="group relative overflow-hidden rounded-3xl border border-white/10 bg-slate-950">
+              <img loading="lazy" src="/src/imgs/proyecto_tigre/tigre_banner.jpg"
+                alt="Baranda de vidrio y acero inoxidable en el balcón de un edificio en Tigre"
+                class="h-[420px] md:h-[520px] w-full object-cover transition-transform duration-700 group-hover:scale-105" />
+              <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/80 to-transparent"></div>
+
+              <div class="absolute inset-x-0 bottom-0 p-7 md:p-10">
+                <div class="mb-3 flex items-center gap-1.5 text-sm text-white/60">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
+                  <span>Tigre, Buenos Aires</span>
+                </div>
+                <h3 class="text-2xl md:text-3xl font-bold text-white">Proyecto Tigre</h3>
+                <p class="mt-3 max-w-xl leading-relaxed text-white/70 max-md:hidden">
+                  Barandas de vidrio con estructura de acero inoxidable en los balcones de las unidades
+                  del edificio: un sistema resistente y de bajo mantenimiento para uso exterior.
+                </p>
+                <div class="mt-5 flex flex-wrap gap-2">
+                  <span class="rounded-full border border-blue-600/50 px-3 py-1 text-xs font-medium text-blue-400">Vidrio</span>
+                  <span class="rounded-full border border-blue-600/50 px-3 py-1 text-xs font-medium text-blue-400">Acero inoxidable</span>
+                </div>
+                <a href="proyectos/tigre.html"
+                  class="mt-6 inline-flex items-center gap-2 rounded-xl bg-blue-600 px-5 py-2.5 font-medium text-white transition-all hover:bg-blue-500">
+                  Ver proyecto
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </a>
+              </div>
+            </article>
+          </div>
+
+          <!-- Edificio Tenaris -->
+          <div class="swiper-slide">
+            <article class="group relative overflow-hidden rounded-3xl border border-white/10 bg-slate-950">
+              <img loading="lazy" src="/src/imgs/proyecto_tenaris/tenaris_banner.jpg"
+                alt="Baranda de acero inoxidable y vidrio en la escalera principal del edificio Tenaris"
+                class="h-[420px] md:h-[520px] w-full object-cover transition-transform duration-700 group-hover:scale-105" />
+              <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/80 to-transparent"></div>
+
+              <div class="absolute inset-x-0 bottom-0 p-7 md:p-10">
+                <div class="mb-3 flex items-center gap-1.5 text-sm text-white/60">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
+                  <span>Escalera principal · Edificio corporativo</span>
+                </div>
+                <h3 class="text-2xl md:text-3xl font-bold text-white">Proyecto Edificio Tenaris</h3>
+                <p class="mt-3 max-w-xl leading-relaxed text-white/70 max-md:hidden">
+                  Baranda de acero inoxidable con paneles de vidrio en la escalera principal,
+                  combinando estructura metálica y vidrio para un espacio de uso corporativo.
+                </p>
+                <div class="mt-5 flex flex-wrap gap-2">
+                  <span class="rounded-full border border-blue-600/50 px-3 py-1 text-xs font-medium text-blue-400">Acero inoxidable</span>
+                  <span class="rounded-full border border-blue-600/50 px-3 py-1 text-xs font-medium text-blue-400">Vidrio</span>
+                </div>
+                <a href="proyectos/tenaris.html"
+                  class="mt-6 inline-flex items-center gap-2 rounded-xl bg-blue-600 px-5 py-2.5 font-medium text-white transition-all hover:bg-blue-500">
+                  Ver proyecto
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </a>
+              </div>
+            </article>
+          </div>
+
+          <!-- Talar del Lago 2 -->
+          <div class="swiper-slide">
+            <article class="group relative overflow-hidden rounded-3xl border border-white/10 bg-slate-950">
+              <img loading="lazy" src="/src/imgs/proyecto_talar_del_lago_2/talar_del_lago_2_banner.jpg"
+                alt="Baranda de acero inoxidable y vidrio en la escalera de una vivienda en Talar del Lago 2"
+                class="h-[420px] md:h-[520px] w-full object-cover transition-transform duration-700 group-hover:scale-105" />
+              <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/80 to-transparent"></div>
+
+              <div class="absolute inset-x-0 bottom-0 p-7 md:p-10">
+                <div class="mb-3 flex items-center gap-1.5 text-sm text-white/60">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
+                  <span>Talar del Lago 2, Buenos Aires</span>
+                </div>
+                <h3 class="text-2xl md:text-3xl font-bold text-white">Proyecto Talar del Lago 2</h3>
+                <p class="mt-3 max-w-xl leading-relaxed text-white/70 max-md:hidden">
+                  Baranda de acero inoxidable con paneles de vidrio en la escalera y el entrepiso,
+                  con pasamanos y postes de acero y un diseño prolijo y funcional.
+                </p>
+                <div class="mt-5 flex flex-wrap gap-2">
+                  <span class="rounded-full border border-blue-600/50 px-3 py-1 text-xs font-medium text-blue-400">Acero inoxidable</span>
+                  <span class="rounded-full border border-blue-600/50 px-3 py-1 text-xs font-medium text-blue-400">Vidrio</span>
+                </div>
+                <a href="proyectos/talar_del_lago_2.html"
+                  class="mt-6 inline-flex items-center gap-2 rounded-xl bg-blue-600 px-5 py-2.5 font-medium text-white transition-all hover:bg-blue-500">
+                  Ver proyecto
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </a>
+              </div>
+            </article>
+          </div>
 
         </div>
-
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-pagination"></div>
       </div>
 
-
-
-
-
-
-      <!-- GRID DE PROYECTOS -->
-      <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12">
-
-
-
-        <!-- DUPLICÁ ESTE BLOQUE PARA OTRO PROYECTO -->
-        <div class="relative h-[60vh] rounded-2xl overflow-hidden group">
-
-          <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
-            style="background-image: url(./src/imgs/Baranda-vidrio-laminado/img-principal.jpeg);"></div>
-
-          <div class="absolute inset-0 bg-black/50 group-hover:bg-black/60 transition-all"></div>
-          <div class="absolute inset-x-0 bottom-0 h-56 bg-gradient-to-t from-black/80 to-transparent"></div>
-
-          <div class="absolute bottom-0 inset-x-0 p-8 z-10 text-white">
-            <h3 class="text-2xl font-semibold">Proyecto Cariló</h3>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-4 text-sm text-white/80">
-              <ul>
-                <li><span class="text-white">Ubicación:</span>San Isidro</li>
-                <li><span class="text-white">Año:</span> 2024</li>
-              </ul>
-
-              <p>
-                Vidrio templado con fijaciones en acero
-              </p>
-
-              <ul>
-                <li>• Vidrio laminado</li>
-                <li>• Estructura de acero</li>
-                <li>• Diseño a medida</li>
-              </ul>
-            </div>
-          </div>
-
-        </div>
-
-
-
-
-
-
-        <!-- DUPLICÁ ESTE BLOQUE PARA OTRO PROYECTO -->
-        <div class="relative h-[60vh] rounded-2xl overflow-hidden group">
-
-          <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
-            style="background-image: url(./src/imgs/Baranda-vidrio-laminado/img-principal.jpeg);"></div>
-
-          <div class="absolute inset-0 bg-black/50 group-hover:bg-black/60 transition-all"></div>
-          <div class="absolute inset-x-0 bottom-0 h-56 bg-gradient-to-t from-black/80 to-transparent"></div>
-
-          <div class="absolute bottom-0 inset-x-0 p-8 z-10 text-white">
-            <h3 class="text-2xl font-semibold">Proyecto Andina</h3>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-4 text-sm text-white/80">
-              <ul>
-                <li><span class="text-white">Ubicación:</span> CABA</li>
-                <li><span class="text-white">Año:</span> 2023</li>
-              </ul>
-
-              <p>
-                Vidrio laminado con estructura y guías en acero
-              </p>
-
-              <ul>
-                <li>• Vidrio laminado</li>
-                <li>• Estructura de acero</li>
-                <li>• Diseño a medida</li>
-              </ul>
-            </div>
-          </div>
-
-        </div>
-
+      <!-- CONTROLES -->
+      <div class="mt-8 flex items-center justify-center gap-5">
+        <button type="button" aria-label="Proyecto anterior"
+          class="projects-prev grid h-11 w-11 place-items-center rounded-full border border-white/15 bg-white/5 text-white transition-all hover:border-blue-600 hover:bg-blue-600">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+        </button>
+        <div class="projects-pagination"></div>
+        <button type="button" aria-label="Proyecto siguiente"
+          class="projects-next grid h-11 w-11 place-items-center rounded-full border border-white/15 bg-white/5 text-white transition-all hover:border-blue-600 hover:bg-blue-600">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+        </button>
       </div>
-
 
     </section>
 
@@ -966,22 +1073,33 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
   <script>
-    const swiper = new Swiper(".mySwiper", {
+    const projectsSwiper = new Swiper(".projects-swiper", {
       loop: true,
+      centeredSlides: true,
+      slidesPerView: 1.1,
+      spaceBetween: 16,
+      grabCursor: true,
+      speed: 600,
 
       autoplay: {
-        delay: 3000,
+        delay: 5000,
         disableOnInteraction: false,
+        pauseOnMouseEnter: true,
       },
 
       navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
+        nextEl: ".projects-next",
+        prevEl: ".projects-prev",
       },
 
       pagination: {
-        el: ".swiper-pagination",
+        el: ".projects-pagination",
         clickable: true,
+      },
+
+      breakpoints: {
+        768: { slidesPerView: 1.4, spaceBetween: 24 },
+        1280: { slidesPerView: 1.8, spaceBetween: 32 },
       },
     });
 
