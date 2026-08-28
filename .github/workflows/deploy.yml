@@ -22,8 +22,9 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          # Ferozo hace FTPS con TLS viejo -> "ftps-legacy" lo tolera (sigue encriptado)
-          protocol: ftps-legacy
+          # El plan de Ferozo solo acepta FTP plano (no soporta FTPS). Ver nota de
+          # seguridad en PROYECTO.md: por eso conviene una contraseña FTP fuerte y random.
+          protocol: ftp
           port: 21
           # La cuenta FTP w1750584@jcherrajes.com ya cae dentro de /public_html/
           server-dir: ./
