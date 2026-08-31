@@ -116,7 +116,7 @@ Dominio **principal**: `https://jcbarandas.com.ar` (sin `www`). El otro dominio 
 
 ### Bloqueantes de código (hacer todos juntos en el cutover, cuando el dominio ya resuelve con SSL)
 
-- [ ] **⚠️ Cambiar la cuenta de EmailJS del formulario.** Hoy en `index.html` apunta al **mail personal del desarrollador** (pruebas): `emailjs.init("yegPUG09JEFFWAJuF")`, `service_socgy8q`, `template_novurzk`. Apuntarlo a la casilla real del cliente (o cambiar el template en EmailJS) y activar "allowed origins" = `jcbarandas.com.ar`.
+- [ ] **⚠️ Cambiar el destino de EmailJS del formulario.** Hoy manda al **mail personal del desarrollador** (pruebas): `emailjs.init("yegPUG09JEFFWAJuF")`, `service_socgy8q`, `template_novurzk` en `index.html`. En el dashboard de EmailJS, cambiar el "To email" del template a **`ventas@jcbarandas.com.ar`** (el mail nuevo del cliente) y activar "allowed origins" = `jcbarandas.com.ar`. (El botón "Enviar por WhatsApp" ya apunta al 11 6446-3400; el mail del sitio en header/footer/schema ya es `ventas@jcbarandas.com.ar`.)
 - [ ] **Probar el formulario de punta a punta** y confirmar que el mail llega. (Opcional: sumar honeypot anti-bot.)
 - [ ] **Quitar `<meta name="robots" content="noindex, nofollow">`** de las 13 páginas (buscar el comentario `<!-- TEMPORAL: ... -->`). **Solo en el cutover** — mientras el sitio viva en la URL temporal, el noindex se queda.
 - [ ] **Cambiar `website-jc.tizdigital.com` → `jcbarandas.com.ar`** en `og:url`, `og:image` y el `schema.org` de la home (≈12 archivos). `sed -i 's#website-jc.tizdigital.com#jcbarandas.com.ar#g'`.

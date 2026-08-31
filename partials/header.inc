@@ -126,10 +126,10 @@
 
         <div class="mt-8 px-6">
 
-          <a href="mailto:ventas@jcherrajes.com"
+          <a href="mailto:ventas@jcbarandas.com.ar"
             class="block rounded-xl bg-black/20 px-5 py-4 text-center hover:bg-black/30 transition-colors">
 
-            ventas@jcherrajes.com
+            ventas@jcbarandas.com.ar
 
           </a>
 
@@ -202,7 +202,7 @@
 
   <div class="flex justify-end  max-md:hidden">
     <a href="/index.html#section-contacto">
-      ventas@jcherrajes.com
+      ventas@jcbarandas.com.ar
     </a>
   </div>
 

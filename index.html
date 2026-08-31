@@ -44,7 +44,7 @@
     "image": "https://website-jc.tizdigital.com/src/imgs/index/hero.jpeg",
     "logo": "https://website-jc.tizdigital.com/src/imgs/logo-jc-negro.png",
     "url": "https://website-jc.tizdigital.com/",
-    "email": "ventas@jcherrajes.com",
+    "email": "ventas@jcbarandas.com.ar",
     "telephone": "+5491164463400",
     "description": "Fabricamos e instalamos barandas, pasamanos y estructuras de acero inoxidable y vidrio templado. Diseños a medida, materiales de calidad y más de 20 años de experiencia.",
     "address": {
@@ -1017,10 +1017,14 @@
                   <option value="Puertas de seguridad">Puertas de seguridad</option>
                 </select>
 
-                <label for="contacto" class="sr-only">número o mail</label>
-                <input id="contacto" class="p-2 pl-4 rounded-3xl"  placeholder="Dejanos un número o mail"
+                <label for="contacto" class="sr-only">Teléfono o WhatsApp</label>
+                <input id="contacto" class="p-2 pl-4 rounded-3xl" type="tel" placeholder="Teléfono / WhatsApp"
                   required>
-                  
+
+                <label for="email" class="sr-only">Email</label>
+                <input id="email" class="p-2 pl-4 rounded-3xl" type="email" placeholder="Tu email"
+                  required>
+
                   <label for="ubicacion" class="sr-only">En que zona estas?</label>
                 <input id="ubicacion" class="p-2 pl-4 rounded-3xl" type="text" placeholder="¿En qué zona estás?"
                   required>
@@ -1139,6 +1143,7 @@
         nombre: document.getElementById("nombre").value,
         interes: document.getElementById("interes").value,
         contacto: document.getElementById("contacto").value,
+        email: document.getElementById("email").value,
         ubicacion: document.getElementById("ubicacion").value,
         mensaje: document.getElementById("mensaje").value,
       };
@@ -1177,10 +1182,11 @@
       const nombre = document.getElementById("nombre").value;
       const interes = document.getElementById("interes").value;
       const contacto = document.getElementById("contacto").value;
+      const email = document.getElementById("email").value;
       const ubicacion = document.getElementById("ubicacion").value;
       const mensaje = document.getElementById("mensaje").value;
 
-      if (!nombre || !interes || !contacto || !ubicacion || !mensaje) {
+      if (!nombre || !interes || !contacto || !email || !ubicacion || !mensaje) {
         mostrarToast("⚠️ Completá todos los campos", "error");
         return;
       }
@@ -1188,7 +1194,8 @@
       const texto = `
 Hola, mi nombre es ${nombre}.
 Estoy interesado en: ${interes}.
-Mi contacto es: ${contacto}.
+Mi teléfono es: ${contacto}.
+Mi email es: ${email}.
 Ubicación: ${ubicacion}.
 
 Mensaje:

@@ -60,7 +60,7 @@
         <h3 class="font-semibold mb-2">Contacto</h3>
         <ul class="space-y-2 text-sm text-white/80">
           <li>Ingeniero Marconi 2816 • Beccar</li>
-          <li>Ventas@jcherrajes.com</li>
+          <li>Ventas@jcbarandas.com.ar</li>
         </ul>
         <h3 class="font-semibold mt-10 mb-2">Telefonos de contacto</h3>
         <ul class="space-y-2 text-sm text-white/70">
@@ -174,7 +174,7 @@
 
       <ul class="pb-4 pl-2 space-y-3 text-sm text-white/70 text-center">
         <li class="hover:text-color-principal transition-colors">Ingeniero Marconi 2816 • Beccar</li>
-        <li class="hover:text-color-principal transition-colors">Ventas@jcherrajes.com</li>
+        <li class="hover:text-color-principal transition-colors">Ventas@jcbarandas.com.ar</li>
       </ul>
     </details>
 
