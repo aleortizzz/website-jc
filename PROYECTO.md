@@ -123,6 +123,9 @@ Dominio **principal**: `https://jcbarandas.com.ar` (sin `www`). El otro dominio 
 - [ ] **`<link rel="canonical">` a URLs absolutas** de `https://jcbarandas.com.ar` en las 13 páginas (hoy en `index.html` es `href="/"`, en el resto relativas).
 - [ ] **Crear `robots.txt` y `sitemap.xml`** con URLs de `https://jcbarandas.com.ar`. Después: alta del dominio en Google Search Console + enviar sitemap.
 - [ ] **`web.config`: descomentar el bloque CUTOVER** (forzar HTTPS + dominio canónico + bloquear internos). Solo después de confirmar que el SSL de `jcbarandas.com.ar` funciona. Si tira error 500 = falta el módulo "URL Rewrite" en IIS → pedirlo a soporte DonWeb.
+- [ ] **URLs limpias en páginas internas** (si el módulo "URL Rewrite" está disponible). Los links internos ya apuntan a `/` y `/#section-...` (sin `index.html`), pero las páginas internas todavía muestran `.html` en la URL. Agregar al `web.config`:
+  - Regla que sirva `/modelos/xxx` → `/modelos/xxx.html` y `/proyectos/xxx` → `/proyectos/xxx.html` (URLs sin extensión), y actualizar los `href` de los desplegables del nav/footer para que no lleven `.html`.
+  - Regla 301 de `/index.html` → `/` (para bookmarks viejos y para no tener `/` y `/index.html` como dos URLs indexables).
 
 ### Otros
 
