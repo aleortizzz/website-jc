@@ -3,7 +3,7 @@
   <!-- Footer desktop -->
   <div class="grid grid-cols-6 p-10 max-md:hidden">
     <div class="flex flex-col col-span-2 w-2/4">
-      <a href="/index.html">
+      <a href="/">
         <img loading="lazy" src="/src/imgs/logo-jc-blanco.png" class="w-28" alt="Logo Jc barandas">
       </a>
       <div class="text-sm mt-3 ">
@@ -35,9 +35,9 @@
       <div class="w-2/4 ">
         <h3 class="font-semibold mb-2">Navegación</h3>
         <ul class="space-y-2 text-sm text-white/80">
-          <li><a class=" hover:text-blue-600 transition-all" href="/index.html#section-inicio">Inicio</a></li>
-          <li><a class=" hover:text-blue-600 transition-all" href="/index.html#section-especificaciones">Especificaciones</a></li>
-          <li><a class=" hover:text-blue-600 transition-all" href="/index.html#section-contacto">Contacto</a></li>
+          <li><a class=" hover:text-blue-600 transition-all" href="/#section-inicio">Inicio</a></li>
+          <li><a class=" hover:text-blue-600 transition-all" href="/#section-especificaciones">Especificaciones</a></li>
+          <li><a class=" hover:text-blue-600 transition-all" href="/#section-contacto">Contacto</a></li>
         </ul>
       </div>
     </div>
@@ -94,13 +94,13 @@
 
       <ul class="pb-4 pl-2 space-y-3 text-sm text-white/70 text-center">
         <li><a class="hover:text-color-principal transition-colors"
-            href="/index.html#section-inicio">Inicio</a></li>
+            href="/#section-inicio">Inicio</a></li>
         <li><a class="hover:text-color-principal transition-colors"
-            href="/index.html#section-proyectos">Proyectos</a></li>
+            href="/#section-proyectos">Proyectos</a></li>
         <li><a class="hover:text-color-principal transition-colors"
-            href="/index.html#section-especificaciones">Especificaciones</a></li>
+            href="/#section-especificaciones">Especificaciones</a></li>
         <li><a class="hover:text-color-principal transition-colors"
-            href="/index.html#section-contacto">Contacto</a></li>
+            href="/#section-contacto">Contacto</a></li>
       </ul>
     </details>
 

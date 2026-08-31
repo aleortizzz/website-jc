@@ -4,7 +4,7 @@
   <div class="flex justify-between items-center w-full px-4">
 
     <div>
-      <a href="/index.html"><img src="/src/imgs/logo-jc-blanco.png" class="w-20" alt="Logo-Jc"></a>
+      <a href="/"><img src="/src/imgs/logo-jc-blanco.png" class="w-20" alt="Logo-Jc"></a>
     </div>
 
     <details id="mobile-menu">
@@ -19,7 +19,7 @@
       <div class="absolute left-0 top-full w-full h-screen bg-gray-900 z-50">
 
         <!-- Inicio -->
-        <a href="/index.html#section-inicio"
+        <a href="/#section-inicio"
           class="flex items-center px-6 py-5 border-b border-gray-700 hover:bg-gray-800 transition-colors">
           Inicio
         </a>
@@ -114,12 +114,12 @@
 
         </details>
 
-        <a href="/index.html#section-especificaciones"
+        <a href="/#section-especificaciones"
           class="flex items-center px-6 py-5 border-b border-gray-700 hover:bg-gray-800 transition-colors">
           Especificaciones
         </a>
 
-        <a href="/index.html#section-contacto"
+        <a href="/#section-contacto"
           class="flex items-center px-6 py-5 border-b border-gray-700 hover:bg-gray-800 transition-colors">
           Contacto
         </a>
@@ -145,14 +145,14 @@
 <nav id="navbar" class="fixed top-0 grid grid-cols-3 items-center px-10 py-3 w-full z-20 max-xl:hidden">
 
   <div>
-    <a href="/index.html#section-inicio">
+    <a href="/#section-inicio">
       <img id="imgheader" src="/src/imgs/logo-jc-blanco.png"
         class="w-36 max-md:w-20 max-md:mb-2 transition-all duration-300" alt="Logo JC barandas">
     </a>
   </div>
 
   <div class="flex justify-between">
-    <a href="/index.html#section-inicio" class="hover:text-blue-600 transition-all cursor-pointer">Inicio</a>
+    <a href="/#section-inicio" class="hover:text-blue-600 transition-all cursor-pointer">Inicio</a>
 
     <div class="relative group">
       <button class="flex items-center gap-2 hover:text-blue-600 transition-all">
@@ -196,12 +196,12 @@
         <a href="/proyectos/talar_del_lago_2.html" class="block px-4 py-3 hover:bg-gray-100">Talar del Lago 2</a>
       </div>
     </div>
-    <a href="/index.html#section-especificaciones" class="hover:text-blue-600 transition-all cursor-pointer">Especificaciones</a>
-    <a href="/index.html#section-contacto" class="hover:text-blue-600 transition-all cursor-pointer font-semibold">Contacto</a>
+    <a href="/#section-especificaciones" class="hover:text-blue-600 transition-all cursor-pointer">Especificaciones</a>
+    <a href="/#section-contacto" class="hover:text-blue-600 transition-all cursor-pointer font-semibold">Contacto</a>
   </div>
 
   <div class="flex justify-end  max-md:hidden">
-    <a href="/index.html#section-contacto">
+    <a href="/#section-contacto">
       ventas@jcbarandas.com.ar
     </a>
   </div>
