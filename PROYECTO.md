@@ -114,16 +114,26 @@ Dominio **principal**: `https://jcbarandas.com.ar` (sin `www`). El otro dominio 
 6. [x] **SSL resuelto vía migración de servidor.** El Windows viejo no podía emitir certificados → DonWeb migró la cuenta a un Windows más nuevo (sin costo). SSL Let's Encrypt instalado para `jcbarandas.com.ar`. FTP host sin cambios. El sitio renderiza OK post-migración (deploy y `.inc` mimeMap del `web.config` sobrevivieron).
 7. [x] `https://jcbarandas.com.ar` abre con candado, sitio completo OK (verificado con canary de deploy).
 
-### Bloqueantes de código
+### Cutover — HECHO (2026-09-02)
 
-- [ ] **⚠️ EmailJS del formulario.** `emailjs.init("yegPUG09JEFFWAJuF")`, `service_socgy8q`, `template_novurzk` en `index.html`. En el dashboard de EmailJS ya está: To → `ventas@jcbarandas.com.ar`, Reply To → `{{email}}`, Bcc → gmail del dev (con OK del cliente, para monitoreo), template HTML dark. **Falta:** activar "allowed origins" con **las dos** variantes (`http://jcbarandas.com.ar` y `https://jcbarandas.com.ar`) y una prueba final de punta a punta.
-- [x] Formulario probado de punta a punta (funciona, mail llega con el template lindo).
-- [x] **`noindex` + comentario `<!-- TEMPORAL -->` quitados** de las 12 páginas.
+- [x] **`noindex` + comentario `<!-- TEMPORAL -->` quitados** de las 12 páginas. Sitio indexable.
 - [x] **`website-jc.tizdigital.com` → `jcbarandas.com.ar`** en `og:url`, `og:image` y `schema.org` (12 archivos).
 - [x] **`<link rel="canonical">` a URLs absolutas** `https://jcbarandas.com.ar/...` en las 12 páginas.
-- [x] **`robots.txt` y `sitemap.xml` creados** (raíz del repo, `https://jcbarandas.com.ar`, 12 URLs). Se deployan con el sitio. **Pendiente:** dar de alta el dominio en Google Search Console y enviar el sitemap. Si se hacen URLs sin `.html`, actualizar los `<loc>`.
-- [ ] **`web.config`: descomentar el bloque CUTOVER** (forzar HTTPS + dominio canónico `jcherrajes.*`/`www`/`jcbarandas.com` → `jcbarandas.com.ar` + bloquear internos). Necesita el módulo "URL Rewrite" de IIS — **confirmar con soporte DonWeb si el servidor nuevo lo tiene**. Si al descomentar tira 500, revertir y pedir el módulo.
-- [ ] **URLs limpias en páginas internas** (si el módulo "URL Rewrite" está disponible). Los links internos ya apuntan a `/` y `/#section-...` (sin `index.html`), pero las páginas internas todavía muestran `.html` en la URL. Agregar al `web.config`:
+- [x] **`web.config` Parte B**: módulo "URL Rewrite" confirmado presente en el server nuevo. Reglas activas: bloquear internos (`.ftp-deploy-sync-state.json`, `web.config` → 404), forzar HTTPS (con guarda `X-Forwarded-Proto` anti-loop), dominio canónico (cualquier host ≠ `jcbarandas.com.ar` → 301 a `https://jcbarandas.com.ar/{path}`). Todo verificado funcionando.
+- [x] Formulario probado de punta a punta (mail llega con el template dark).
+- [x] `robots.txt` y `sitemap.xml` en la raíz, deployados.
+- [x] `dangerous-clean-slate` removido del workflow → deploys incrementales.
+
+### Pendiente (lado cliente / externo)
+
+- [ ] **`jcbarandas.com`** (el `.com`): agregarlo al hosting Ferozo para que también caiga en el redirect a `.com.ar`. Hoy no está configurado (no sirve el sitio). Alternativa: redirect a nivel registrador.
+- [ ] **EmailJS "allowed origins"**: agregar `https://jcbarandas.com.ar` (con HTTPS forzado, alcanza esa sola variante).
+- [ ] **Google Search Console**: dar de alta `jcbarandas.com.ar` y enviar `https://jcbarandas.com.ar/sitemap.xml`.
+- [ ] **Certificados SSL para `jcherrajes.*`** (opcional): así `https://jcherrajes.com` redirige sin aviso de certificado. Chequear en el panel si la migración ya los generó; si no, es menor (poca gente escribe esa URL).
+
+### Mejoras opcionales (ya posibles, URL Rewrite disponible)
+
+- [ ] **URLs limpias en páginas internas**. Los links internos ya apuntan a `/` y `/#section-...`, pero las páginas internas muestran `.html`. Agregar al `web.config`:
   - Regla que sirva `/modelos/xxx` → `/modelos/xxx.html` y `/proyectos/xxx` → `/proyectos/xxx.html` (URLs sin extensión), y actualizar los `href` de los desplegables del nav/footer para que no lleven `.html`.
   - Regla 301 de `/index.html` → `/` (para bookmarks viejos y para no tener `/` y `/index.html` como dos URLs indexables).
 
