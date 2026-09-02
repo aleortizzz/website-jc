@@ -126,16 +126,17 @@ Dominio **principal**: `https://jcbarandas.com.ar` (sin `www`). El otro dominio 
 
 ### Pendiente (lado cliente / externo)
 
-- [ ] **`jcbarandas.com`** (el `.com`): agregarlo al hosting Ferozo para que también caiga en el redirect a `.com.ar`. Hoy no está configurado (no sirve el sitio). Alternativa: redirect a nivel registrador.
+- [ ] **`jcbarandas.com`** (el `.com`): agregarlo al hosting Ferozo (mejor por "Certificados SSL → Configurar dominio", así genera el SSL solo) para que también caiga en el redirect a `.com.ar`. Hoy no está configurado.
 - [ ] **EmailJS "allowed origins"**: agregar `https://jcbarandas.com.ar` (con HTTPS forzado, alcanza esa sola variante).
 - [ ] **Google Search Console**: dar de alta `jcbarandas.com.ar` y enviar `https://jcbarandas.com.ar/sitemap.xml`.
-- [ ] **Certificados SSL para `jcherrajes.*`** (opcional): así `https://jcherrajes.com` redirige sin aviso de certificado. Chequear en el panel si la migración ya los generó; si no, es menor (poca gente escribe esa URL).
 
-### Mejoras opcionales (ya posibles, URL Rewrite disponible)
+### Opcional — para más tarde (no bloqueante)
 
-- [ ] **URLs limpias en páginas internas**. Los links internos ya apuntan a `/` y `/#section-...`, pero las páginas internas muestran `.html`. Agregar al `web.config`:
+- [ ] **URLs limpias en páginas internas**. Los links internos ya apuntan a `/` y `/#section-...`, pero las páginas internas muestran `.html`. El módulo URL Rewrite está disponible, así que se puede. Agregar al `web.config`:
   - Regla que sirva `/modelos/xxx` → `/modelos/xxx.html` y `/proyectos/xxx` → `/proyectos/xxx.html` (URLs sin extensión), y actualizar los `href` de los desplegables del nav/footer para que no lleven `.html`.
   - Regla 301 de `/index.html` → `/` (para bookmarks viejos y para no tener `/` y `/index.html` como dos URLs indexables).
+  - Si se hace, actualizar los `<loc>` del `sitemap.xml`.
+- [ ] **Certificados SSL para `jcherrajes.*`**: así `https://jcherrajes.com` (y `.online` / `.store`) redirigen sin aviso de certificado. Chequear en el panel si la migración ya los generó; si no, es menor (poca gente escribe esas URLs con `https://` a mano).
 
 ### Otros
 
