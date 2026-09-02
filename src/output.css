@@ -1662,12 +1662,12 @@ html {
   height: 300px;
 }
 
-.h-\[40vh\] {
-  height: 40vh;
-}
-
 .h-\[420px\] {
   height: 420px;
+}
+
+.h-\[46vh\] {
+  height: 46vh;
 }
 
 .h-\[480px\] {
@@ -2906,6 +2906,10 @@ html {
 
   .md\:p-10 {
     padding: 2.5rem;
+  }
+
+  .md\:pt-24 {
+    padding-top: 6rem;
   }
 
   .md\:text-3xl {
