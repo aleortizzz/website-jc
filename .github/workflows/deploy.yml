@@ -28,10 +28,6 @@ jobs:
           port: 21
           # La cuenta FTP w1750584@jcherrajes.com ya cae dentro de /public_html/
           server-dir: ./
-          # TEMPORAL: borra todo lo que haya en public_html antes de subir (para limpiar
-          # la web vieja de jcherrajes en el primer deploy). Quitar esta línea una vez
-          # confirmado que el sitio nuevo carga bien — deja los deploys incrementales.
-          dangerous-clean-slate: true
           # Archivos que NO se suben al hosting (tooling, docs internas, temporales)
           exclude: |
             **/.git*

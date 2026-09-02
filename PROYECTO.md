@@ -108,21 +108,21 @@ Dominio **principal**: `https://jcbarandas.com.ar` (sin `www`). El otro dominio 
 **Setup en el panel (progreso):**
 1. [x] `jcbarandas.com.ar` asociado al hosting Ferozo → "CONFIGURADO CORRECTAMENTE". Sirve `public_html`.
 2. [x] Web vieja de `jcherrajes.com` (en `public_html`) respaldada a `.zip`.
-3. [ ] Vaciar `public_html` desde el Administrador de archivos (backup ya hecho).
-4. [ ] Crear los 3 secrets FTP en GitHub y correr el primer deploy (`.github/workflows/deploy.yml`).
+3. [x] `public_html` limpiado en el primer deploy (el workflow tenía `dangerous-clean-slate`, ya removido).
+4. [x] 3 secrets FTP en GitHub (`FTP_SERVER=w1750584.ferozo.com`, `FTP_USERNAME=w1750584@jcherrajes.com`, `FTP_PASSWORD`) + deploy funcionando (FTP plano; el plan no soporta FTPS).
 5. [ ] Agregar `jcbarandas.com` al hosting (hoy solo está `.com.ar`).
-6. [ ] SSL Let's Encrypt para `jcbarandas.com.ar` + `www` (panel Ferozo → "Certificados SSL"), esperar a que emita.
-7. [ ] Confirmar que `https://jcbarandas.com.ar` abre el sitio con candado antes del cutover de código.
+6. [x] **SSL resuelto vía migración de servidor.** El Windows viejo no podía emitir certificados → DonWeb migró la cuenta a un Windows más nuevo (sin costo). SSL Let's Encrypt instalado para `jcbarandas.com.ar`. FTP host sin cambios. El sitio renderiza OK post-migración (deploy y `.inc` mimeMap del `web.config` sobrevivieron).
+7. [x] `https://jcbarandas.com.ar` abre con candado, sitio completo OK (verificado con canary de deploy).
 
-### Bloqueantes de código (hacer todos juntos en el cutover, cuando el dominio ya resuelve con SSL)
+### Bloqueantes de código
 
-- [ ] **⚠️ Cambiar el destino de EmailJS del formulario.** Hoy manda al **mail personal del desarrollador** (pruebas): `emailjs.init("yegPUG09JEFFWAJuF")`, `service_socgy8q`, `template_novurzk` en `index.html`. En el dashboard de EmailJS, cambiar el "To email" del template a **`ventas@jcbarandas.com.ar`** (el mail nuevo del cliente) y activar "allowed origins" = `jcbarandas.com.ar`. (El botón "Enviar por WhatsApp" ya apunta al 11 6446-3400; el mail del sitio en header/footer/schema ya es `ventas@jcbarandas.com.ar`.)
-- [ ] **Probar el formulario de punta a punta** y confirmar que el mail llega. (Opcional: sumar honeypot anti-bot.)
-- [ ] **Quitar `<meta name="robots" content="noindex, nofollow">`** de las 13 páginas (buscar el comentario `<!-- TEMPORAL: ... -->`). **Solo en el cutover** — mientras el sitio viva en la URL temporal, el noindex se queda.
-- [ ] **Cambiar `website-jc.tizdigital.com` → `jcbarandas.com.ar`** en `og:url`, `og:image` y el `schema.org` de la home (≈12 archivos). `sed -i 's#website-jc.tizdigital.com#jcbarandas.com.ar#g'`.
-- [ ] **`<link rel="canonical">` a URLs absolutas** de `https://jcbarandas.com.ar` en las 13 páginas (hoy en `index.html` es `href="/"`, en el resto relativas).
-- [x] **`robots.txt` y `sitemap.xml` creados** (raíz del repo, URLs `https://jcbarandas.com.ar`, 12 URLs: home + 5 modelos + 6 proyectos). Se deployan con el sitio. **Pendiente en el cutover:** dar de alta el dominio en Google Search Console y enviar el sitemap. Si en el cutover se hacen las URLs sin `.html` (regla URL Rewrite), actualizar los `<loc>` del `sitemap.xml` para que coincidan.
-- [ ] **`web.config`: descomentar el bloque CUTOVER** (forzar HTTPS + dominio canónico + bloquear internos). Solo después de confirmar que el SSL de `jcbarandas.com.ar` funciona. Si tira error 500 = falta el módulo "URL Rewrite" en IIS → pedirlo a soporte DonWeb.
+- [ ] **⚠️ EmailJS del formulario.** `emailjs.init("yegPUG09JEFFWAJuF")`, `service_socgy8q`, `template_novurzk` en `index.html`. En el dashboard de EmailJS ya está: To → `ventas@jcbarandas.com.ar`, Reply To → `{{email}}`, Bcc → gmail del dev (con OK del cliente, para monitoreo), template HTML dark. **Falta:** activar "allowed origins" con **las dos** variantes (`http://jcbarandas.com.ar` y `https://jcbarandas.com.ar`) y una prueba final de punta a punta.
+- [x] Formulario probado de punta a punta (funciona, mail llega con el template lindo).
+- [x] **`noindex` + comentario `<!-- TEMPORAL -->` quitados** de las 12 páginas.
+- [x] **`website-jc.tizdigital.com` → `jcbarandas.com.ar`** en `og:url`, `og:image` y `schema.org` (12 archivos).
+- [x] **`<link rel="canonical">` a URLs absolutas** `https://jcbarandas.com.ar/...` en las 12 páginas.
+- [x] **`robots.txt` y `sitemap.xml` creados** (raíz del repo, `https://jcbarandas.com.ar`, 12 URLs). Se deployan con el sitio. **Pendiente:** dar de alta el dominio en Google Search Console y enviar el sitemap. Si se hacen URLs sin `.html`, actualizar los `<loc>`.
+- [ ] **`web.config`: descomentar el bloque CUTOVER** (forzar HTTPS + dominio canónico `jcherrajes.*`/`www`/`jcbarandas.com` → `jcbarandas.com.ar` + bloquear internos). Necesita el módulo "URL Rewrite" de IIS — **confirmar con soporte DonWeb si el servidor nuevo lo tiene**. Si al descomentar tira 500, revertir y pedir el módulo.
 - [ ] **URLs limpias en páginas internas** (si el módulo "URL Rewrite" está disponible). Los links internos ya apuntan a `/` y `/#section-...` (sin `index.html`), pero las páginas internas todavía muestran `.html` en la URL. Agregar al `web.config`:
   - Regla que sirva `/modelos/xxx` → `/modelos/xxx.html` y `/proyectos/xxx` → `/proyectos/xxx.html` (URLs sin extensión), y actualizar los `href` de los desplegables del nav/footer para que no lleven `.html`.
   - Regla 301 de `/index.html` → `/` (para bookmarks viejos y para no tener `/` y `/index.html` como dos URLs indexables).
