@@ -127,7 +127,7 @@ Dominio **principal**: `https://jcbarandas.com.ar` (sin `www`). El otro dominio 
 ### Pendiente (lado cliente / externo)
 
 - [ ] **`jcbarandas.com`** (el `.com`): agregarlo al hosting Ferozo (mejor por "Certificados SSL → Configurar dominio", así genera el SSL solo) para que también caiga en el redirect a `.com.ar`. Hoy no está configurado.
-- [ ] **EmailJS "allowed origins"**: agregar `https://jcbarandas.com.ar` (con HTTPS forzado, alcanza esa sola variante).
+- [x] **Anti-spam del formulario**: EmailJS "allowed origins" (restricción por dominio) es **feature de pago** — en el plan free no se puede. En su lugar se agregó un **honeypot** (campo oculto `empresa` en `index.html`; si viene completo, el email y el WhatsApp no se envían y se finge éxito). Frena el spam automático. Si aparece abuso real de la Public Key: generar una nueva en EmailJS y cambiarla en `index.html`, o evaluar plan pago / mover el form (Formspree, Web3Forms).
 - [ ] **Google Search Console**: dar de alta `jcbarandas.com.ar` y enviar `https://jcbarandas.com.ar/sitemap.xml`.
 
 ### Opcional — para más tarde (no bloqueante)

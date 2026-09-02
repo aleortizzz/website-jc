@@ -1005,6 +1005,12 @@
             <div class="bg-white/30 backdrop-blur-sm p-6 rounded-b-3xl hover:backdrop-blur-0 transition-all">
               <form id="contact-form" class="flex flex-col text-black gap-4">
 
+                <!-- Honeypot anti-bot: oculto para humanos, los bots lo completan -->
+                <div style="position:absolute;left:-5000px;height:0;overflow:hidden" aria-hidden="true">
+                  <label for="empresa">No completar este campo</label>
+                  <input id="empresa" name="empresa" type="text" tabindex="-1" autocomplete="off">
+                </div>
+
                 <label for="nombre" class="sr-only">Nombre</label>
                 <input id="nombre" class="p-2 pl-4 rounded-3xl" type="text" placeholder="Nombre" required>
 
@@ -1137,6 +1143,14 @@
     form.addEventListener("submit", function (e) {
       e.preventDefault();
 
+      // Honeypot anti-bot: si el campo oculto viene completo, es un bot.
+      // Fingimos éxito y no enviamos nada.
+      if (document.getElementById("empresa").value) {
+        mostrarToast("✅ Consulta enviada correctamente");
+        form.reset();
+        return;
+      }
+
       const data = {
         nombre: document.getElementById("nombre").value,
         interes: document.getElementById("interes").value,
@@ -1177,6 +1191,7 @@
     const btnWhatsapp = document.getElementById("btn-whatsapp");
 
     btnWhatsapp.addEventListener("click", () => {
+      if (document.getElementById("empresa").value) return; // honeypot: bot
       const nombre = document.getElementById("nombre").value;
       const interes = document.getElementById("interes").value;
       const contacto = document.getElementById("contacto").value;
