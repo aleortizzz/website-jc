@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700;800;900&display=swap"
     rel="stylesheet" />
-  <link rel="stylesheet" href="src/output.css?v=20">
+  <link rel="stylesheet" href="src/output.css?v=21">
   <link rel="icon" href="./src/imgs/faviconJC.png" type="image/x-icon">
 <title>JC Barandas | Barandas de Acero Inoxidable y Vidrio templado</title>
 
@@ -980,7 +980,7 @@
 
     <div id="section-contacto" class="mt-32">
       <!-- CONTENEDOR CON IMAGEN -->
-      <div class="relative grid grid-cols-2 max-md:grid-cols-1  h-[80vh] bg-cover bg-center rounded-xl"
+      <div class="relative grid grid-cols-2 max-md:grid-cols-1 min-h-[80vh] py-10 bg-cover bg-center rounded-xl"
         style="background-image: url(./src/imgs/img-form.jpg);">
 
         <!-- OVERLAY SOLO DE LA IMAGEN -->
@@ -1029,7 +1029,7 @@
                 <input id="ubicacion" class="p-2 pl-4 rounded-3xl" type="text" placeholder="¿En qué zona estás?"
                   required>
 
-                <textarea id="mensaje" class="p-2 pl-4 rounded-3xl h-40 max-md:h-20 "
+                <textarea id="mensaje" class="p-2 pl-4 rounded-3xl h-32 max-md:h-20 "
                   placeholder="Contanos un poco más del proyecto" required></textarea>
 
                 <div class="flex justify-center gap-6">
@@ -1191,16 +1191,17 @@
         return;
       }
 
-      const texto = `
-Hola, mi nombre es ${nombre}.
-Estoy interesado en: ${interes}.
-Mi teléfono es: ${contacto}.
-Mi email es: ${email}.
-Ubicación: ${ubicacion}.
-
-Mensaje:
-${mensaje}
-    `;
+      const texto = [
+        `Hola, soy ${nombre}. Les escribo desde la web de JC Barandas.`,
+        ``,
+        `*Interés:* ${interes}`,
+        `*Zona:* ${ubicacion}`,
+        `*Teléfono:* ${contacto}`,
+        `*Email:* ${email}`,
+        ``,
+        `*Consulta:*`,
+        mensaje,
+      ].join("\n");
 
       const numero = "5491164463400"; // WhatsApp principal JC Barandas (11 6446-3400)
       const url = `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;

@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /.ftp-deploy-sync-state.json
+
+Sitemap: https://jcbarandas.com.ar/sitemap.xml
