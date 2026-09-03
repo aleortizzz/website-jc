@@ -129,7 +129,7 @@ Dominio **principal**: `https://jcbarandas.com.ar` (sin `www`). El otro dominio 
 
 - [~] **`jcbarandas.com`** (el `.com`): ya está agregado al hosting con SSL Let's Encrypt (panel "Certificados SSL"), pero el DNS apunta bien (misma IP que `.com.ar`, confirmado con `nslookup`) y aun así en HTTPS muestra la página genérica del hosting ("HostMar") en vez del sitio — el SSL figura como "Instalando", probablemente todavía terminando de propagarse/activar el binding del lado del servidor. Falta reconfirmar que ya sirva bien; si sigue igual pasado un tiempo, abrir ticket a soporte DonWeb.
 - [x] **Anti-spam del formulario**: EmailJS "allowed origins" (restricción por dominio) es **feature de pago** — en el plan free no se puede. En su lugar se agregó un **honeypot** (campo oculto `empresa` en `index.html`; si viene completo, el email y el WhatsApp no se envían y se finge éxito). Frena el spam automático. Si aparece abuso real de la Public Key: generar una nueva en EmailJS y cambiarla en `index.html`, o evaluar plan pago / mover el form (Formspree, Web3Forms).
-- [ ] **Google Search Console**: dar de alta `jcbarandas.com.ar` y enviar `https://jcbarandas.com.ar/sitemap.xml`.
+- [x] **Google Search Console**: `jcbarandas.com.ar` verificado como propiedad de dominio (TXT en DNS de DonWeb) y `sitemap.xml` enviado — 12 páginas descubiertas.
 - [ ] **Volver a activar caché larga para `.html`/`.inc`** una vez que el sitio esté terminado y no se sigan pidiendo cambios seguido (ver nota en Notas sobre `web.config`) — hoy está en "no cache" a propósito mientras el cliente revisa cambios.
 
 ### Opcional — para más tarde (no bloqueante)
