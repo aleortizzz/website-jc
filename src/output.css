@@ -1706,6 +1706,10 @@ html {
   min-height: 80vh;
 }
 
+.min-h-screen {
+  min-height: 100vh;
+}
+
 .w-10 {
   width: 2.5rem;
 }
@@ -2364,6 +2368,10 @@ html {
   padding-right: 0.5rem;
 }
 
+.pt-32 {
+  padding-top: 8rem;
+}
+
 .text-center {
   text-align: center;
 }
@@ -2846,6 +2854,10 @@ html {
   .max-md\:px-6 {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
+  }
+
+  .max-md\:pt-0 {
+    padding-top: 0px;
   }
 
   .max-md\:text-center {
