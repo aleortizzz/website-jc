@@ -30,6 +30,11 @@
             <path
               d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z" />
           </svg></a> </div>
+      <p class="text-xs text-white/30 mt-4">Sitio desarrollado por
+        <a class="hover:text-blue-500 transition-all"
+          href="https://wa.me/5491153855217?text=Hola%2C%20vi%20la%20web%20de%20JC%20Barandas%20y%20ten%C3%ADa%20una%20consulta%20sobre%20un%20desarrollo."
+          target="_blank">TizDigital</a>
+      </p>
     </div>
     <div class=" flex flex-col items-center">
       <div class="w-2/4 ">
@@ -205,15 +210,18 @@
 
     <hr class="border-t border-white/10">
 
+    <p class="text-center text-xs text-white/30 py-4">Sitio desarrollado por
+      <a class="hover:text-blue-500 transition-all"
+        href="https://wa.me/5491153855217?text=Hola%2C%20vi%20la%20web%20de%20JC%20Barandas%20y%20ten%C3%ADa%20una%20consulta%20sobre%20un%20desarrollo."
+        target="_blank">TizDigital</a>
+    </p>
+
   </div>
 
   <!-- Derechos -->
   <div class="w-full text-slate-600 flex flex-col">
     <hr class="border-t w-full border-slate-800 mb-5">
-    <p class="text-center mb-2"> &copy; <span id="current-year"></span> JC Barandas • Desarrollado por
-      <a class="hover:text-blue-600 transition-all underline"
-        href="https://wa.me/5491153855217?text=Hola%2C%20vi%20la%20web%20de%20JC%20Barandas%20y%20ten%C3%ADa%20una%20consulta%20sobre%20un%20desarrollo."
-        target="_blank">TizDigital</a>.</p>
+    <p class="text-center mb-2"> &copy; <span id="current-year"></span> JC Barandas</p>
     <p class="text-center mb-5 text-sm">
       <a class="hover:text-blue-600 transition-all underline" href="/politica-privacidad.html">Política de Privacidad</a>
     </p>
