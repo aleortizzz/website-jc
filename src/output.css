@@ -2514,6 +2514,10 @@ html {
   color: rgb(234 179 8 / var(--tw-text-opacity, 1));
 }
 
+.underline {
+  text-decoration-line: underline;
+}
+
 .opacity-0 {
   opacity: 0;
 }

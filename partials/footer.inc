@@ -211,7 +211,9 @@
   <div class="w-full text-slate-600 flex flex-col">
     <hr class="border-t w-full border-slate-800 mb-5">
     <p class="text-center mb-5"> &copy; <span id="current-year"></span> JC Barandas • Desarrollado por
-      TizDigital.</p>
+      <a class="hover:text-blue-600 transition-all underline"
+        href="https://wa.me/5491153855217?text=Hola%2C%20vi%20la%20web%20de%20JC%20Barandas%20y%20ten%C3%ADa%20una%20consulta%20sobre%20un%20desarrollo."
+        target="_blank">TizDigital</a>.</p>
   </div>
 </footer>
 
