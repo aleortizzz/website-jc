@@ -151,7 +151,7 @@
     </a>
   </div>
 
-  <div class="flex justify-between">
+  <div class="flex justify-between gap-x-5">
     <a href="/#section-inicio" class="hover:text-blue-600 transition-all cursor-pointer">Inicio</a>
 
     <div class="relative group">
@@ -197,7 +197,7 @@
       </div>
     </div>
     <a href="/#section-especificaciones" class="hover:text-blue-600 transition-all cursor-pointer">Especificaciones</a>
-    <a href="/#section-contacto" class="hover:text-blue-600 transition-all cursor-pointer font-semibold">Contacto</a>
+    <a href="/#section-contacto" class="hover:text-blue-600 transition-all cursor-pointer">Contacto</a>
   </div>
 
   <div class="flex justify-end  max-md:hidden">
