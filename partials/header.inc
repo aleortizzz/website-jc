@@ -43,23 +43,23 @@
 
           <div class="bg-black/20">
 
-            <a href="/modelos/vid_tem_bot.html" class="block px-10 py-4 border-b border-gray-800 hover:bg-gray-800">
+            <a href="/modelos/vid_tem_bot" class="block px-10 py-4 border-b border-gray-800 hover:bg-gray-800">
               Vidrio templado y botones
             </a>
 
-            <a href="/modelos/vid_tem_minipostes.html" class="block px-10 py-4 border-b border-gray-800 hover:bg-gray-800">
+            <a href="/modelos/vid_tem_minipostes" class="block px-10 py-4 border-b border-gray-800 hover:bg-gray-800">
               Vidrio T. y minipostes
             </a>
 
-            <a href="/modelos/vid_tem_estructura.html" class="block px-10 py-4 border-b border-gray-800 hover:bg-gray-800">
+            <a href="/modelos/vid_tem_estructura" class="block px-10 py-4 border-b border-gray-800 hover:bg-gray-800">
               Vidrio T. y estructura inoxidable
             </a>
 
-            <a href="/modelos/barandas_exterior.html" class="block px-10 py-4 border-b border-gray-800 hover:bg-gray-800">
+            <a href="/modelos/barandas_exterior" class="block px-10 py-4 border-b border-gray-800 hover:bg-gray-800">
               Barandas de exterior
             </a>
 
-            <a href="/modelos/otros.html" class="block px-10 py-4 hover:bg-gray-800">
+            <a href="/modelos/otros" class="block px-10 py-4 hover:bg-gray-800">
               Otros
             </a>
 
@@ -86,27 +86,27 @@
 
           <div class="bg-black/20">
 
-            <a href="/proyectos/carilo.html" class="block px-10 py-4 border-b border-gray-800 hover:bg-gray-800">
+            <a href="/proyectos/carilo" class="block px-10 py-4 border-b border-gray-800 hover:bg-gray-800">
               Cariló
             </a>
 
-            <a href="/proyectos/costa_esmeralda.html" class="block px-10 py-4 border-b border-gray-800 hover:bg-gray-800">
+            <a href="/proyectos/costa_esmeralda" class="block px-10 py-4 border-b border-gray-800 hover:bg-gray-800">
               Costa Esmeralda
             </a>
 
-            <a href="/proyectos/haras_santa_maria.html" class="block px-10 py-4 border-b border-gray-800 hover:bg-gray-800">
+            <a href="/proyectos/haras_santa_maria" class="block px-10 py-4 border-b border-gray-800 hover:bg-gray-800">
               Haras Santa María
             </a>
 
-            <a href="/proyectos/tigre.html" class="block px-10 py-4 border-b border-gray-800 hover:bg-gray-800">
+            <a href="/proyectos/tigre" class="block px-10 py-4 border-b border-gray-800 hover:bg-gray-800">
               Tigre
             </a>
 
-            <a href="/proyectos/tenaris.html" class="block px-10 py-4 border-b border-gray-800 hover:bg-gray-800">
+            <a href="/proyectos/tenaris" class="block px-10 py-4 border-b border-gray-800 hover:bg-gray-800">
               Edificio Tenaris
             </a>
 
-            <a href="/proyectos/talar_del_lago_2.html" class="block px-10 py-4 hover:bg-gray-800">
+            <a href="/proyectos/talar_del_lago_2" class="block px-10 py-4 hover:bg-gray-800">
               Talar del Lago 2
             </a>
 
@@ -167,11 +167,11 @@
       <div class="absolute top-full left-0 mt-2 w-56 rounded-xl bg-white text-black shadow-xl
           opacity-0 invisible group-hover:opacity-100 group-hover:visible
           transition-all duration-300">
-        <a href="/modelos/vid_tem_bot.html" class="block px-4 py-3 hover:bg-gray-100">Vidrio templado y botones</a>
-        <a href="/modelos/vid_tem_minipostes.html" class="block px-4 py-3 hover:bg-gray-100">Vidrio T. y minipostes</a>
-        <a href="/modelos/vid_tem_estructura.html" class="block px-4 py-3 hover:bg-gray-100">Vidrio T. y estructura de acero inoxidable</a>
-        <a href="/modelos/barandas_exterior.html" class="block px-4 py-3 hover:bg-gray-100">Barandas de exterior</a>
-        <a href="/modelos/otros.html" class="block px-4 py-3 hover:bg-gray-100">Otros</a>
+        <a href="/modelos/vid_tem_bot" class="block px-4 py-3 hover:bg-gray-100">Vidrio templado y botones</a>
+        <a href="/modelos/vid_tem_minipostes" class="block px-4 py-3 hover:bg-gray-100">Vidrio T. y minipostes</a>
+        <a href="/modelos/vid_tem_estructura" class="block px-4 py-3 hover:bg-gray-100">Vidrio T. y estructura de acero inoxidable</a>
+        <a href="/modelos/barandas_exterior" class="block px-4 py-3 hover:bg-gray-100">Barandas de exterior</a>
+        <a href="/modelos/otros" class="block px-4 py-3 hover:bg-gray-100">Otros</a>
       </div>
     </div>
 
@@ -188,12 +188,12 @@
       <div class="absolute top-full left-0 mt-2 w-56 rounded-xl bg-white text-black shadow-xl
           opacity-0 invisible group-hover:opacity-100 group-hover:visible
           transition-all duration-300">
-        <a href="/proyectos/carilo.html" class="block px-4 py-3 hover:bg-gray-100">Cariló</a>
-        <a href="/proyectos/costa_esmeralda.html" class="block px-4 py-3 hover:bg-gray-100">Costa Esmeralda</a>
-        <a href="/proyectos/haras_santa_maria.html" class="block px-4 py-3 hover:bg-gray-100">Haras Santa María</a>
-        <a href="/proyectos/tigre.html" class="block px-4 py-3 hover:bg-gray-100">Tigre</a>
-        <a href="/proyectos/tenaris.html" class="block px-4 py-3 hover:bg-gray-100">Edificio Tenaris</a>
-        <a href="/proyectos/talar_del_lago_2.html" class="block px-4 py-3 hover:bg-gray-100">Talar del Lago 2</a>
+        <a href="/proyectos/carilo" class="block px-4 py-3 hover:bg-gray-100">Cariló</a>
+        <a href="/proyectos/costa_esmeralda" class="block px-4 py-3 hover:bg-gray-100">Costa Esmeralda</a>
+        <a href="/proyectos/haras_santa_maria" class="block px-4 py-3 hover:bg-gray-100">Haras Santa María</a>
+        <a href="/proyectos/tigre" class="block px-4 py-3 hover:bg-gray-100">Tigre</a>
+        <a href="/proyectos/tenaris" class="block px-4 py-3 hover:bg-gray-100">Edificio Tenaris</a>
+        <a href="/proyectos/talar_del_lago_2" class="block px-4 py-3 hover:bg-gray-100">Talar del Lago 2</a>
       </div>
     </div>
     <a href="/#section-especificaciones" class="hover:text-blue-600 transition-all cursor-pointer">Especificaciones</a>

@@ -31,7 +31,7 @@
               d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z" />
           </svg></a> </div>
       <p class="text-xs text-white/30 mt-4">
-        <a class="hover:text-blue-500 transition-all" href="/politica-privacidad.html">Política de Privacidad</a>
+        <a class="hover:text-blue-500 transition-all" href="/politica-privacidad">Política de Privacidad</a>
       </p>
     </div>
     <div class=" flex flex-col items-center">
@@ -49,12 +49,12 @@
       <div class="w-3/4 ">
         <h3 class="font-semibold mb-2">Proyectos</h3>
         <ul class="space-y-2 text-sm text-white/80">
-          <li><a class=" hover:text-blue-600 transition-all" href="/proyectos/carilo.html">Cariló</a></li>
-          <li><a class=" hover:text-blue-600 transition-all" href="/proyectos/costa_esmeralda.html">Costa Esmeralda</a></li>
-          <li><a class=" hover:text-blue-600 transition-all" href="/proyectos/haras_santa_maria.html">Haras Santa María</a></li>
-          <li><a class=" hover:text-blue-600 transition-all" href="/proyectos/tigre.html">Tigre</a></li>
-          <li><a class=" hover:text-blue-600 transition-all" href="/proyectos/tenaris.html">Edificio Tenaris</a></li>
-          <li><a class=" hover:text-blue-600 transition-all" href="/proyectos/talar_del_lago_2.html">Talar del Lago 2</a></li>
+          <li><a class=" hover:text-blue-600 transition-all" href="/proyectos/carilo">Cariló</a></li>
+          <li><a class=" hover:text-blue-600 transition-all" href="/proyectos/costa_esmeralda">Costa Esmeralda</a></li>
+          <li><a class=" hover:text-blue-600 transition-all" href="/proyectos/haras_santa_maria">Haras Santa María</a></li>
+          <li><a class=" hover:text-blue-600 transition-all" href="/proyectos/tigre">Tigre</a></li>
+          <li><a class=" hover:text-blue-600 transition-all" href="/proyectos/tenaris">Edificio Tenaris</a></li>
+          <li><a class=" hover:text-blue-600 transition-all" href="/proyectos/talar_del_lago_2">Talar del Lago 2</a></li>
         </ul>
       </div>
     </div>
@@ -123,15 +123,15 @@
       </summary>
 
       <ul class="pb-4 pl-2 space-y-3 text-sm text-white/70 text-center">
-        <li><a class="hover:text-color-principal transition-colors" href="/modelos/vid_tem_bot.html">Vidrio
+        <li><a class="hover:text-color-principal transition-colors" href="/modelos/vid_tem_bot">Vidrio
             templado y botones</a>
         </li>
-        <li><a class="hover:text-color-principal transition-colors" href="/modelos/vid_tem_minipostes.html">Vidrio T. y minipostes</a></li>
-        <li><a class="hover:text-color-principal transition-colors" href="/modelos/vid_tem_estructura.html">Vidrio T. y estructura
+        <li><a class="hover:text-color-principal transition-colors" href="/modelos/vid_tem_minipostes">Vidrio T. y minipostes</a></li>
+        <li><a class="hover:text-color-principal transition-colors" href="/modelos/vid_tem_estructura">Vidrio T. y estructura
             inoxidable</a>
         </li>
-        <li><a class="hover:text-color-principal transition-colors" href="/modelos/barandas_exterior.html">Barandas de exterior</a></li>
-        <li><a class="hover:text-color-principal transition-colors" href="/modelos/otros.html">Otros</a></li>
+        <li><a class="hover:text-color-principal transition-colors" href="/modelos/barandas_exterior">Barandas de exterior</a></li>
+        <li><a class="hover:text-color-principal transition-colors" href="/modelos/otros">Otros</a></li>
       </ul>
     </details>
 
@@ -151,12 +151,12 @@
       </summary>
 
       <ul class="pb-4 pl-2 space-y-3 text-sm text-white/70 text-center">
-        <li><a class="hover:text-color-principal transition-colors" href="/proyectos/carilo.html">Cariló</a></li>
-        <li><a class="hover:text-color-principal transition-colors" href="/proyectos/costa_esmeralda.html">Costa Esmeralda</a></li>
-        <li><a class="hover:text-color-principal transition-colors" href="/proyectos/haras_santa_maria.html">Haras Santa María</a></li>
-        <li><a class="hover:text-color-principal transition-colors" href="/proyectos/tigre.html">Tigre</a></li>
-        <li><a class="hover:text-color-principal transition-colors" href="/proyectos/tenaris.html">Edificio Tenaris</a></li>
-        <li><a class="hover:text-color-principal transition-colors" href="/proyectos/talar_del_lago_2.html">Talar del Lago 2</a></li>
+        <li><a class="hover:text-color-principal transition-colors" href="/proyectos/carilo">Cariló</a></li>
+        <li><a class="hover:text-color-principal transition-colors" href="/proyectos/costa_esmeralda">Costa Esmeralda</a></li>
+        <li><a class="hover:text-color-principal transition-colors" href="/proyectos/haras_santa_maria">Haras Santa María</a></li>
+        <li><a class="hover:text-color-principal transition-colors" href="/proyectos/tigre">Tigre</a></li>
+        <li><a class="hover:text-color-principal transition-colors" href="/proyectos/tenaris">Edificio Tenaris</a></li>
+        <li><a class="hover:text-color-principal transition-colors" href="/proyectos/talar_del_lago_2">Talar del Lago 2</a></li>
       </ul>
     </details>
 
@@ -209,7 +209,7 @@
     <hr class="border-t border-white/10">
 
     <p class="text-center text-xs text-white/30 py-4">
-      <a class="hover:text-blue-500 transition-all" href="/politica-privacidad.html">Política de Privacidad</a>
+      <a class="hover:text-blue-500 transition-all" href="/politica-privacidad">Política de Privacidad</a>
     </p>
 
   </div>
