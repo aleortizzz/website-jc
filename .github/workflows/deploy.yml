@@ -44,5 +44,3 @@ jobs:
             .gitignore
             .gitattributes
             _*
-            seo-*.json
-            jcbarandas.com.ar-audit/**
