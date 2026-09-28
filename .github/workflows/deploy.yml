@@ -28,10 +28,6 @@ jobs:
           port: 21
           # La cuenta FTP w1750584@jcherrajes.com ya cae dentro de /public_html/
           server-dir: ./
-          # TEMPORAL: fuerza un borrado completo de public_html antes de resubir,
-          # para limpiar seo-cuestionario-cliente.json que quedo huerfano en el
-          # servidor. Sacar esta linea despues del proximo deploy exitoso.
-          dangerous-clean-slate: true
           # Archivos que NO se suben al hosting (tooling, docs internas, temporales)
           exclude: |
             **/.git*
