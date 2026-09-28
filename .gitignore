@@ -18,3 +18,11 @@ Thumbs.db
 _*.png
 _preview.html
 scratchpad/
+
+# Datos internos/sensibles del cliente (respuestas privadas, competidores,
+# auditorias con hallazgos) -- el repo es publico, esto NUNCA se commitea.
+seo-respuestas-cliente.json
+seo-cambios-cliente.json
+seo-decisiones-cliente.json
+seo-cuestionario-cliente.json
+jcbarandas.com.ar-audit/
