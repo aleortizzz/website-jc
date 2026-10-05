@@ -114,7 +114,7 @@
 
         </details>
 
-        <a href="/#section-especificaciones"
+        <a href="/quienes-somos"
           class="flex items-center px-6 py-5 border-b border-gray-700 hover:bg-gray-800 transition-colors">
           Nosotros
         </a>
@@ -196,7 +196,7 @@
         <a href="/proyectos/talar_del_lago_2" class="block px-4 py-3 hover:bg-gray-100">Talar del Lago 2</a>
       </div>
     </div>
-    <a href="/#section-especificaciones" class="hover:text-blue-600 transition-all cursor-pointer">Nosotros</a>
+    <a href="/quienes-somos" class="hover:text-blue-600 transition-all cursor-pointer">Nosotros</a>
     <a href="/#section-contacto" class="hover:text-blue-600 transition-all cursor-pointer">Contacto</a>
   </div>
 

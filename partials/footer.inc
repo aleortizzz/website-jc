@@ -39,7 +39,7 @@
         <h3 class="font-semibold mb-2">Navegación</h3>
         <ul class="space-y-2 text-sm text-white/80">
           <li><a class=" hover:text-blue-600 transition-all" href="/#section-inicio">Inicio</a></li>
-          <li><a class=" hover:text-blue-600 transition-all" href="/#section-especificaciones">Nosotros</a></li>
+          <li><a class=" hover:text-blue-600 transition-all" href="/quienes-somos">Nosotros</a></li>
           <li><a class=" hover:text-blue-600 transition-all" href="/#section-contacto">Contacto</a></li>
         </ul>
       </div>
@@ -102,7 +102,7 @@
         <li><a class="hover:text-color-principal transition-colors"
             href="/#section-proyectos">Proyectos</a></li>
         <li><a class="hover:text-color-principal transition-colors"
-            href="/#section-especificaciones">Nosotros</a></li>
+            href="/quienes-somos">Nosotros</a></li>
         <li><a class="hover:text-color-principal transition-colors"
             href="/#section-contacto">Contacto</a></li>
       </ul>
