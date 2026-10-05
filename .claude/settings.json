@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "deny": [
+      "Bash(npx impeccable*)",
+      "Bash(npm i impeccable*)"
+    ]
+  }
+}
