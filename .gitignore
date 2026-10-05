@@ -26,3 +26,6 @@ seo-cambios-cliente.json
 seo-decisiones-cliente.json
 seo-cuestionario-cliente.json
 jcbarandas.com.ar-audit/
+
+# Permisos personales de Claude Code (cada uno tiene los suyos)
+.claude/settings.local.json
