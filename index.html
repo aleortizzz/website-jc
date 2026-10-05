@@ -9,20 +9,20 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700;800;900&display=swap"
     rel="stylesheet" />
-  <link rel="stylesheet" href="src/output.css?v=22">
+  <link rel="stylesheet" href="src/output.css?v=26">
   <link rel="icon" href="./src/imgs/faviconJC.png" type="image/x-icon">
 <title>JC Barandas | Barandas de Acero Inoxidable y Vidrio templado</title>
 
   <!-- Meta description -->
    <meta
   name="description"
-  content="Fabricamos e instalamos barandas, pasamanos y estructuras de acero inoxidable y vidrio templado. Diseños a medida, materiales de calidad y más de 20 años de experiencia.">
+  content="Fabricamos e instalamos barandas, mamparas, cerramientos y espejos en vidrio templado Blindex y acero inoxidable AISI 304/316. Taller propio en Zona Norte y más de 30 años de experiencia.">
 
 <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="JC Barandas | Barandas de Vidrio Templado y Acero Inoxidable">
   <meta property="og:description"
-    content="Fabricamos e instalamos barandas, pasamanos y estructuras de acero inoxidable y vidrio templado. Diseños a medida, materiales de calidad y más de 20 años de experiencia.">
+    content="Fabricamos e instalamos barandas, mamparas, cerramientos y espejos en vidrio templado Blindex y acero inoxidable AISI 304/316. Taller propio en Zona Norte y más de 30 años de experiencia.">
 
   <meta property="og:url" content="https://jcbarandas.com.ar">
   <meta property="og:site_name" content="JC Barandas">
@@ -38,17 +38,18 @@
   {
     "@context": "https://schema.org",
     "@type": "HomeAndConstructionBusiness",
+    "@id": "https://jcbarandas.com.ar/#negocio",
     "name": "JC Barandas",
     "image": "https://jcbarandas.com.ar/src/imgs/index/hero.jpeg",
     "logo": "https://jcbarandas.com.ar/src/imgs/logo-jc-negro.png",
     "url": "https://jcbarandas.com.ar/",
     "email": "ventas@jcbarandas.com.ar",
     "telephone": "+5491164463400",
-    "description": "Fabricamos e instalamos barandas, pasamanos y estructuras de acero inoxidable y vidrio templado. Diseños a medida, materiales de calidad y más de 20 años de experiencia.",
+    "description": "Fabricamos e instalamos barandas, mamparas, cerramientos y espejos en vidrio templado Blindex y acero inoxidable AISI 304/316. Taller propio en Zona Norte y más de 30 años de experiencia.",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Ingeniero Marconi 2816",
-      "addressLocality": "Béccar",
+      "addressLocality": "Beccar",
       "addressRegion": "Buenos Aires",
       "postalCode": "B1643FFJ",
       "addressCountry": "AR"
@@ -58,6 +59,36 @@
       "latitude": -34.4725389,
       "longitude": -58.5558537
     },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "08:00",
+        "closes": "12:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "14:00",
+        "closes": "17:00"
+      }
+    ],
+    "areaServed": [
+      { "@type": "City", "name": "Tigre" },
+      { "@type": "City", "name": "Escobar" },
+      { "@type": "City", "name": "San Fernando" },
+      { "@type": "City", "name": "Pilar" },
+      { "@type": "City", "name": "Zárate" },
+      { "@type": "City", "name": "Luján" },
+      { "@type": "City", "name": "General Rodríguez" },
+      { "@type": "City", "name": "Nordelta" },
+      { "@type": "City", "name": "Vicente López" },
+      { "@type": "City", "name": "Olivos" },
+      { "@type": "City", "name": "Ciudad Autónoma de Buenos Aires" },
+      { "@type": "City", "name": "Canning" },
+      { "@type": "City", "name": "Ezeiza" },
+      { "@type": "City", "name": "Moreno" }
+    ],
     "sameAs": [
       "https://www.instagram.com/jc_barandasok/",
       "https://www.facebook.com/pasamanos.barandas.acero.inoxidable",
@@ -98,6 +129,30 @@
       transition: background .3s ease, width .3s ease;
     }
 
+    /* Swiper marca los controles con -lock cuando entran todos los slides (ej. reseñas en pantallas grandes) */
+    .swiper-button-lock {
+      display: none !important;
+    }
+
+    /* Preguntas frecuentes: el alto/opacidad lo anima JS; la flecha gira con la clase */
+    .faq-body {
+      overflow: hidden;
+    }
+
+    .faq-chevron {
+      transition: transform 200ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    .faq-item.abierto .faq-chevron {
+      transform: rotate(180deg);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .faq-chevron {
+        transition: none;
+      }
+    }
+
     .projects-pagination .swiper-pagination-bullet-active {
       width: 40px;
       background: #2563eb;
@@ -136,10 +191,14 @@
     <section id="section-inicio" class="relative z-10 flex-1 flex flex-col justify-center max-md:justify-start px-10 pt-32 max-md:pt-0 max-md:mt-6 ">
 
 
-      <div class="grid grid-cols-2 max-md:grid-cols-1 max-md:mt-32">
+      <div class="grid grid-cols-2 gap-x-16 xl:gap-x-24 max-md:grid-cols-1 max-md:mt-32">
         <div class="flex justify-center flex-col">
           <div class="animate-fade-down" style="text-shadow: 0 4px 8px rgba(0,0,0,.6);">
-            <h1 class="text-7xl max-md:text-5xl"><span class="text-blue-600">Barandas</span> de Diseño</h1>
+            <h1>
+              <span class="block text-7xl max-md:text-5xl"><span class="text-blue-600">Barandas</span>, Mamparas, Cerramientos y Espejos</span>
+              <span class="block text-2xl 2xl:text-3xl max-md:text-xl font-medium mt-4">a medida en Zona Norte, CABA y todo el GBA</span>
+            </h1>
+            <p class="text-lg max-md:text-sm text-white/70 mt-4">Vidrio templado Blindex y acero inoxidable AISI 304/316 · Taller propio en Beccar · Envíos a todo el país</p>
           </div>
           <div class="flex gap-6 mt-6 max-md:flex-col">
             <a href="#section-proyectos">
@@ -170,7 +229,7 @@
             <div
               class="flex flex-col gap-2  bg-white/10 p-6 max-md:p-4 hover:backdrop-blur-sm hover:bg-blue-700/30 transition-all cursor-pointer rounded-xl transform hover:scale-[1.02]">
               <span class="text-2xl max-md:text-base">Calidad y seguridad garantizadas</span>
-              <span class="text-xl max-md:text-xs">Trabajamos con acero inoxidable y vidrios de seguridad, garantizando
+              <span class="text-xl max-md:text-xs">Trabajamos con acero inoxidable AISI 304 / AISI 316 y vidrio templado Blindex, garantizando
                 resistencia, durabilidad y
                 excelente terminación.</span>
             </div>
@@ -201,344 +260,115 @@
 
   <main class="mx-32 max-md:mx-0">
 
-    <div id="sobre-nosotros" class="mt-20">
-      <h2 class="text-4xl font-semibold text-white text-center mb-6">Opiniones que hablan por nosotros</h2>
+    <section id="section-productos" class="mt-32 scroll-mt-32">
+      <div class="max-w-7xl mx-auto px-10 max-md:px-6">
 
+        <!-- TÍTULO -->
+        <span class="text-sm font-semibold uppercase tracking-[0.2em] text-blue-500">Productos</span>
+        <h2 class="text-3xl md:text-4xl font-semibold text-white mt-3">Qué hacemos</h2>
+        <p class="text-white/70 mt-3 max-w-xl">
+          Todo a medida, en vidrio templado Blindex y acero inoxidable AISI 304/316.
+        </p>
 
-      <div class="flex flex-wrap gap-6
-            max-md:px-5
-           items-center justify-center">
+        <!-- BARANDAS -->
+        <h3 class="text-xl font-semibold text-white mt-10 mb-5">Barandas</h3>
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 max-md:gap-3">
+            <a href="/modelos/vid_tem_bot" class="group relative block overflow-hidden rounded-2xl aspect-[3/4] max-md:aspect-[4/5]">
+              <img loading="lazy" src="./src/imgs/vid_tem_bot/vid_tem_bot_portada.jpg" width="1200" height="1600" alt="Baranda de vidrio templado sujeta con botones de acero inoxidable"
+                class="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-105">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent"></div>
+                <span class="absolute top-3 left-3 rounded-full bg-blue-600 px-3 py-1 text-xs font-semibold text-white">Más elegido</span>
+              <div class="absolute inset-x-0 bottom-0 p-4">
+                <h3 class="text-lg max-md:text-base font-semibold text-white leading-tight">Vidrio templado y botones</h3>
+                <span class="mt-1 inline-block text-sm text-blue-400 group-hover:text-blue-300">Ver modelo &rarr;</span>
+              </div>
+            </a>
 
+            <a href="/modelos/vid_tem_minipostes" class="group relative block overflow-hidden rounded-2xl aspect-[3/4] max-md:aspect-[4/5]">
+              <img loading="lazy" src="./src/imgs/vid_tem_minpostes/vid_tem_minipostes_portada.jpg" width="1200" height="1600" alt="Baranda de vidrio templado con minipostes de acero inoxidable"
+                class="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-105">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent"></div>
+              <div class="absolute inset-x-0 bottom-0 p-4">
+                <h3 class="text-lg max-md:text-base font-semibold text-white leading-tight">Vidrio templado y minipostes</h3>
+                <span class="mt-1 inline-block text-sm text-blue-400 group-hover:text-blue-300">Ver modelo &rarr;</span>
+              </div>
+            </a>
 
-        <div class="bg-white w-72 h-64 rounded-xl p-6
-       max-md:w-full
-       max-md:max-w-sm
-       max-md:h-auto">
+            <a href="/modelos/vid_tem_estructura" class="group relative block overflow-hidden rounded-2xl aspect-[3/4] max-md:aspect-[4/5]">
+              <img loading="lazy" src="./src/imgs/vid_tem_estructura/vid_tem_estructura_portada.jpg" width="1600" height="1200" alt="Baranda de vidrio templado con estructura de acero inoxidable"
+                class="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-105">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent"></div>
+              <div class="absolute inset-x-0 bottom-0 p-4">
+                <h3 class="text-lg max-md:text-base font-semibold text-white leading-tight">Vidrio templado y estructura de acero</h3>
+                <span class="mt-1 inline-block text-sm text-blue-400 group-hover:text-blue-300">Ver modelo &rarr;</span>
+              </div>
+            </a>
 
-          <div class="flex justify-between items-center">
-            <div class="flex items-center gap-2">
-              <img loading="lazy" class="w-10"
-                src="https://lh3.googleusercontent.com/a-/ALV-UjUq79C0jvpLZwSzbUyZF52mKNqMGdIt6PhyzJ66HiuOyOBaxekcxQ=w72-h72-p-rp-mo-ba12-br100"
-                alt="Alejandro Laudicina">
-              <span class="text-black">Alejandro Laudicina</span>
-            </div>
-            <div>
-              <img loading="lazy"  class="w-4" src="/src/imgs/icono-google.png" alt="Logo de Google">
-            </div>
-          </div>
+            <a href="/modelos/barandas_exterior" class="group relative block overflow-hidden rounded-2xl aspect-[3/4] max-md:aspect-[4/5]">
+              <img loading="lazy" src="./src/imgs/baranda_exterior/baranda_exterior_portada.jpg" width="1440" height="1405" alt="Baranda de exterior en vidrio templado y acero inoxidable"
+                class="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-105">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent"></div>
+              <div class="absolute inset-x-0 bottom-0 p-4">
+                <h3 class="text-lg max-md:text-base font-semibold text-white leading-tight">Barandas de exterior</h3>
+                <span class="mt-1 inline-block text-sm text-blue-400 group-hover:text-blue-300">Ver modelo &rarr;</span>
+              </div>
+            </a>
 
-          <div class="flex gap-2 text-yellow-500 mt-1">
-            <svg class="fill-yellow-500" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
-              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path
-                d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
-            </svg>
-            <svg class="fill-yellow-500" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
-              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path
-                d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
-            </svg>
-            <svg class="fill-yellow-500" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
-              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path
-                d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
-            </svg>
-            <svg class="fill-yellow-500" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
-              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path
-                d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
-            </svg>
-            <svg class="fill-yellow-500" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
-              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path
-                d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
-            </svg>
-            <span class="text-gray-500 text-sm" data-date="2026-02-27"></span>
-          </div>
-
-          <p class="text-gray-700 mt-2 text-sm">Lo primero a destacar es la atención insuperable de los dueños. Por otro
-            lado la calidad del trabajo es de excelencia hasta el minimo detalle. Totalmente recomendables.</p>
+            <a href="/modelos/otros" class="group relative block overflow-hidden rounded-2xl aspect-[3/4] max-md:aspect-[4/5]">
+              <img loading="lazy" src="./src/imgs/otros/otros_portada.jpg" width="960" height="1280" alt="Pasamanos y estructura a medida en acero inoxidable"
+                class="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-105">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent"></div>
+              <div class="absolute inset-x-0 bottom-0 p-4">
+                <h3 class="text-lg max-md:text-base font-semibold text-white leading-tight">Pasamanos y otros trabajos</h3>
+                <span class="mt-1 inline-block text-sm text-blue-400 group-hover:text-blue-300">Ver modelo &rarr;</span>
+              </div>
+            </a>
         </div>
 
+        <!-- OTROS SERVICIOS -->
+        <h3 class="text-xl font-semibold text-white mt-12 mb-5">También hacemos</h3>
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-md:gap-3">
+            <a href="#section-contacto" data-interes="Mamparas de baño"
+              class="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 p-4 transition-all hover:border-blue-600/60 hover:bg-white/10">
+              <span class="shrink-0 rounded-lg bg-blue-500/10 p-2 text-blue-500"><i data-lucide="shower-head" class="w-6 h-6"></i></span>
+              <span class="text-sm font-medium text-white leading-snug">Mamparas de baño</span>
+            </a>
 
-        <div class="bg-white w-72 h-64 rounded-xl p-6
-       max-md:w-full
-       max-md:max-w-sm
-       max-md:h-auto">
+            <a href="#section-contacto" data-interes="Cerramientos para galerías"
+              class="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 p-4 transition-all hover:border-blue-600/60 hover:bg-white/10">
+              <span class="shrink-0 rounded-lg bg-blue-500/10 p-2 text-blue-500"><i data-lucide="fold-horizontal" class="w-6 h-6"></i></span>
+              <span class="text-sm font-medium text-white leading-snug">Cerramientos plegadizos para galerías</span>
+            </a>
 
-          <div class="flex justify-between items-center">
-            <div class="flex items-center gap-2">
-              <img loading="lazy"  class="w-10"
-                src="https://lh3.googleusercontent.com/a-/ALV-UjX1U8vEd-NHInQ2bnx7jOxhErETojtmVyhT0x0T6_JBLKtgHASf=w72-h72-p-rp-mo-br100"
-                alt="Gustavo Fontana">
-              <span class="text-black">Gustavo Fontana</span>
-            </div>
-            <div>
-              <img loading="lazy"  class="w-4" src="/src/imgs/icono-google.png" alt="Logo de Google">
-            </div>
-          </div>
+            <a href="#section-contacto" data-interes="Espejos iluminados"
+              class="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 p-4 transition-all hover:border-blue-600/60 hover:bg-white/10">
+              <span class="shrink-0 rounded-lg bg-blue-500/10 p-2 text-blue-500"><i data-lucide="lamp-wall-up" class="w-6 h-6"></i></span>
+              <span class="text-sm font-medium text-white leading-snug">Espejos iluminados</span>
+            </a>
 
+            <a href="#section-contacto" data-interes="Cercos de piletas"
+              class="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 p-4 transition-all hover:border-blue-600/60 hover:bg-white/10">
+              <span class="shrink-0 rounded-lg bg-blue-500/10 p-2 text-blue-500"><i data-lucide="waves" class="w-6 h-6"></i></span>
+              <span class="text-sm font-medium text-white leading-snug">Cercos de piletas</span>
+            </a>
 
+            <a href="#section-contacto" data-interes="Rampas"
+              class="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 p-4 transition-all hover:border-blue-600/60 hover:bg-white/10">
+              <span class="shrink-0 rounded-lg bg-blue-500/10 p-2 text-blue-500"><i data-lucide="accessibility" class="w-6 h-6"></i></span>
+              <span class="text-sm font-medium text-white leading-snug">Rampas para edificios</span>
+            </a>
 
-          <div class="flex gap-2 items-center">
-          </div>
-
-          <div class="flex gap-2 text-yellow-500 mt-1">
-            <svg class="fill-yellow-500" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
-              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path
-                d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
-            </svg>
-            <svg class="fill-yellow-500" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
-              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path
-                d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
-            </svg>
-            <svg class="fill-yellow-500" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
-              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path
-                d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
-            </svg>
-            <svg class="fill-yellow-500" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
-              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path
-                d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
-            </svg>
-            <svg class="fill-yellow-500" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
-              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path
-                d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
-            </svg>
-            <span class="text-gray-500 text-sm" data-date="2026-02-18"></span>
-          </div>
-
-          <p class="text-gray-700 mt-2 text-sm">Hoy terminaron el trabajo en tiempo y forma según lo acordado al
-            contratar sus servicios. Los volveré a contratar para mi próximo proyecto. Muy recomendables!</p>
-
+            <a href="#section-contacto" data-interes="Puertas de seguridad"
+              class="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 p-4 transition-all hover:border-blue-600/60 hover:bg-white/10">
+              <span class="shrink-0 rounded-lg bg-blue-500/10 p-2 text-blue-500"><i data-lucide="door-closed" class="w-6 h-6"></i></span>
+              <span class="text-sm font-medium text-white leading-snug">Puertas de seguridad</span>
+            </a>
         </div>
-
-
-        <div class="bg-white w-72 h-64 rounded-xl p-6
-       max-md:w-full
-       max-md:max-w-sm
-       max-md:h-auto">
-
-
-          <div class="flex justify-between items-center">
-            <div class="flex items-center gap-2">
-              <img loading="lazy"  class="w-10"
-                src="https://lh3.googleusercontent.com/a-/ALV-UjXvfESeV6SjbQs4ccZkDZd6KrOE5x66RjgjgbNIiN-ei2GZb1Yldg=w72-h72-p-rp-mo-br100"
-                alt="Fran Copes">
-              <span class="text-gray-700">Fran Copes</span>
-            </div>
-            <div>
-              <img loading="lazy"  class="w-4" src="/src/imgs/icono-google.png" alt="Logo de Google">
-            </div>
-          </div>
-
-
-          <div class="flex gap-2 text-yellow-500 mt-1">
-            <svg class="fill-yellow-500" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
-              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path
-                d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
-            </svg>
-            <svg class="fill-yellow-500" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
-              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path
-                d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
-            </svg>
-            <svg class="fill-yellow-500" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
-              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path
-                d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
-            </svg>
-            <svg class="fill-yellow-500" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
-              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path
-                d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
-            </svg>
-            <svg class="fill-yellow-500" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
-              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path
-                d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
-            </svg>
-            <span class="text-gray-500 text-sm" data-date="2026-06-13"></span>
-          </div>
-
-          <p class="text-gray-700 mt-2 text-sm">Me instalaron las barandas y pasamanos de la escalera y todo de diez.
-            Cumplieron con los plazos y los materiales y terminaciónes son excelentes.</p>
-        </div>
-
-
-        <div class="bg-white w-72 h-64 rounded-xl p-6
-       max-md:w-full
-       max-md:max-w-sm
-       max-md:h-auto  max-md:hidden ">
-
-
-
-          <div class="flex justify-between items-center">
-            <div class="flex items-center gap-2">
-              <img loading="lazy"  class="w-10"
-                src="https://lh3.googleusercontent.com/a-/ALV-UjW2dUPoOPIwaisXt6ReC8-yRrN6mHiJ0_lGSEyZklrFOtbQiNr5=w72-h72-p-rp-mo-ba12-br100"
-                alt="Adriana Vzc">
-              <span class="text-gray-700">Adriana Vzc</span>
-            </div>
-            <div>
-              <img loading="lazy"  class="w-4" src="/src/imgs/icono-google.png" alt="Logo de Google">
-            </div>
-          </div>
-
-
-          <div class="flex gap-2 text-yellow-500 mt-1">
-            <svg class="fill-yellow-500" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
-              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path
-                d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
-            </svg>
-            <svg class="fill-yellow-500" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
-              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path
-                d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
-            </svg>
-            <svg class="fill-yellow-500" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
-              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path
-                d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
-            </svg>
-            <svg class="fill-yellow-500" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
-              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path
-                d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
-            </svg>
-            <svg class="fill-yellow-500" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
-              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path
-                d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
-            </svg>
-            <span class="text-gray-500 text-sm" data-date="2024-06-27"></span>
-          </div>
-
-          <p class="text-sm mt-3 text-gray-700 overflow-y-auto max-h-32 pr-2">Carlos y su equipo son excelentes y muy
-            profesionales. Destaco la atención y cordialidad, además son muy prolijos y detallistas en todo. Cumplieron
-            con los plazos acordados e incluso instalaron antes. La baranda de acero inoxidable quedó espectacular. Los
-            recomiendo!</p>
-        </div>
-
-
-
-        <div class="bg-white w-72 h-64 rounded-xl p-6
-       max-md:w-full
-       max-md:max-w-sm
-       max-md:h-auto  max-md:hidden">
-
-
-          <div class="flex justify-between items-center">
-            <div class="flex items-center gap-2">
-              <img loading="lazy"  class="w-10"
-                src="https://lh3.googleusercontent.com/a/ACg8ocK-sQYgUgSVpaRwK_SKVmooJlPSCj1dB1iZy2h3E-wNYx2Oiw=w72-h72-p-rp-mo-br100"
-                alt="Guille Ruiz">
-              <span class="text-black">Guille Ruiz</span>
-            </div>
-            <div>
-              <img loading="lazy"  class="w-4" src="/src/imgs/icono-google.png" alt="Logo de Google">
-            </div>
-          </div>
-
-
-          <div class="flex gap-2 text-yellow-500 mt-1">
-            <svg class="fill-yellow-500" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
-              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path
-                d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
-            </svg>
-            <svg class="fill-yellow-500" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
-              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path
-                d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
-            </svg>
-            <svg class="fill-yellow-500" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
-              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path
-                d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
-            </svg>
-            <svg class="fill-yellow-500" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
-              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path
-                d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
-            </svg>
-            <svg class="fill-yellow-500" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
-              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path
-                d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
-            </svg>
-            <span class="text-gray-500 text-sm" data-date="2026-05-30"></span>
-          </div>
-
-          <p class="text-gray-700 mt-2 text-sm">Los materiales un lujo, llegaron muy bien embalados , a 1200 km de
-            capital y un seguimiento y asesoramiento de lujo para la colocación.. un 10!! En todo</p>
-        </div>
-
-
 
       </div>
+    </section>
 
-
-
-    </div>
-
-
-
-
-
-
-
-
-    <div class="mt-20">
-
-      <div class="flex max-md:flex-col max-md:items-center gap-6 justify-center text-center mt-10 text-lg">
-
-
-        <div class="w-[80%] flex flex-col gap-6 ">
-          <p class="h-[50%]"> En <span class="text-blue-600 font-semibold">JC Barandas</span> nos especializamos en el
-            diseño, fabricación e instalación de barandas, pasamanos y estructuras en acero inoxidable, combinando<span
-              class="text-blue-600 font-semibold"> funcionalidad, seguridad y estética</span> en cada proyecto.</p>
-
-          <p class="h-[50%]">Contamos con taller propio, lo que nos permite controlar todo el proceso: desde la
-            selección de materiales
-            hasta
-            la terminación final. Trabajamos con acero inoxidable de alta calidad y vidrios de seguridad, garantizando
-            <span class="text-blue-600 font-semibold"> durabilidad, resistencia y un acabado prolijo</span> en cada
-            detalle.
-          </p>
-        </div>
-
-        <div class="border-r-2 border-blue-600"></div>
-
-        <div class="w-[80%] flex flex-col  gap-6">
-          <p class="h-[50%]">Atendemos proyectos residenciales y comerciales,<span class="text-blue-600 font-semibold">
-              adaptándonos a las necesidades de cada cliente </span>y brindando
-            asesoramiento personalizado desde la primera consulta. Creemos que cada espacio es único, por eso
-            <span class="text-blue-600 font-semibold"> desarrollamos
-              soluciones a medida</span>, priorizando siempre la seguridad y el diseño.
-          </p>
-
-          <p class="h-[50%]"> Nos encontramos en Zona Norte, donde recibimos a nuestros clientes y coordinamos visitas
-            para tomar medidas
-            y
-            evaluar cada proyecto en el lugar. Nuestro objetivo es ofrecer un<span class="text-blue-600 font-semibold">
-              servicio confiable, transparente y de
-              calidad</span>,
-            respaldado por la experiencia y el compromiso con cada trabajo realizado.</p>
-
-        </div>
-      </div>
-    </div>
-
-
-
-    <section id="section-proyectos" class="mt-40 scroll-mt-40">
+    <section id="section-proyectos" class="mt-32 scroll-mt-32">
 
       <!-- TÍTULO -->
       <div class="max-w-7xl mx-auto px-10 mb-14">
@@ -691,7 +521,7 @@
               <div class="absolute inset-x-0 bottom-0 p-7 md:p-10">
                 <div class="mb-3 flex items-center gap-1.5 text-sm text-white/60">
                   <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
-                  <span>Escalera principal · Edificio corporativo</span>
+                  <span>Campana · Edificio corporativo</span>
                 </div>
                 <h3 class="text-2xl md:text-3xl font-bold text-white">Proyecto Edificio Tenaris</h3>
                 <p class="mt-3 max-w-xl leading-relaxed text-white/70 max-md:hidden">
@@ -762,219 +592,367 @@
 
 
 
-    <div id="section-especificaciones" class="mt-24 scroll-mt-24">
-      <h2 class="text-4xl font-semibold text-white mb-10 text-center">Nos caracteriza</h2>
-      <div class="grid grid-cols-2 max-md:grid-cols-1 gap-6">
+    <section id="section-especificaciones" class="mt-32 scroll-mt-32">
+      <div class="max-w-7xl mx-auto px-10 max-md:px-6 grid lg:grid-cols-2 gap-12 items-center">
 
-        <div class="flex justify-center">
-          <div class="w-[80%] flex flex-col gap-6">
-            <div class="rounded-xl p-6 border-2 border-blue-600 transform transition-all hover:scale-[1.02]">
-              <div class="flex items-center gap-2">
-                <div class="p-2 bg-blue-500/10 rounded-lg">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="lucide lucide-badge-check-icon lucide-badge-check">
-                    <path
-                      d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z" />
-                    <path d="m9 12 2 2 4-4" />
-                  </svg>
-                </div>
-                <span class="text-xl font-semibold text-white/70">Calidad en cada detalle</span>
-              </div>
-              <p class="text-blue-600 ">Cuidamos cada terminación y material para garantizar trabajos duraderos,
-                funcionales y estéticamente
-                sólidos.</p>
-            </div>
+        <!-- TEXTO -->
+        <div>
+          <span class="text-sm font-semibold uppercase tracking-[0.2em] text-blue-500">Quiénes somos</span>
+          <h2 class="text-3xl md:text-4xl font-semibold text-white mt-3">Por qué elegirnos</h2>
+          <p class="text-white/70 mt-5 leading-relaxed">
+            Somos una empresa familiar que diseña, fabrica e instala barandas, pasamanos, mamparas, cerramientos y
+            espejos a medida, para proyectos residenciales y comerciales.
+          </p>
+          <p class="text-white/70 mt-4 leading-relaxed">
+            Desde nuestro taller en Beccar seguimos cada proyecto de principio a fin: desde la selección de materiales
+            hasta la instalación. Vamos a la obra a tomar medidas y te asesoramos desde la primera consulta.
+          </p>
+          <p class="text-white/40 text-sm mt-6">No trabajamos con madera ni hierro.</p>
+        </div>
 
+        <!-- DATOS -->
+        <div class="grid grid-cols-2 gap-4 max-md:gap-3">
+          <div class="rounded-2xl border border-white/10 bg-white/5 p-6 max-md:p-4 transition-all hover:border-blue-600/60">
+            <div class="w-fit p-2 rounded-lg bg-blue-500/10 text-blue-500"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z" /><path d="m9 12 2 2 4-4" /></svg></div>
+            <p class="text-2xl max-md:text-lg font-semibold text-white mt-4 max-md:mt-3 leading-tight">+30 años</p>
+            <p class="text-sm max-md:text-xs text-white/60 mt-1">instalando en todo el GBA y CABA, con envíos a todo el país</p>
+          </div>
 
-            <div class="rounded-xl p-6 border-2 border-blue-600 transform transition-all hover:scale-[1.02]">
-              <div class="flex items-center gap-2">
-                <div class="p-2 bg-blue-500/10 rounded-lg">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="lucide lucide-handshake-icon lucide-handshake">
-                    <path d="m11 17 2 2a1 1 0 1 0 3-3" />
-                    <path
-                      d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4" />
-                    <path d="m21 3 1 11h-2" />
-                    <path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3" />
-                    <path d="M3 4h8" />
-                  </svg>
-                </div>
-                <span class="text-xl font-semibold text-white/70">Compromiso y responsabilidad</span>
-              </div>
-              <p class="text-blue-600">Cumplimos con los tiempos acordados y acompañamos al cliente en cada etapa del
-                proyecto.</p>
-            </div>
+          <div class="rounded-2xl border border-white/10 bg-white/5 p-6 max-md:p-4 transition-all hover:border-blue-600/60">
+            <div class="w-fit p-2 rounded-lg bg-blue-500/10 text-blue-500"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 10h.01" /><path d="M12 14h.01" /><path d="M12 6h.01" /><path d="M16 10h.01" /><path d="M16 14h.01" /><path d="M16 6h.01" /><path d="M8 10h.01" /><path d="M8 14h.01" /><path d="M8 6h.01" /><path d="M9 22v-3a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v3" /><rect x="4" y="2" width="16" height="20" rx="2" /></svg></div>
+            <p class="text-2xl max-md:text-lg font-semibold text-white mt-4 max-md:mt-3 leading-tight">Taller propio</p>
+            <p class="text-sm max-md:text-xs text-white/60 mt-1">en Beccar, donde te atendemos personalmente</p>
+          </div>
+
+          <div class="rounded-2xl border border-white/10 bg-white/5 p-6 max-md:p-4 transition-all hover:border-blue-600/60">
+            <div class="w-fit p-2 rounded-lg bg-blue-500/10 text-blue-500"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m11 17 2 2a1 1 0 1 0 3-3" /><path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4" /><path d="m21 3 1 11h-2" /><path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3" /><path d="M3 4h8" /></svg></div>
+            <p class="text-2xl max-md:text-lg font-semibold text-white mt-4 max-md:mt-3 leading-tight">Sin sorpresas</p>
+            <p class="text-sm max-md:text-xs text-white/60 mt-1">cumplimos con lo pactado en cada presupuesto</p>
+          </div>
+
+          <div class="rounded-2xl border border-white/10 bg-white/5 p-6 max-md:p-4 transition-all hover:border-blue-600/60">
+            <div class="w-fit p-2 rounded-lg bg-blue-500/10 text-blue-500"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 7 8.7 2.7a2.41 2.41 0 0 0-3.4 0L2.7 5.3a2.41 2.41 0 0 0 0 3.4L7 13" /><path d="m8 6 2-2" /><path d="m18 16 2-2" /><path d="m17 11 4.3 4.3c.94.94.94 2.46 0 3.4l-2.6 2.6c-.94.94-2.46.94-3.4 0L11 17" /><path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z" /><path d="m15 5 4 4" /></svg></div>
+            <p class="text-2xl max-md:text-lg font-semibold text-white mt-4 max-md:mt-3 leading-tight">Blindex + AISI 304/316</p>
+            <p class="text-sm max-md:text-xs text-white/60 mt-1">vidrio templado y acero inoxidable de primera calidad</p>
           </div>
         </div>
 
+      </div>
+    </section>
 
-        <div class="flex justify-center">
-          <div class="w-[80%] flex flex-col gap-6">
-            <div class="rounded-xl p-6 border-2 border-blue-600 transform transition-all hover:scale-[1.02]">
-              <div class="flex items-center gap-2">
-                <div class="p-2 bg-blue-500/10 rounded-lg">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="lucide lucide-pencil-ruler-icon lucide-pencil-ruler">
-                    <path d="M13 7 8.7 2.7a2.41 2.41 0 0 0-3.4 0L2.7 5.3a2.41 2.41 0 0 0 0 3.4L7 13" />
-                    <path d="m8 6 2-2" />
-                    <path d="m18 16 2-2" />
-                    <path d="m17 11 4.3 4.3c.94.94.94 2.46 0 3.4l-2.6 2.6c-.94.94-2.46.94-3.4 0L11 17" />
-                    <path
-                      d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z" />
-                    <path d="m15 5 4 4" />
-                  </svg>
+    <section id="sobre-nosotros" class="mt-32 scroll-mt-32">
+
+      <!-- TÍTULO -->
+      <div class="max-w-[1600px] mx-auto px-10 max-md:px-6 mb-10 flex flex-wrap items-end justify-between gap-4">
+        <div>
+          <span class="text-sm font-semibold uppercase tracking-[0.2em] text-blue-500">Opiniones</span>
+          <h2 class="text-3xl md:text-4xl font-semibold text-white mt-3">Opiniones que hablan por nosotros</h2>
+        </div>
+        <a href="https://www.google.com/maps?cid=4381594547291201877" target="_blank" rel="noopener"
+          class="text-blue-500 hover:text-blue-400 font-medium transition-all">Ver todas las opiniones en Google &rarr;</a>
+      </div>
+
+      <!-- CARRUSEL -->
+      <div class="swiper reviews-swiper max-w-[1600px] mx-auto !px-10 max-md:!px-6">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide !h-auto">
+            <article class="bg-white h-64 rounded-xl p-6 flex flex-col">
+              <div class="flex justify-between items-center gap-2">
+                <div class="flex items-center gap-2">
+                  <img loading="lazy" class="w-10 h-10 rounded-full" src="https://lh3.googleusercontent.com/a-/ALV-UjUq79C0jvpLZwSzbUyZF52mKNqMGdIt6PhyzJ66HiuOyOBaxekcxQ=w72-h72-p-rp-mo-ba12-br100" alt="Alejandro Laudicina">
+                  <span class="text-black">Alejandro Laudicina</span>
                 </div>
-                <span class="text-xl font-semibold text-white/70">Diseño a medida</span>
+                <img loading="lazy" class="w-4" src="/src/imgs/icono-google.png" alt="Logo de Google">
               </div>
-              <p class="text-blue-600">Cada trabajo es único. Adaptamos diseños y soluciones a las necesidades reales de
-                cada espacio.</p>
-            </div>
-
-
-            <div class="rounded-xl p-6 border-2 border-blue-600 transform transition-all hover:scale-[1.02]">
-              <div class="flex items-center gap-2">
-                <div class="p-2 bg-blue-500/10 rounded-lg">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="lucide lucide-building-icon lucide-building">
-                    <path d="M12 10h.01" />
-                    <path d="M12 14h.01" />
-                    <path d="M12 6h.01" />
-                    <path d="M16 10h.01" />
-                    <path d="M16 14h.01" />
-                    <path d="M16 6h.01" />
-                    <path d="M8 10h.01" />
-                    <path d="M8 14h.01" />
-                    <path d="M8 6h.01" />
-                    <path d="M9 22v-3a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v3" />
-                    <rect x="4" y="2" width="16" height="20" rx="2" />
-                  </svg>
-                </div>
-                <span class="text-xl font-semibold text-white/70">Experiencia y confianza</span>
+              <div class="flex items-center gap-1 mt-2" aria-label="5 de 5 estrellas">
+                <svg class="w-[18px] h-[18px] fill-yellow-500" viewBox="0 0 24 24" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" /></svg>
+                <svg class="w-[18px] h-[18px] fill-yellow-500" viewBox="0 0 24 24" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" /></svg>
+                <svg class="w-[18px] h-[18px] fill-yellow-500" viewBox="0 0 24 24" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" /></svg>
+                <svg class="w-[18px] h-[18px] fill-yellow-500" viewBox="0 0 24 24" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" /></svg>
+                <svg class="w-[18px] h-[18px] fill-yellow-500" viewBox="0 0 24 24" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" /></svg>
+                <span class="text-gray-500 text-sm ml-2" data-date="2026-02-27"></span>
               </div>
-              <p class="text-blue-600">Nuestra trayectoria respalda cada proyecto, construyendo relaciones basadas en
-                confianza y resultados.</p>
-            </div>
+              <p class="text-gray-700 mt-3 text-sm leading-relaxed flex-1 min-h-0 overflow-y-auto pr-2">Lo primero a destacar es la atención insuperable de los dueños. Por otro lado la calidad del trabajo es de excelencia hasta el minimo detalle. Totalmente recomendables.</p>
+            </article>
           </div>
 
+          <div class="swiper-slide !h-auto">
+            <article class="bg-white h-64 rounded-xl p-6 flex flex-col">
+              <div class="flex justify-between items-center gap-2">
+                <div class="flex items-center gap-2">
+                  <img loading="lazy" class="w-10 h-10 rounded-full" src="https://lh3.googleusercontent.com/a-/ALV-UjX1U8vEd-NHInQ2bnx7jOxhErETojtmVyhT0x0T6_JBLKtgHASf=w72-h72-p-rp-mo-br100" alt="Gustavo Fontana">
+                  <span class="text-black">Gustavo Fontana</span>
+                </div>
+                <img loading="lazy" class="w-4" src="/src/imgs/icono-google.png" alt="Logo de Google">
+              </div>
+              <div class="flex items-center gap-1 mt-2" aria-label="5 de 5 estrellas">
+                <svg class="w-[18px] h-[18px] fill-yellow-500" viewBox="0 0 24 24" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" /></svg>
+                <svg class="w-[18px] h-[18px] fill-yellow-500" viewBox="0 0 24 24" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" /></svg>
+                <svg class="w-[18px] h-[18px] fill-yellow-500" viewBox="0 0 24 24" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" /></svg>
+                <svg class="w-[18px] h-[18px] fill-yellow-500" viewBox="0 0 24 24" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" /></svg>
+                <svg class="w-[18px] h-[18px] fill-yellow-500" viewBox="0 0 24 24" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" /></svg>
+                <span class="text-gray-500 text-sm ml-2" data-date="2026-02-18"></span>
+              </div>
+              <p class="text-gray-700 mt-3 text-sm leading-relaxed flex-1 min-h-0 overflow-y-auto pr-2">Hoy terminaron el trabajo en tiempo y forma según lo acordado al contratar sus servicios. Los volveré a contratar para mi próximo proyecto. Muy recomendables!</p>
+            </article>
+          </div>
+
+          <div class="swiper-slide !h-auto">
+            <article class="bg-white h-64 rounded-xl p-6 flex flex-col">
+              <div class="flex justify-between items-center gap-2">
+                <div class="flex items-center gap-2">
+                  <img loading="lazy" class="w-10 h-10 rounded-full" src="https://lh3.googleusercontent.com/a-/ALV-UjXvfESeV6SjbQs4ccZkDZd6KrOE5x66RjgjgbNIiN-ei2GZb1Yldg=w72-h72-p-rp-mo-br100" alt="Fran Copes">
+                  <span class="text-black">Fran Copes</span>
+                </div>
+                <img loading="lazy" class="w-4" src="/src/imgs/icono-google.png" alt="Logo de Google">
+              </div>
+              <div class="flex items-center gap-1 mt-2" aria-label="5 de 5 estrellas">
+                <svg class="w-[18px] h-[18px] fill-yellow-500" viewBox="0 0 24 24" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" /></svg>
+                <svg class="w-[18px] h-[18px] fill-yellow-500" viewBox="0 0 24 24" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" /></svg>
+                <svg class="w-[18px] h-[18px] fill-yellow-500" viewBox="0 0 24 24" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" /></svg>
+                <svg class="w-[18px] h-[18px] fill-yellow-500" viewBox="0 0 24 24" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" /></svg>
+                <svg class="w-[18px] h-[18px] fill-yellow-500" viewBox="0 0 24 24" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" /></svg>
+                <span class="text-gray-500 text-sm ml-2" data-date="2026-06-13"></span>
+              </div>
+              <p class="text-gray-700 mt-3 text-sm leading-relaxed flex-1 min-h-0 overflow-y-auto pr-2">Me instalaron las barandas y pasamanos de la escalera y todo de diez. Cumplieron con los plazos y los materiales y terminaciónes son excelentes.</p>
+            </article>
+          </div>
+
+          <div class="swiper-slide !h-auto">
+            <article class="bg-white h-64 rounded-xl p-6 flex flex-col">
+              <div class="flex justify-between items-center gap-2">
+                <div class="flex items-center gap-2">
+                  <img loading="lazy" class="w-10 h-10 rounded-full" src="https://lh3.googleusercontent.com/a-/ALV-UjW2dUPoOPIwaisXt6ReC8-yRrN6mHiJ0_lGSEyZklrFOtbQiNr5=w72-h72-p-rp-mo-ba12-br100" alt="Adriana Vzc">
+                  <span class="text-black">Adriana Vzc</span>
+                </div>
+                <img loading="lazy" class="w-4" src="/src/imgs/icono-google.png" alt="Logo de Google">
+              </div>
+              <div class="flex items-center gap-1 mt-2" aria-label="5 de 5 estrellas">
+                <svg class="w-[18px] h-[18px] fill-yellow-500" viewBox="0 0 24 24" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" /></svg>
+                <svg class="w-[18px] h-[18px] fill-yellow-500" viewBox="0 0 24 24" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" /></svg>
+                <svg class="w-[18px] h-[18px] fill-yellow-500" viewBox="0 0 24 24" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" /></svg>
+                <svg class="w-[18px] h-[18px] fill-yellow-500" viewBox="0 0 24 24" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" /></svg>
+                <svg class="w-[18px] h-[18px] fill-yellow-500" viewBox="0 0 24 24" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" /></svg>
+                <span class="text-gray-500 text-sm ml-2" data-date="2024-06-27"></span>
+              </div>
+              <p class="text-gray-700 mt-3 text-sm leading-relaxed flex-1 min-h-0 overflow-y-auto pr-2">Carlos y su equipo son excelentes y muy profesionales. Destaco la atención y cordialidad, además son muy prolijos y detallistas en todo. Cumplieron con los plazos acordados e incluso instalaron antes. La baranda de acero inoxidable quedó espectacular. Los recomiendo!</p>
+            </article>
+          </div>
+
+          <div class="swiper-slide !h-auto">
+            <article class="bg-white h-64 rounded-xl p-6 flex flex-col">
+              <div class="flex justify-between items-center gap-2">
+                <div class="flex items-center gap-2">
+                  <img loading="lazy" class="w-10 h-10 rounded-full" src="https://lh3.googleusercontent.com/a/ACg8ocK-sQYgUgSVpaRwK_SKVmooJlPSCj1dB1iZy2h3E-wNYx2Oiw=w72-h72-p-rp-mo-br100" alt="Guille Ruiz">
+                  <span class="text-black">Guille Ruiz</span>
+                </div>
+                <img loading="lazy" class="w-4" src="/src/imgs/icono-google.png" alt="Logo de Google">
+              </div>
+              <div class="flex items-center gap-1 mt-2" aria-label="5 de 5 estrellas">
+                <svg class="w-[18px] h-[18px] fill-yellow-500" viewBox="0 0 24 24" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" /></svg>
+                <svg class="w-[18px] h-[18px] fill-yellow-500" viewBox="0 0 24 24" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" /></svg>
+                <svg class="w-[18px] h-[18px] fill-yellow-500" viewBox="0 0 24 24" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" /></svg>
+                <svg class="w-[18px] h-[18px] fill-yellow-500" viewBox="0 0 24 24" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" /></svg>
+                <svg class="w-[18px] h-[18px] fill-yellow-500" viewBox="0 0 24 24" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" /></svg>
+                <span class="text-gray-500 text-sm ml-2" data-date="2026-05-30"></span>
+              </div>
+              <p class="text-gray-700 mt-3 text-sm leading-relaxed flex-1 min-h-0 overflow-y-auto pr-2">Los materiales un lujo, llegaron muy bien embalados , a 1200 km de capital y un seguimiento y asesoramiento de lujo para la colocación.. un 10!! En todo</p>
+            </article>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="mt-32"></div>
+      <!-- CONTROLES (Swiper los oculta solo cuando entran todas las reseñas) -->
+      <div class="mt-8 flex items-center justify-center gap-5">
+        <button type="button" aria-label="Opinión anterior"
+          class="reviews-prev grid h-11 w-11 place-items-center rounded-full border border-white/15 bg-white/5 text-white transition-all hover:border-blue-600 hover:bg-blue-600">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+        </button>
+        <div class="reviews-pagination projects-pagination"></div>
+        <button type="button" aria-label="Opinión siguiente"
+          class="reviews-next grid h-11 w-11 place-items-center rounded-full border border-white/15 bg-white/5 text-white transition-all hover:border-blue-600 hover:bg-blue-600">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+        </button>
+      </div>
 
-    <div class="mt-32" id="modelos">
+    </section>
 
-      <section class="py-24">
-        <div class="max-w-7xl mx-auto px-10">
+    <section id="section-como-trabajamos" class="mt-32 scroll-mt-32">
+      <div class="max-w-7xl mx-auto px-10 max-md:px-6">
 
-          <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <!-- TÍTULO -->
+        <span class="text-sm font-semibold uppercase tracking-[0.2em] text-blue-500">Cómo trabajamos</span>
+        <h2 class="text-3xl md:text-4xl font-semibold text-white mt-3">De la consulta a la instalación</h2>
 
-            <!-- IMAGEN -->
-            <div class="relative">
-              <div class="absolute inset-0 border-2 border-blue-600 rounded-xl translate-x-3  translate-y-3"></div>
-
-              <img loading="lazy"  src="./src/imgs/templado-botones-sin-pasamanos/img-principal.jpeg" alt="Baranda de vidrio templado sin pasamano en escalera"
-                class="relative z-10 rounded-xl object-cover w-full h-[420px]" />
+        <!-- PASOS -->
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 max-md:gap-3 mt-10">
+          <div class="rounded-2xl border border-white/10 bg-white/5 p-6 max-md:p-4">
+            <div class="flex items-center justify-between">
+              <span class="rounded-lg bg-blue-500/10 p-2 text-blue-500"><i data-lucide="message-circle" class="w-6 h-6"></i></span>
+              <span class="text-3xl max-md:text-2xl font-semibold text-white/15">01</span>
             </div>
-
-            <!-- TEXTO -->
-            <div class="flex flex-col gap-6 text-white">
-              <h2 class="text-4xl font-semibold text-blue-600">
-                Barandas de vidrio templado sin pasamano
-              </h2>
-
-              <div class="space-y-4 text-white/80 leading-relaxed">
-                <p>
-                  Este modelo de baranda en vidrio templado se caracteriza por su diseño limpio y minimalista, sin
-                  pasamanos visibles. Es ideal para escaleras y balcones donde se busca seguridad sin perder amplitud
-                  visual ni luminosidad.
-                </p>
-
-                <p>
-                  El sistema se instala mediante fijaciones puntuales en acero inoxidable, garantizando resistencia y
-                  estabilidad. El vidrio templado de seguridad cumple con las normas vigentes, ofreciendo durabilidad y
-                  protección para espacios interiores y exteriores.
-                </p>
-
-                <p>
-                  Una solución moderna, funcional y estética, pensada para proyectos residenciales que priorizan diseño,
-                  seguridad y calidad en cada detalle.
-                </p>
-              </div>
-
-              <a href="modelos/vid_tem_bot">
-                <button
-                  class="border-2 w-fit border-white transition-all hover:bg-blue-600 hover:border-transparent px-6 py-3 rounded-xl">Ver
-                  más imágenes</button></a>
-            </div>
-
+            <h3 class="text-lg max-md:text-base font-semibold text-white mt-4 leading-tight">Consulta</h3>
+            <p class="text-sm max-md:text-xs text-white/60 mt-1">Contanos qué necesitás por WhatsApp o desde el formulario.</p>
           </div>
 
-        </div>
-      </section>
-
-
-
-      <section class="py-24">
-        <div class="max-w-7xl mx-auto px-10">
-
-          <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-
-
-            <!-- TEXTO -->
-            <div class="flex flex-col gap-6 text-white">
-              <h2 class="text-4xl font-semibold text-blue-600">
-                Barandas de vidrio laminado con estructura de acero inoxidable
-              </h2>
-
-              <div class="space-y-4 text-white/80 leading-relaxed">
-                <p>
-                  Este modelo de baranda combina vidrio laminado de seguridad con una estructura de acero inoxidable,
-                  ofreciendo una solución robusta, segura y de diseño moderno. Es ideal para escaleras, balcones y
-                  entrepisos donde se requiere mayor protección sin resignar estética.
-                </p>
-
-                <p>
-                  El sistema incorpora guías y perfilería en acero inoxidable, que aportan estabilidad y un anclaje
-                  firme al conjunto. El vidrio laminado brinda una mayor resistencia ante impactos y, en caso de rotura,
-                  mantiene su integridad, aumentando el nivel de seguridad.
-                </p>
-
-                <p>
-                  Una opción confiable y duradera, pensada para proyectos residenciales y comerciales que buscan
-                  combinar seguridad, calidad constructiva y una terminación prolija en cada detalle.
-                </p>
-              </div>
-
-              <a href="modelos/vid_tem_estructura">
-                <button
-                  class="border-2 w-fit border-white transition-all hover:bg-blue-600 hover:border-transparent px-6 py-3 rounded-xl">Ver
-                  más imágenes</button></a>
+          <div class="rounded-2xl border border-white/10 bg-white/5 p-6 max-md:p-4">
+            <div class="flex items-center justify-between">
+              <span class="rounded-lg bg-blue-500/10 p-2 text-blue-500"><i data-lucide="ruler" class="w-6 h-6"></i></span>
+              <span class="text-3xl max-md:text-2xl font-semibold text-white/15">02</span>
             </div>
-
-
-            <!-- IMAGEN -->
-            <div class="relative">
-              <div class="absolute inset-0 border-2 border-blue-600 rounded-xl translate-x-3  translate-y-3"></div>
-
-              <img loading="lazy"  src="./src/imgs/Baranda-vidrio-laminado/img-principal.jpeg" alt="Baranda de vidrio laminado con estructura de acero inoxidable"
-                class="relative z-10 rounded-xl object-cover w-full h-[420px]" />
-            </div>
-
+            <h3 class="text-lg max-md:text-base font-semibold text-white mt-4 leading-tight">Visita y medición</h3>
+            <p class="text-sm max-md:text-xs text-white/60 mt-1">Siempre vamos a la obra a tomar medidas y asesorarte.</p>
           </div>
 
+          <div class="rounded-2xl border border-white/10 bg-white/5 p-6 max-md:p-4">
+            <div class="flex items-center justify-between">
+              <span class="rounded-lg bg-blue-500/10 p-2 text-blue-500"><i data-lucide="clipboard-check" class="w-6 h-6"></i></span>
+              <span class="text-3xl max-md:text-2xl font-semibold text-white/15">03</span>
+            </div>
+            <h3 class="text-lg max-md:text-base font-semibold text-white mt-4 leading-tight">Presupuesto</h3>
+            <p class="text-sm max-md:text-xs text-white/60 mt-1">Te pasamos un presupuesto detallado y cumplimos con lo pactado.</p>
+          </div>
+
+          <div class="rounded-2xl border border-white/10 bg-white/5 p-6 max-md:p-4">
+            <div class="flex items-center justify-between">
+              <span class="rounded-lg bg-blue-500/10 p-2 text-blue-500"><i data-lucide="hammer" class="w-6 h-6"></i></span>
+              <span class="text-3xl max-md:text-2xl font-semibold text-white/15">04</span>
+            </div>
+            <h3 class="text-lg max-md:text-base font-semibold text-white mt-4 leading-tight">Fabricación e instalación</h3>
+            <p class="text-sm max-md:text-xs text-white/60 mt-1">Un trabajo típico lleva alrededor de 10 días.</p>
+          </div>
         </div>
-      </section>
 
-    </div>
+        <!-- PRECIO -->
+        <div class="mt-6 rounded-2xl border border-blue-600/40 bg-blue-600/10 p-8 max-md:p-6 grid lg:grid-cols-2 gap-6 items-center">
+          <div>
+            <h3 class="text-2xl max-md:text-xl font-semibold text-white">¿De qué depende el precio?</h3>
+            <p class="text-white/70 mt-3 leading-relaxed">
+              Cada trabajo es a medida, así que el presupuesto depende de:
+            </p>
+          </div>
+          <ul class="space-y-2 text-white/80">
+              <li class="flex gap-2"><span class="text-blue-500">&#10003;</span>Los metros lineales</li>
+              <li class="flex gap-2"><span class="text-blue-500">&#10003;</span>El tipo de sistema (botones, minipostes, estructura)</li>
+              <li class="flex gap-2"><span class="text-blue-500">&#10003;</span>El espesor del vidrio</li>
+              <li class="flex gap-2"><span class="text-blue-500">&#10003;</span>Los accesos a la obra (altura, pisos)</li>
+          </ul>
+        </div>
 
+      </div>
+    </section>
 
+    <section id="section-faq" class="mt-32 scroll-mt-32">
+      <div class="max-w-7xl mx-auto px-10 max-md:px-6">
 
+        <!-- TÍTULO + CTA -->
+        <div class="flex flex-wrap items-end justify-between gap-4">
+          <div>
+            <span class="text-sm font-semibold uppercase tracking-[0.2em] text-blue-500">Preguntas frecuentes</span>
+            <h2 class="text-3xl md:text-4xl font-semibold text-white mt-3">Lo que más nos preguntan</h2>
+          </div>
+          <a href="https://wa.me/5491164463400?text=Hola%2C%20los%20contacto%20desde%20la%20web%20de%20JC%20Barandas.%20Quisiera%20hacer%20una%20consulta." target="_blank" rel="noopener"
+            class="text-blue-500 hover:text-blue-400 font-medium transition-colors">¿Otra duda? Escribinos por WhatsApp &rarr;</a>
+        </div>
 
+        <!-- ACORDEÓN EN DOS COLUMNAS (cada columna crece por separado) -->
+        <div class="faq-lista mt-8 grid md:grid-cols-2 gap-x-12 items-start">
+          <div class="border-t border-white/10">
+            <details class="faq-item border-b border-white/10">
+              <summary class="flex cursor-pointer list-none items-center justify-between gap-4 py-4 max-md:py-3 font-medium text-white hover:text-blue-400 transition-colors">
+                ¿Cuánto tarda un trabajo?
+                <i data-lucide="chevron-down" class="faq-chevron w-5 h-5 shrink-0 text-blue-500"></i>
+              </summary>
+              <div class="faq-body">
+                <p class="pb-4 max-md:pb-3 text-white/70 leading-relaxed">Un trabajo típico tarda alrededor de 10 días. En cada presupuesto te confirmamos el plazo.</p>
+              </div>
+            </details>
+
+            <details class="faq-item border-b border-white/10">
+              <summary class="flex cursor-pointer list-none items-center justify-between gap-4 py-4 max-md:py-3 font-medium text-white hover:text-blue-400 transition-colors">
+                ¿Qué formas de pago aceptan?
+                <i data-lucide="chevron-down" class="faq-chevron w-5 h-5 shrink-0 text-blue-500"></i>
+              </summary>
+              <div class="faq-body">
+                <p class="pb-4 max-md:pb-3 text-white/70 leading-relaxed">Efectivo, transferencia, cheques y tarjetas.</p>
+              </div>
+            </details>
+
+            <details class="faq-item border-b border-white/10">
+              <summary class="flex cursor-pointer list-none items-center justify-between gap-4 py-4 max-md:py-3 font-medium text-white hover:text-blue-400 transition-colors">
+                ¿Tienen local o taller?
+                <i data-lucide="chevron-down" class="faq-chevron w-5 h-5 shrink-0 text-blue-500"></i>
+              </summary>
+              <div class="faq-body">
+                <p class="pb-4 max-md:pb-3 text-white/70 leading-relaxed">Sí. Nuestro taller está en Ingeniero Marconi 2816, Beccar. Te atendemos de lunes a viernes de 8 a 12 y de 14 a 17 hs.</p>
+              </div>
+            </details>
+
+            <details class="faq-item border-b border-white/10">
+              <summary class="flex cursor-pointer list-none items-center justify-between gap-4 py-4 max-md:py-3 font-medium text-white hover:text-blue-400 transition-colors">
+                ¿Van a la obra a tomar medidas?
+                <i data-lucide="chevron-down" class="faq-chevron w-5 h-5 shrink-0 text-blue-500"></i>
+              </summary>
+              <div class="faq-body">
+                <p class="pb-4 max-md:pb-3 text-white/70 leading-relaxed">Sí, siempre vamos a la obra a tomar medidas antes de fabricar.</p>
+              </div>
+            </details>
+
+            <details class="faq-item border-b border-white/10">
+              <summary class="flex cursor-pointer list-none items-center justify-between gap-4 py-4 max-md:py-3 font-medium text-white hover:text-blue-400 transition-colors">
+                ¿El vidrio templado es seguro?
+                <i data-lucide="chevron-down" class="faq-chevron w-5 h-5 shrink-0 text-blue-500"></i>
+              </summary>
+              <div class="faq-body">
+                <p class="pb-4 max-md:pb-3 text-white/70 leading-relaxed">Sí. Es mucho más resistente que un vidrio común y, si llegara a romperse, se fragmenta en pequeños gránulos que no cortan.</p>
+              </div>
+            </details>
+          </div>
+          <div class="border-t border-white/10 max-md:border-t-0">
+            <details class="faq-item border-b border-white/10">
+              <summary class="flex cursor-pointer list-none items-center justify-between gap-4 py-4 max-md:py-3 font-medium text-white hover:text-blue-400 transition-colors">
+                ¿Las barandas necesitan mantenimiento?
+                <i data-lucide="chevron-down" class="faq-chevron w-5 h-5 shrink-0 text-blue-500"></i>
+              </summary>
+              <div class="faq-body">
+                <p class="pb-4 max-md:pb-3 text-white/70 leading-relaxed">No, alcanza con limpiarlas.</p>
+              </div>
+            </details>
+
+            <details class="faq-item border-b border-white/10">
+              <summary class="flex cursor-pointer list-none items-center justify-between gap-4 py-4 max-md:py-3 font-medium text-white hover:text-blue-400 transition-colors">
+                ¿Tienen garantía?
+                <i data-lucide="chevron-down" class="faq-chevron w-5 h-5 shrink-0 text-blue-500"></i>
+              </summary>
+              <div class="faq-body">
+                <p class="pb-4 max-md:pb-3 text-white/70 leading-relaxed">Sí, todos nuestros trabajos tienen garantía por desperfectos. El plazo depende del producto.</p>
+              </div>
+            </details>
+
+            <details class="faq-item border-b border-white/10">
+              <summary class="flex cursor-pointer list-none items-center justify-between gap-4 py-4 max-md:py-3 font-medium text-white hover:text-blue-400 transition-colors">
+                ¿Trabajan fuera de Zona Norte?
+                <i data-lucide="chevron-down" class="faq-chevron w-5 h-5 shrink-0 text-blue-500"></i>
+              </summary>
+              <div class="faq-body">
+                <p class="pb-4 max-md:pb-3 text-white/70 leading-relaxed">Sí. Trabajamos en todo el GBA y CABA, viajamos a otras zonas si el proyecto lo justifica y enviamos el producto a todo el país (la instalación queda a cargo del cliente).</p>
+              </div>
+            </details>
+
+            <details class="faq-item border-b border-white/10">
+              <summary class="flex cursor-pointer list-none items-center justify-between gap-4 py-4 max-md:py-3 font-medium text-white hover:text-blue-400 transition-colors">
+                ¿Trabajan con madera o hierro?
+                <i data-lucide="chevron-down" class="faq-chevron w-5 h-5 shrink-0 text-blue-500"></i>
+              </summary>
+              <div class="faq-body">
+                <p class="pb-4 max-md:pb-3 text-white/70 leading-relaxed">No. Trabajamos con vidrio templado y acero inoxidable.</p>
+              </div>
+            </details>
+          </div>
+        </div>
+
+      </div>
+    </section>
 
     <div id="section-contacto" class="mt-32">
       <!-- CONTENEDOR CON IMAGEN -->
@@ -1019,6 +997,12 @@
                   <option value="Barandas">Barandas</option>
                   <option value="Pasamanos">Pasamanos</option>
                   <option value="Puertas de seguridad">Puertas de seguridad</option>
+                  <option value="Mamparas de baño">Mamparas de baño</option>
+                  <option value="Cerramientos para galerías">Cerramientos para galerías</option>
+                  <option value="Espejos iluminados">Espejos iluminados</option>
+                  <option value="Cercos de piletas">Cercos de piletas</option>
+                  <option value="Rampas">Rampas</option>
+                  <option value="Otro">Otro</option>
                 </select>
 
                 <label for="contacto" class="sr-only">Teléfono o WhatsApp</label>
@@ -1063,7 +1047,7 @@
 
 
   <div class="flex justify-center mt-32"> <a class="my-3 hover:text-blue-600 transition-all font-semibold text-xl"
-      href="https://www.google.com/maps/dir//Ing.+Marconi+2816+B1643FFJ+B%C3%A9ccar+Provincia+de+Buenos+Aires/@-34.4725389,-58.5558537,16z/data=!4m8!4m7!1m0!1m5!1m1!1s0x95bcbaaa21e7e401:0xb3d7bc1a894da626!2m2!1d-58.5558537!2d-34.4725389?entry=ttu&g_ep=EgoyMDI2MDExMy4wIKXMDSoKLDEwMDc5MjA3M0gBUAM%3D"
+      href="https://www.google.com/maps/dir//JC+Barandas,+Ingeniero+Marconi+2816,+B1643FFJ+Beccar,+Provincia+de+Buenos+Aires/@-34.4724464,-58.5559349,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x95bcbaaa23a82453:0x3cce8d06ad14a155!2m2!1d-58.5559349!2d-34.4724464"
       target="_blank"> Cómo llegar ⤵ </a>
 
   </div>
@@ -1071,7 +1055,7 @@
   <div class="bg-slate-900">
     <div> <iframe class="w-full rounded-t-xl h-[200px]"
         title="Ubicación de JC Barandas en Google Maps"
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3289.196682976468!2d-58.55842862432234!3d-34.47253445058188!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcbaaa21e7e401%3A0xb3d7bc1a894da626!2sIng.%20Marconi%202816%2C%20B1643FFJ%20B%C3%A9ccar%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1768261485016!5m2!1ses-419!2sar"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3289.196682976468!2d-58.5559349!3d-34.4724464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcbaaa23a82453%3A0x3cce8d06ad14a155!2sJC%20Barandas!5e0!3m2!1ses-419!2sar!4v1768261485016!5m2!1ses-419!2sar"
         allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
       </iframe>
     </div>
@@ -1110,6 +1094,86 @@
         768: { slidesPerView: 1.4, spaceBetween: 24 },
         1280: { slidesPerView: 1.8, spaceBetween: 32 },
       },
+    });
+
+    const reviewsSwiper = new Swiper(".reviews-swiper", {
+      slidesPerView: 1.1,
+      spaceBetween: 16,
+      grabCursor: true,
+      speed: 500,
+
+      navigation: {
+        nextEl: ".reviews-next",
+        prevEl: ".reviews-prev",
+      },
+
+      pagination: {
+        el: ".reviews-pagination",
+        clickable: true,
+      },
+
+      // con 5 visibles entran todas: Swiper bloquea el carrusel y oculta los controles
+      breakpoints: {
+        640: { slidesPerView: 2, spaceBetween: 20 },
+        1024: { slidesPerView: 3, spaceBetween: 24 },
+        1800: { slidesPerView: 5, spaceBetween: 24 },
+      },
+    });
+
+    document.querySelectorAll("[data-interes]").forEach(a => {
+      a.addEventListener("click", () => {
+        document.getElementById("interes").value = a.dataset.interes;
+      });
+    });
+
+    // Preguntas frecuentes: anima alto + opacidad (200ms) y deja una sola abierta.
+    // Sin JS, <details> sigue funcionando igual (abre y cierra sin animación).
+    const EASE_OUT = "cubic-bezier(0.23, 1, 0.32, 1)";
+    const reducirMovimiento = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const faqItems = document.querySelectorAll(".faq-item");
+
+    function animarFaq(item, abrir) {
+      const cuerpo = item.querySelector(".faq-body");
+      // si estaba a mitad de una animación, arrancar desde el alto actual.
+      // Cerrado arranca de 0: Chrome reporta el alto completo del contenido aunque el <details> esté cerrado.
+      const desde = item.open ? cuerpo.getBoundingClientRect().height : 0;
+      if (item._anim) item._anim.cancel();
+
+      item.classList.toggle("abierto", abrir);
+      if (abrir) item.open = true;
+      const hasta = abrir ? cuerpo.scrollHeight : 0;
+
+      if (reducirMovimiento.matches) {
+        if (!abrir) item.open = false;
+        return;
+      }
+
+      item._anim = cuerpo.animate(
+        [
+          { height: desde + "px", opacity: abrir ? 0 : 1 },
+          { height: hasta + "px", opacity: abrir ? 1 : 0 },
+        ],
+        { duration: 200, easing: EASE_OUT, fill: "forwards" }
+      );
+      item._anim.onfinish = () => {
+        // cerrar el <details> antes de soltar el fill, así no hay un cuadro con el contenido completo
+        if (!abrir) item.open = false;
+        item._anim.cancel();
+        item._anim = null;
+      };
+    }
+
+    faqItems.forEach(item => {
+      item.querySelector("summary").addEventListener("click", e => {
+        e.preventDefault();
+        const abrir = !item.classList.contains("abierto");
+        if (abrir) {
+          faqItems.forEach(otro => {
+            if (otro !== item && otro.classList.contains("abierto")) animarFaq(otro, false);
+          });
+        }
+        animarFaq(item, abrir);
+      });
     });
 
     function mostrarToast(mensaje, tipo = "success") {
