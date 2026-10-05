@@ -2116,6 +2116,10 @@ html {
        column-gap: 1.25rem;
 }
 
+.gap-y-1 {
+  row-gap: 0.25rem;
+}
+
 .space-y-2 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
@@ -2593,10 +2597,6 @@ html {
 
 .font-medium {
   font-weight: 500;
-}
-
-.font-normal {
-  font-weight: 400;
 }
 
 .font-semibold {
