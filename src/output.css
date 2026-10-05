@@ -1484,10 +1484,6 @@ html {
   pointer-events: none;
 }
 
-.visible {
-  visibility: visible;
-}
-
 .invisible {
   visibility: hidden;
 }
@@ -2110,6 +2106,11 @@ html {
        column-gap: 4rem;
 }
 
+.gap-x-2 {
+  -moz-column-gap: 0.5rem;
+       column-gap: 0.5rem;
+}
+
 .gap-x-5 {
   -moz-column-gap: 1.25rem;
        column-gap: 1.25rem;
@@ -2592,6 +2593,10 @@ html {
 
 .font-medium {
   font-weight: 500;
+}
+
+.font-normal {
+  font-weight: 400;
 }
 
 .font-semibold {
@@ -3090,10 +3095,6 @@ html {
 
   .max-md\:pt-28 {
     padding-top: 7rem;
-  }
-
-  .max-md\:text-center {
-    text-align: center;
   }
 
   .max-md\:text-2xl {
