@@ -13,10 +13,11 @@ Landing page comercial pensada para captar clientes: muestra el trabajo de la em
   - `section-productos` — "Qué hacemos": tarjetas con foto de los 5 modelos (link a cada página) + "También hacemos" (mamparas, cerramientos, espejos, cercos, rampas, puertas). Esas tarjetas llevan `data-interes` y al tocarlas preseleccionan el `<select id="interes">` del formulario.
   - `section-proyectos` — Carrusel (Swiper) con los 6 proyectos reales.
   - `section-especificaciones` — "Por qué elegirnos" (texto + 4 datos). El id se mantuvo por compatibilidad; el menú "Nosotros" ahora va a `/quienes-somos`.
-  - `sobre-nosotros` — Reseñas de Google en carrusel (Swiper `.reviews-swiper`; con ≥1800px entran las 5 y Swiper bloquea el carrusel y oculta controles vía `.swiper-button-lock`). Tarjetas de alto fijo (`h-64`) con scroll interno en el texto. Link "Ver todas las opiniones en Google" a la ficha (`?cid=4381594547291201877`).
+  - `sobre-nosotros` — Reseñas de Google en carrusel (Swiper `.reviews-swiper`; con ≥1800px entran las 5 y Swiper bloquea el carrusel y oculta controles vía `.swiper-button-lock`). Todas las tarjetas miden lo mismo: el alto lo marca la reseña más larga de las normales y la de Adriana (la única larga) scrollea por dentro, sin definir el alto (`h-0 flex-auto overflow-y-auto` en su `<p>`; sin JS, se adapta solo al ancho). Si entra otra reseña larga, darle esas mismas clases. Link "Ver todas las opiniones en Google" a la ficha (`?cid=4381594547291201877`).
   - `section-como-trabajamos` — 4 pasos + "¿De qué depende el precio?" (no se publican precios).
-  - `section-faq` — Preguntas frecuentes en dos columnas, `<details>` con apertura animada por WAAPI (200ms, ease-out fuerte) y una sola abierta a la vez; sin JS siguen funcionando. Respeta `prefers-reduced-motion`.
-  - `section-contacto` — Formulario (nombre, interés, contacto, zona, mensaje) con envío por **WhatsApp** y **email**; mapa y "Cómo llegar" apuntan a la ficha de Google del negocio (no solo a la dirección).
+  - `section-faq` — Preguntas frecuentes en dos columnas, `<details>` con apertura animada por WAAPI (200ms, ease-out fuerte) y una sola abierta a la vez; sin JS siguen funcionando. Respeta `prefers-reduced-motion`. Las mismas preguntas están en el schema `FAQPage` del `<head>`: si se cambia una pregunta o respuesta, cambiarla en los dos lugares.
+  - `section-zonas` — "Dónde instalamos barandas": localidades y barrios cerrados en pills (los que tienen página de proyecto llevan link); cada lista cierra con una pill "consultá por tu zona →" que lleva al formulario. Las localidades también están en el `areaServed` del schema.
+  - `section-contacto` — Lleva `scroll-mt-32` como las demás secciones, para que los botones que llevan al formulario (también los `/#section-contacto` de las otras páginas) no lo dejen tapado por el menú fijo. Formulario (nombre, interés, contacto, zona, mensaje) con envío por **WhatsApp** y **email**; mapa y "Cómo llegar" apuntan a la ficha de Google del negocio (no solo a la dirección).
 
 - **[quienes-somos.html](quienes-somos.html)** — Página "Quiénes somos" (`/quienes-somos`): historia, datos, taller (dirección, horario, cómo llegar) y las 6 obras. Schema `AboutPage`. **La foto del taller es ilustrativa** (hay un `TODO` en el HTML) hasta que el cliente mande la real.
 
@@ -131,7 +132,8 @@ Regla del proyecto: **toda imagen nueva que se suba al sitio pasa por esto antes
 - [ ] OK del cliente para publicar (mergear `cambios-seo-cliente` → `main`). Anotar la fecha de deploy para medir en Search Console a las ~4 semanas y pedir reindexación de la home y `/quienes-somos`.
 - [ ] Fotos: taller (reemplaza la ilustrativa de Quiénes somos), servicios nuevos, banners horizontales de Haras y Costa Esmeralda.
 - [ ] Datos de Haras, Tigre y Talar (año, tamaño); garantía (plazo/cobertura); confirmar sistema de baranda de cada proyecto.
-- [ ] Optimizar imágenes a WebP (ítem aprobado del plan).
+- [x] Optimizar imágenes a WebP (ítem aprobado del plan) — hecho el 2026-10-06: versiones `.webp` (lado largo 1600px; `-sm` de 900px para tarjetas) al lado de cada JPG; los JPG quedan solo para `og:image`. Para fotos nuevas, generar también su `.webp`.
+- [ ] Al deployar: actualizar los `<lastmod>` del `sitemap.xml` si hubo más cambios y reenviar el sitemap en Search Console.
 
 ### Dominio final: `jcbarandas.com.ar` (decidido)
 
@@ -174,7 +176,7 @@ Dominio **principal**: `https://jcbarandas.com.ar` (sin `www`). El otro dominio 
 ### Otros
 
 - [ ] Decidir si reemplazar `vid_tem_bot_portada_4.jpg` (marca de agua de IA) por una foto real. — *por ahora se deja como está.*
-- [ ] **`unpkg.com/lucide@latest`** en 13 páginas (íconos): pinear una versión concreta y, si se puede, mover a cdnjs. `@latest` sin fijar puede romper los íconos si sale una versión con cambios. — *dejado así por ahora.*
+- [x] ~~**`unpkg.com/lucide@latest`** en 13 páginas (íconos)~~ — resuelto el 2026-10-06: los íconos pasaron a SVG inline y ya no se carga la librería.
 - [ ] **Avatares de testimonios hotlinkeados de Google** (`lh3.googleusercontent.com`, 5 imágenes en la home): descargar, optimizar y servir localmente. Esas URLs de Google pueden expirar. — *dejado así por ahora.*
 - [x] QA: los botones "Ver más imágenes" de la home (sección modelos) apuntaban a `href="#"` (muertos) → ahora van a `vid_tem_bot.html` y `vid_tem_estructura.html`.
 - [x] QA: el botón "Ver proyectos" del hero no hacía nada → ahora scrollea a `#section-proyectos` (el carrusel).
