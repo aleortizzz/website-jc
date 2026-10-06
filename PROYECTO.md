@@ -8,21 +8,25 @@ Landing page comercial pensada para captar clientes: muestra el trabajo de la em
 
 ## Estructura del sitio
 
-- **[index.html](index.html)** — Página principal, con las siguientes secciones:
-  - `section-inicio` — Hero principal ("Barandas de Diseño")
-  - `sobre-nosotros` — Presentación de la empresa + opiniones/testimonios de clientes
-  - `section-proyectos` — Destacado de proyectos realizados (carrusel + grid). **Pendiente de rehacer con los 6 proyectos reales** — todavía tiene contenido placeholder ("Proyecto San Isidro", "Proyecto Andina", ubicaciones/años inventados).
-  - `section-especificaciones` — "Nos caracteriza" (diferenciales de la empresa)
-  - `modelos` — Vista previa de los modelos/estilos de baranda ofrecidos
-  - `section-contacto` — Formulario de contacto (nombre, interés, contacto, zona, mensaje) con botones de envío por **WhatsApp** y **email**
-  - Footer con redes sociales (Instagram, WhatsApp, Facebook)
+- **[index.html](index.html)** — Página principal. Orden de secciones (reordenado en oct-2026 según el recorrido del usuario: qué hacen → trabajos → confianza → dudas → contacto):
+  - `section-inicio` — Hero. H1 en dos líneas dentro del mismo `<h1>`: "Barandas, Mamparas, Cerramientos y Espejos" + "a medida en Zona Norte, CABA y todo el GBA"; debajo materiales (Blindex, AISI 304/316) y 3 tarjetas con datos concretos.
+  - `section-productos` — "Qué hacemos": tarjetas con foto de los 5 modelos (link a cada página) + "También hacemos" (mamparas, cerramientos, espejos, cercos, rampas, puertas). Esas tarjetas llevan `data-interes` y al tocarlas preseleccionan el `<select id="interes">` del formulario.
+  - `section-proyectos` — Carrusel (Swiper) con los 6 proyectos reales.
+  - `section-especificaciones` — "Por qué elegirnos" (texto + 4 datos). El id se mantuvo por compatibilidad; el menú "Nosotros" ahora va a `/quienes-somos`.
+  - `sobre-nosotros` — Reseñas de Google en carrusel (Swiper `.reviews-swiper`; con ≥1800px entran las 5 y Swiper bloquea el carrusel y oculta controles vía `.swiper-button-lock`). Tarjetas de alto fijo (`h-64`) con scroll interno en el texto. Link "Ver todas las opiniones en Google" a la ficha (`?cid=4381594547291201877`).
+  - `section-como-trabajamos` — 4 pasos + "¿De qué depende el precio?" (no se publican precios).
+  - `section-faq` — Preguntas frecuentes en dos columnas, `<details>` con apertura animada por WAAPI (200ms, ease-out fuerte) y una sola abierta a la vez; sin JS siguen funcionando. Respeta `prefers-reduced-motion`.
+  - `section-contacto` — Formulario (nombre, interés, contacto, zona, mensaje) con envío por **WhatsApp** y **email**; mapa y "Cómo llegar" apuntan a la ficha de Google del negocio (no solo a la dirección).
+
+- **[quienes-somos.html](quienes-somos.html)** — Página "Quiénes somos" (`/quienes-somos`): historia, datos, taller (dirección, horario, cómo llegar) y las 6 obras. Schema `AboutPage`. **La foto del taller es ilustrativa** (hay un `TODO` en el HTML) hasta que el cliente mande la real.
 
 - **[modelos/](modelos/)** — Páginas de detalle de modelos de barandas (son las que aparecen en el desplegable "Modelos" del nav):
-  - [vid_tem_bot.html](modelos/vid_tem_bot.html) — Vidrio templado y botones
-  - [vid_tem_minipostes.html](modelos/vid_tem_minipostes.html) — Vidrio templado y minipostes
-  - [vid_tem_estructura.html](modelos/vid_tem_estructura.html) — Vidrio templado y estructura de acero inoxidable
-  - [barandas_exterior.html](modelos/barandas_exterior.html) — Barandas de exterior
-  - [otros.html](modelos/otros.html) — Otros trabajos a medida
+  - [vid_tem_bot.html](modelos/vid_tem_bot.html) — Barandas de Vidrio Templado y Botones (el más elegido)
+  - [vid_tem_minipostes.html](modelos/vid_tem_minipostes.html) — Barandas de Vidrio Templado y Minipostes
+  - [vid_tem_estructura.html](modelos/vid_tem_estructura.html) — Barandas de Vidrio Templado con Estructura de Acero Inoxidable
+  - [barandas_exterior.html](modelos/barandas_exterior.html) — Barandas de Exterior de Acero Inoxidable y Vidrio
+  - [otros.html](modelos/otros.html) — Pasamanos y Trabajos a Medida (con un "Catálogo" de 10 productos y su material)
+  - Cada página: H1/título con "Barandas de…" (keyword), intro que explica cómo funciona el sistema, bloque "lo que tenés que saber" (ideal para / materiales / plazos y garantía) y "¿Cómo se cotiza?". Schema `Service` + `BreadcrumbList` vinculado al `@id` del negocio (`https://jcbarandas.com.ar/#negocio`, definido en el schema de la home).
 
 - **[proyectos/](proyectos/)** — Casos de estudio de proyectos realizados:
   - _(`sanisidro.html` — era la plantilla base con fotos de stock, **eliminada** una vez que los 6 proyectos reales quedaron armados. La estructura que definía — hero, sobre el proyecto, materiales/detalles técnicos, galería, CTA — ya está replicada en las 6 páginas reales; usar cualquiera de ellas como base para nuevos proyectos. También se había descartado antes una `proyecto_template.html` alternativa.)_
@@ -32,6 +36,7 @@ Landing page comercial pensada para captar clientes: muestra el trabajo de la em
   - [tigre.html](proyectos/tigre.html) — Barandas de vidrio y acero inoxidable en balcones de un edificio en Tigre. Fotos en `src/imgs/proyecto_tigre/`.
   - [tenaris.html](proyectos/tenaris.html) — Baranda de acero inoxidable y vidrio en la escalera principal del edificio Tenaris. Fotos en `src/imgs/proyecto_tenaris/`.
   - [talar_del_lago_2.html](proyectos/talar_del_lago_2.html) — Baranda de acero inoxidable y vidrio en escalera/entrepiso de una vivienda en Talar del Lago 2. Fotos en `src/imgs/proyecto_talar_del_lago_2/`. Nota: quedó `IMG_20230312_220001.jpg` sin usar/renombrar en esa carpeta (había una foto de más).
+  - Cada proyecto tiene "Cómo lo resolvimos" (3 tarjetas con datos de la obra) y un link "Sistema usado" a la página del modelo; Tenaris, Cariló y Costa Esmeralda tienen además una ficha (ubicación, año, etc.). Schema `BreadcrumbList`. El sistema asignado a cada obra está **pendiente de confirmar con el cliente**.
   - **Las 6 páginas de proyectos reales están completas** con el mismo patrón: banner + imagen "Sobre el proyecto" + materiales (3 categorías) + galería de 3 a 6 fotos + CTA, todas con alt text real, `width`/`height`, compresión y `og:image` propio. El copy de todas sigue el criterio de foco en la baranda, no en la arquitectura de la casa.
   - La imagen de "Sobre el proyecto" tiene `h-[480px] object-cover` (además de `width`/`height` reales para el navegador) para que se vea del mismo tamaño en todas las páginas — antes cada una tenía su tamaño natural y algunas (Tenaris) quedaban gigantes y pedían scroll para verse completas.
   - **Banner (header hero) — probado y revertido.** El problema real: fotos angostas/verticales (Haras Santa María es 897×1920, sin ninguna horizontal disponible) se pixelan al estirarse como fondo ancho con `background-size: cover`. Se probaron dos soluciones: achicar la altura (`h-[28vh]` — no sirve, `cover` igual agranda la imagen lo mismo horizontalmente sin importar la altura del contenedor) y un diseño de 3 capas con fondo `blur-2xl` + foto sin estirar centrada encima (sí soluciona el pixelado, probado y confirmado que se ve bien). A pedido del usuario **se volvió al banner original** (`h-[40vh] bg-cover bg-center`, simple, sin las capas de blur) en las 6 páginas de proyecto — va a pedirle al cliente fotos sacadas en horizontal para Haras Santa María y Costa Esmeralda en vez de complicar el CSS. Si en el futuro se quiere retomar el diseño con blur, la receta está en el historial de esta conversación.
@@ -60,8 +65,19 @@ Landing page comercial pensada para captar clientes: muestra el trabajo de la em
 ## Scripts disponibles
 
 ```bash
+npm run dev        # Sirve el sitio en http://localhost:3000 con URLs limpias (/modelos/vid_tem_bot)
 npm run tailwind   # Compila y observa cambios en el CSS (input.css -> output.css)
 ```
+
+- **Usar `npm run dev`, no Live Server**: los links del sitio no llevan `.html` (en producción los resuelve el `web.config` de IIS) y Live Server da "Cannot GET" en todas. `serve` los resuelve igual que producción.
+- Al cambiar CSS hay que subir el `?v=N` de `output.css` en todas las páginas (cache-busting: el hosting cachea el CSS 7 días).
+
+## Flujo de trabajo y deploy
+
+- **Push a `main` = deploy automático** al sitio del cliente. Los cambios en curso viven en la rama **`cambios-seo-cliente`** (push a esa rama no despliega); se mergea a `main` recién cuando el cliente aprueba.
+- El deploy excluye `.claude/**` y `.mcp.json` (herramientas de desarrollo). Si se suma tooling nuevo al repo, excluirlo también en `deploy.yml`.
+- `.claude/skills/` tiene skills de diseño y animación (Emil Kowalski, MIT; impeccable sin scripts ni hooks, Apache 2.0) y `.mcp.json` el MCP de Playwright para capturas.
+- Datos privados del cliente (respuestas de encuestas, auditorías, Search Console) **nunca** al repo: están en el `.gitignore`.
 
 ## Notas
 
@@ -74,7 +90,7 @@ npm run tailwind   # Compila y observa cambios en el CSS (input.css -> output.cs
 - El formulario de contacto envía los mails vía **EmailJS** (service/template configurados en el `<script>` de [index.html](index.html)); no hay backend propio.
 - El header/footer compartido (`partials/`) se carga con `fetch()`, que **no funciona abriendo el HTML directo desde el explorador de archivos** (`file://...`). Para probar en local hace falta un servidor HTTP simple (ej. extensión "Live Server" de VS Code, o `npx serve`). En Hostinger va a andar normal porque ahí sí se sirve por HTTP.
 - Los links del nav/footer a secciones de la home (Inicio, Proyectos, etc.) ahora apuntan siempre a `/index.html#section-...`, incluso estando ya en la home — antes hacían scroll suave sin recargar. Es la contra de tener un solo header compartido; si se nota molesto se puede revisar más adelante.
-- El nav de escritorio (con los 5 modelos + Proyectos + Especificaciones + Contacto + mail) necesita bastante ancho para no amontonarse. Por eso el menú hamburguesa se usa hasta los 1280px de ancho de pantalla, y recién de ahí para arriba se ve el menú horizontal completo.
+- El nav de escritorio (con los 5 modelos + Proyectos + Nosotros + Contacto + mail) necesita bastante ancho para no amontonarse. Por eso el menú hamburguesa se usa hasta los 1280px de ancho de pantalla, y recién de ahí para arriba se ve el menú horizontal completo.
 - `vid_tem_minipostes.html` ya tiene sus fotos reales (`src/imgs/vid_tem_minpostes/`, nota: la carpeta quedó con ese typo — falta la "i" de "minipostes" — no lo corregí para no romper los links, se puede renombrar más adelante si se quiere prolijo).
 - `vid_tem_estructura.html` ya tiene sus fotos reales (`src/imgs/vid_tem_estructura/`, esta carpeta sin typo).
 - `barandas_exterior.html` ya tiene sus fotos reales (`src/imgs/baranda_exterior/` — ojo, la carpeta está en singular "baranda", la página en plural "barandas", otro nombre que no coincide exacto pero funciona).
@@ -101,7 +117,21 @@ Regla del proyecto: **toda imagen nueva que se suba al sitio pasa por esto antes
 5. **Revisar que no sea contenido de IA o de stock** — si es una foto real de un trabajo, que se vea como tal.
 6. **Para el banner (header) de una página de proyecto** — usar la foto más horizontal/ancha que haya disponible. Una foto vertical estirada como fondo ancho se pixela (banner simple `bg-cover`, sin corrección — ver Notas). Si todas las fotos del proyecto son verticales, avisar al usuario para que le pida al cliente una sacada en horizontal.
 
+## Criterios de copy (acordados con el usuario)
+
+- Nada genérico ("calidad premium", "llevemos tu proyecto al siguiente nivel"): cada texto dice algo concreto del producto o la obra.
+- No decir "no publicamos precios": usar "cada trabajo es a medida, así que el presupuesto depende de…".
+- No decir que viajan a otras zonas "si el proyecto lo justifica" (hace sentir menos importante al cliente). Alcance: "todo el GBA y CABA, y enviamos a todo el país".
+- "Beccar" sin tilde (pedido del cliente). No publicar datos que el cliente no autorizó (ej. cantidad de obras por mes).
+
 ## Pendientes antes de entregar al cliente
+
+### Cambios SEO (oct-2026) — esperando al cliente
+
+- [ ] OK del cliente para publicar (mergear `cambios-seo-cliente` → `main`). Anotar la fecha de deploy para medir en Search Console a las ~4 semanas y pedir reindexación de la home y `/quienes-somos`.
+- [ ] Fotos: taller (reemplaza la ilustrativa de Quiénes somos), servicios nuevos, banners horizontales de Haras y Costa Esmeralda.
+- [ ] Datos de Haras, Tigre y Talar (año, tamaño); garantía (plazo/cobertura); confirmar sistema de baranda de cada proyecto.
+- [ ] Optimizar imágenes a WebP (ítem aprobado del plan).
 
 ### Dominio final: `jcbarandas.com.ar` (decidido)
 
