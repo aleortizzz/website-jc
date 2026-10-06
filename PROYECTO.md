@@ -130,8 +130,9 @@ Regla del proyecto: **toda imagen nueva que se suba al sitio pasa por esto antes
 ### Cambios SEO (oct-2026) — esperando al cliente
 
 - [ ] OK del cliente para publicar (mergear `cambios-seo-cliente` → `main`). Anotar la fecha de deploy para medir en Search Console a las ~4 semanas y pedir reindexación de la home y `/quienes-somos`.
-- [ ] Fotos: taller (reemplaza la ilustrativa de Quiénes somos), servicios nuevos, banners horizontales de Haras y Costa Esmeralda.
-- [ ] Datos de Haras, Tigre y Talar (año, tamaño); garantía (plazo/cobertura).
+- [ ] Fotos (pedidas al cliente): taller actual (reemplaza el mapa provisorio de "Nuestro taller" en Quiénes somos) y banner horizontal de Haras. Costa Esmeralda ya está.
+- [x] Respuestas del cliente (2026-10-06), aplicadas: visita sin costo hasta 40 km; presupuesto por WhatsApp sin visita obligatoria (FAQ nueva + "¿Cómo se cotiza?" en modelos); años Haras 2024 / Tigre 2025 / Talar 2023 (ficha en cada proyecto); personal con seguros reglamentarios y maquinaria; apoyo telefónico para instalaciones en el interior. No tienen promociones bancarias (no se publica).
+- [ ] Metros lineales de Haras, Tigre y Talar: el cliente tiene que buscar el historial. La garantía quedó genérica a propósito.
 - [x] Optimizar imágenes a WebP (ítem aprobado del plan) — hecho el 2026-10-06: versiones `.webp` (lado largo 1600px; `-sm` de 900px para tarjetas) al lado de cada JPG; los JPG quedan solo para `og:image`. Para fotos nuevas, generar también su `.webp`.
 - [ ] Al deployar: actualizar los `<lastmod>` del `sitemap.xml` si hubo más cambios y reenviar el sitemap en Search Console.
 
