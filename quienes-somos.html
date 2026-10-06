@@ -6,8 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet" />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap"></noscript>
   <link rel="stylesheet" href="src/output.css?v=27">
   <link rel="icon" href="./src/imgs/faviconJC.png" type="image/x-icon">
   <title>Quiénes Somos | Empresa Familiar de Barandas en Beccar | JC Barandas</title>
@@ -147,14 +148,14 @@
 
         <ul class="mt-6 space-y-4">
           <li class="flex gap-3">
-            <span class="shrink-0 rounded-lg bg-blue-500/10 p-2 text-blue-500 h-fit"><i data-lucide="map-pin" class="w-5 h-5"></i></span>
+            <span class="shrink-0 rounded-lg bg-blue-500/10 p-2 text-blue-500 h-fit"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin w-5 h-5" aria-hidden="true"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></span>
             <div>
               <p class="font-semibold text-white">Ingeniero Marconi 2816, Beccar</p>
               <p class="text-sm text-white/60">Provincia de Buenos Aires</p>
             </div>
           </li>
           <li class="flex gap-3">
-            <span class="shrink-0 rounded-lg bg-blue-500/10 p-2 text-blue-500 h-fit"><i data-lucide="clock" class="w-5 h-5"></i></span>
+            <span class="shrink-0 rounded-lg bg-blue-500/10 p-2 text-blue-500 h-fit"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clock w-5 h-5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span>
             <div>
               <p class="font-semibold text-white">Lunes a viernes</p>
               <p class="text-sm text-white/60">8 a 12 y 14 a 17 hs</p>
@@ -233,9 +234,6 @@
   </main>
 
   <div id="footer-placeholder"></div>
-
-  <script src="https://unpkg.com/lucide@latest"></script>
-  <script>lucide.createIcons();</script>
 </body>
 
 </html>

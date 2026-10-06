@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet" />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap"></noscript>
     <link rel="stylesheet" href="../src/output.css?v=27">
     <link rel="icon" href="../src/imgs/faviconJC.png" type="image/x-icon">
     <title>Pasamanos y Trabajos a Medida en Acero Inoxidable | JC Barandas</title>
@@ -137,7 +137,7 @@
                 <div class="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-8">
 
                     <div class="flex flex-col items-center lg:items-start text-center lg:text-left animate-fade-right">
-                        <i data-lucide="ruler" class="w-12 h-12 text-blue-600 mb-3"></i>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-ruler w-12 h-12 text-blue-600 mb-3" aria-hidden="true"><path d="M21.3 15.3a2.4 2.4 0 0 1 0 3.4l-2.6 2.6a2.4 2.4 0 0 1-3.4 0L2.7 8.7a2.41 2.41 0 0 1 0-3.4l2.6-2.6a2.41 2.41 0 0 1 3.4 0Z"/><path d="m14.5 12.5 2-2"/><path d="m11.5 9.5 2-2"/><path d="m8.5 6.5 2-2"/><path d="m17.5 15.5 2-2"/></svg>
                         <h3 class="font-semibold">Pasamanos curvos</h3>
                         <p class="text-sm text-white/70">
                             Siguen la forma de la escalera.
@@ -146,7 +146,7 @@
 
                     <div
                         class="flex flex-col items-center lg:items-start text-center lg:text-left animate-fade-right animate-delay-150">
-                        <i data-lucide="shield-check" class="w-12 h-12 text-blue-600 mb-3"></i>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield-check w-12 h-12 text-blue-600 mb-3" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>
                         <h3 class="font-semibold">Cercos y portones</h3>
                         <p class="text-sm text-white/70">
                             De vidrio, para piletas y escaleras.
@@ -155,7 +155,7 @@
 
                     <div
                         class="flex flex-col items-center lg:items-start text-center lg:text-left animate-fade-right animate-delay-300">
-                        <i data-lucide="users" class="w-12 h-12 text-blue-600 mb-3"></i>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users w-12 h-12 text-blue-600 mb-3" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><path d="M16 3.128a4 4 0 0 1 0 7.744"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><circle cx="9" cy="7" r="4"/></svg>
                         <h3 class="font-semibold">Puertas y manijas</h3>
                         <p class="text-sm text-white/70">
                             De seguridad y de entrada, en acero.
@@ -171,7 +171,7 @@
                 <a href="#section-galeria"
                     class="flex items-center gap-2 text-xl font-semibold hover:text-blue-500 transition">
                     <span>Ver Galería</span>
-                    <i data-lucide="corner-right-down" class="w-6 h-6"></i>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-corner-right-down w-6 h-6" aria-hidden="true"><path d="m10 15 5 5 5-5"/><path d="M4 4h7a4 4 0 0 1 4 4v12"/></svg>
                 </a>
             </div>
 
@@ -373,8 +373,6 @@
 
 </body>
 
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
 
 
 <script>
@@ -435,8 +433,5 @@
 
     });
 </script>
-
-<script src="https://unpkg.com/lucide@latest"></script>
-<script>lucide.createIcons();</script>
 
 </html>
