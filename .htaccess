@@ -1,0 +1,21 @@
+# Solo para el sitio de prueba en Hostinger (website-jc.tizdigital.com).
+# Producción (jcbarandas.com.ar) corre en IIS y usa web.config; este archivo
+# está excluido del deploy a Ferozo.
+
+# El test no se indexa: el sitio real es jcbarandas.com.ar
+<IfModule mod_headers.c>
+  Header set X-Robots-Tag "noindex, nofollow"
+</IfModule>
+
+Options -MultiViews -Indexes
+RewriteEngine On
+
+# Archivos internos del repo (docs, tooling): 404
+RewriteRule ^(\.claude|\.github|node_modules)(/|$) - [R=404,L]
+RewriteRule ^(PROYECTO\.md|notes\.txt|package(-lock)?\.json|postcss\.config\.js|tailwind\.config\.js|web\.config|\.mcp\.json|\.gitignore)$ - [R=404,L]
+
+# URLs sin .html, igual que en producción: /quienes-somos -> /quienes-somos.html
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.+?)/?$ $1.html [L]
