@@ -1781,6 +1781,10 @@ html {
   aspect-ratio: 432/250;
 }
 
+.aspect-\[900\/690\] {
+  aspect-ratio: 900/690;
+}
+
 .\!h-auto {
   height: auto !important;
 }
@@ -1829,16 +1833,16 @@ html {
   height: 20vh;
 }
 
+.h-\[260px\] {
+  height: 260px;
+}
+
 .h-\[300px\] {
   height: 300px;
 }
 
 .h-\[420px\] {
   height: 420px;
-}
-
-.h-\[440px\] {
-  height: 440px;
 }
 
 .h-\[46vh\] {
@@ -2240,6 +2244,12 @@ html {
   --tw-space-y-reverse: 0;
   margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(1rem * var(--tw-space-y-reverse));
+}
+
+.space-y-6 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
 }
 
 .overflow-hidden {
@@ -3263,8 +3273,8 @@ html {
     height: 15vh;
   }
 
-  .max-md\:h-\[320px\] {
-    height: 320px;
+  .max-md\:h-\[220px\] {
+    height: 220px;
   }
 
   .max-md\:h-\[380px\] {
