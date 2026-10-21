@@ -9,7 +9,7 @@ Landing page comercial pensada para captar clientes: muestra el trabajo de la em
 ## Estructura del sitio
 
 - **[index.html](index.html)** — Página principal. Orden de secciones (reordenado en oct-2026 según el recorrido del usuario: qué hacen → trabajos → confianza → dudas → contacto):
-  - `section-inicio` — Hero. H1 en dos líneas dentro del mismo `<h1>`: "Barandas, Mamparas, Cerramientos y Espejos" + "a medida en Zona Norte, CABA y todo el GBA"; debajo materiales (Blindex, AISI 304/316) y 3 tarjetas con datos concretos.
+  - `section-inicio` — Hero. H1 en dos líneas dentro del mismo `<h1>`: "Barandas de diseño" (frase pedida por el cliente) + "en vidrio templado y acero inoxidable, a medida en Zona Norte, CABA y GBA" (la segunda línea queda dentro del `<h1>` para no perder materiales y zona); debajo "También mamparas, cerramientos y espejos" + materiales y 3 tarjetas con datos concretos.
   - `section-productos` — "Qué hacemos": tarjetas con foto de los 5 modelos (link a cada página) + "También hacemos" (mamparas, cerramientos, espejos, cercos, rampas, puertas). Esas tarjetas llevan `data-interes` y al tocarlas preseleccionan el `<select id="interes">` del formulario.
   - `section-proyectos` — Carrusel (Swiper) con los 6 proyectos reales.
   - `section-especificaciones` — "Por qué elegirnos" (texto + 4 datos). El id se mantuvo por compatibilidad; el menú "Nosotros" ahora va a `/quienes-somos`.
