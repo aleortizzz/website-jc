@@ -1833,8 +1833,8 @@ html {
   height: 20vh;
 }
 
-.h-\[260px\] {
-  height: 260px;
+.h-\[220px\] {
+  height: 220px;
 }
 
 .h-\[300px\] {
@@ -2538,6 +2538,11 @@ html {
 .object-cover {
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.object-\[center_30\%\] {
+  -o-object-position: center 30%;
+     object-position: center 30%;
 }
 
 .p-10 {
@@ -3273,10 +3278,6 @@ html {
     height: 15vh;
   }
 
-  .max-md\:h-\[220px\] {
-    height: 220px;
-  }
-
   .max-md\:h-\[380px\] {
     height: 380px;
   }
@@ -3510,6 +3511,18 @@ html {
   .lg\:mx-0 {
     margin-left: 0px;
     margin-right: 0px;
+  }
+
+  .lg\:aspect-auto {
+    aspect-ratio: auto;
+  }
+
+  .lg\:h-\[180px\] {
+    height: 180px;
+  }
+
+  .lg\:h-\[320px\] {
+    height: 320px;
   }
 
   .lg\:auto-rows-\[220px\] {
