@@ -9,7 +9,7 @@ Landing page comercial pensada para captar clientes: muestra el trabajo de la em
 ## Estructura del sitio
 
 - **[index.html](index.html)** — Página principal. Orden de secciones (reordenado en oct-2026 según el recorrido del usuario: qué hacen → trabajos → confianza → dudas → contacto):
-  - `section-inicio` — Hero. H1 en dos líneas dentro del mismo `<h1>`: "Barandas de diseño" (frase pedida por el cliente) + "en vidrio templado y acero inoxidable, a medida en Zona Norte, CABA y GBA" (la segunda línea queda dentro del `<h1>` para no perder materiales y zona); debajo "También mamparas, cerramientos y espejos" + materiales y 3 tarjetas con datos concretos.
+  - `section-inicio` — Hero. H1 en dos líneas dentro del mismo `<h1>`: "Barandas de diseño" (frase pedida por el cliente) + "en vidrio templado y acero inoxidable, a medida en Zona Norte, CABA y GBA, con envíos al interior del país" (la segunda línea queda dentro del `<h1>` para no perder materiales y zona); debajo "También mamparas, cerramientos y espejos" + materiales y 3 tarjetas con solo el título (Medimos en tu obra · Plazo confirmado en el presupuesto · Garantía en todos los trabajos), sin texto debajo.
   - `section-productos` — "Qué hacemos": tarjetas con foto de los 5 modelos (link a cada página) + "También hacemos" (mamparas, cerramientos, espejos, cercos, rampas, puertas). Esas tarjetas llevan `data-interes` y al tocarlas preseleccionan el `<select id="interes">` del formulario.
   - `section-proyectos` — Carrusel (Swiper) con los 6 proyectos reales.
   - `section-especificaciones` — "Por qué elegirnos" (texto + 4 datos). El id se mantuvo por compatibilidad; el menú "Nosotros" ahora va a `/quienes-somos`.
@@ -133,7 +133,8 @@ Regla del proyecto: **toda imagen nueva que se suba al sitio pasa por esto antes
 ### Cambios SEO (oct-2026) — esperando al cliente
 
 - [x] **Publicado el 2026-10-21** (`cambios-seo-cliente` → `main`, deploy a Ferozo OK). Medir en Search Console a las ~4 semanas (~2026-11-18).
-- [ ] Search Console: reenviar `sitemap.xml` y pedir reindexación de la home y `/quienes-somos`.
+- [x] Search Console: sitemap reenviado (2026-10-21) y línea base bajada (local, no se commitea: `jcbarandas.com.ar-audit/gsc-baseline-2026-10-21/BASELINE.md`). Antes (28 d, 09-22→10-19): 22 clics, 395 impresiones, CTR 5,6 %, pos. 6,0; casi todo de marca, 0 clics no marca. Acceso a la API: login propio con `gcloud auth application-default login` + proyecto de cuota `asiste-509601` (no usar la cuenta de servicio de rpmedium de `GOOGLE_APPLICATION_CREDENTIALS`).
+- [ ] Pedir indexación a mano de `/quienes-somos` (quedó "Descubierta, aún no indexada"). Medir de nuevo ~2026-11-21 (período 10-22→11-18).
 - [x] Al deployar se vio que el IIS de Ferozo **no servía `.webp`** (404 en todas las fotos): se agregó su `mimeMap` en `web.config`. Si se usa otra extensión nueva (`.avif`, `.woff2`, etc.), declararla ahí también — Hostinger (prueba) no tiene este problema, así que no se nota hasta producción.
 - [~] Fotos (pedidas al cliente): frente de la fábrica ya puesto en Quiénes somos (2026-10-21, arriba del mapa). Faltan fotos del interior (soldadura, máquinas, producción) y el banner horizontal de Haras. Costa Esmeralda ya está.
 - [x] Respuestas del cliente (2026-10-06), aplicadas: visita sin costo hasta 40 km; presupuesto por WhatsApp sin visita obligatoria (FAQ nueva + "¿Cómo se cotiza?" en modelos); años Haras 2024 / Tigre 2025 / Talar 2023 (ficha en cada proyecto); personal con seguros reglamentarios y maquinaria; apoyo telefónico para instalaciones en el interior. No tienen promociones bancarias (no se publica).
