@@ -283,7 +283,7 @@
 
 
 
-    <section id="section-inicio" class="relative z-10 flex-1 flex flex-col justify-center max-md:justify-start px-10 pt-32 max-md:pt-0 max-md:mt-6 ">
+    <section id="section-inicio" class="relative z-10 flex-1 flex flex-col justify-center max-md:justify-start px-10 max-md:px-6 pt-32 max-md:pt-0 max-md:mt-6 ">
 
 
       <div class="grid grid-cols-2 gap-x-16 xl:gap-x-24 max-md:grid-cols-1 max-md:mt-32">
@@ -295,24 +295,25 @@
             </h1>
             <p class="text-lg max-md:text-sm text-white/70 mt-4">También mamparas, cerramientos y espejos · Blindex y AISI 304/316 · Fábrica propia en Beccar · Envíos a todo el país</p>
           </div>
-          <div class="flex gap-6 mt-6 max-md:flex-col">
+          <div class="flex gap-6 mt-6 max-md:grid max-md:grid-cols-2 max-md:gap-3 max-md:mt-8">
             <a href="#section-proyectos">
               <button
-                class="bg-white w-fit text-black animate-fade-up px-6 py-3 transition-all hover:bg-white/50 hover:text-white border-transparent rounded-xl">Ver
+                class="bg-white w-fit max-md:w-full max-md:px-3 max-md:text-sm text-black animate-fade-up px-6 py-3 transition-all hover:bg-white/50 hover:text-white border-2 border-transparent rounded-xl">Ver
                 proyectos</button></a>
             <a href="#section-contacto">
               <button
-                class="border-2 w-fit border-white animate-fade-up animate-delay-[0.1s] transition-all hover:bg-blue-600 hover:border-transparent px-6 py-3 rounded-xl">Solicitar
+                class="border-2 w-fit max-md:w-full max-md:px-3 max-md:text-sm border-white animate-fade-up animate-delay-[0.1s] transition-all hover:bg-blue-600 hover:border-transparent px-6 py-3 rounded-xl">Solicitar
                 cotización</button></a>
           </div>
         </div>
 
 
-        <div class="flex flex-col gap-6 max-md:gap-2 max-md:mt-4 max-md:text-sm">
+        <!-- En celular las 3 tarjetas se unen en un solo panel con divisores, para que no quede un bloque de cajas pegadas -->
+        <div class="flex flex-col gap-6 max-md:gap-0 max-md:mt-10 max-md:text-sm max-md:rounded-xl max-md:bg-white/10 max-md:backdrop-blur-sm max-md:divide-y max-md:divide-white/10">
 
           <div class="animate-fade-right">
             <div
-              class="flex flex-col gap-2  bg-white/10 p-6 max-md:p-4 hover:backdrop-blur-sm hover:bg-blue-700/30 transition-all cursor-pointer rounded-xl transform hover:scale-[1.02]">
+              class="flex flex-col gap-2 max-md:gap-1 bg-white/10 max-md:bg-transparent p-6 max-md:px-5 max-md:py-4 hover:backdrop-blur-sm hover:bg-blue-700/30 max-md:hover:bg-transparent transition-all cursor-pointer rounded-xl transform hover:scale-[1.02] max-md:hover:scale-100">
               <span class="text-2xl max-md:text-base">Medimos en tu obra</span>
               <span class="text-xl max-md:text-xs">Vamos al lugar a tomar medidas y asesorarte, sin costo hasta 40 km.</span>
             </div>
@@ -320,7 +321,7 @@
 
           <div class="animate-fade-right animate-delay-[0.2s]">
             <div
-              class="flex flex-col gap-2  bg-white/10 p-6 max-md:p-4 hover:backdrop-blur-sm hover:bg-blue-700/30 transition-all cursor-pointer rounded-xl transform hover:scale-[1.02]">
+              class="flex flex-col gap-2 max-md:gap-1 bg-white/10 max-md:bg-transparent p-6 max-md:px-5 max-md:py-4 hover:backdrop-blur-sm hover:bg-blue-700/30 max-md:hover:bg-transparent transition-all cursor-pointer rounded-xl transform hover:scale-[1.02] max-md:hover:scale-100">
               <span class="text-2xl max-md:text-base">Plazo confirmado en el presupuesto</span>
               <span class="text-xl max-md:text-xs">Depende de la cantidad de metros y de la distancia, y te lo decimos antes de empezar.</span>
             </div>
@@ -329,7 +330,7 @@
 
           <div class="animate-fade-right animate-delay-[0.4s]">
             <div
-              class="flex flex-col gap-2   bg-white/10 p-6 max-md:p-4 hover:backdrop-blur-sm hover:bg-blue-700/30 transition-all cursor-pointer rounded-xl transform hover:scale-[1.02]">
+              class="flex flex-col gap-2 max-md:gap-1 bg-white/10 max-md:bg-transparent p-6 max-md:px-5 max-md:py-4 hover:backdrop-blur-sm hover:bg-blue-700/30 max-md:hover:bg-transparent transition-all cursor-pointer rounded-xl transform hover:scale-[1.02] max-md:hover:scale-100">
               <span class="text-2xl max-md:text-base">Garantía en todos los trabajos</span>
               <span class="text-xl max-md:text-xs">Cubre desperfectos; el plazo depende del producto.</span>
             </div>
