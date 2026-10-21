@@ -124,6 +124,7 @@ Regla del proyecto: **toda imagen nueva que se suba al sitio pasa por esto antes
 - No decir "no publicamos precios": usar "cada trabajo es a medida, así que el presupuesto depende de…".
 - No decir que viajan a otras zonas "si el proyecto lo justifica" (hace sentir menos importante al cliente). Alcance: "todo el GBA y CABA, y enviamos a todo el país".
 - Decir "fábrica", nunca "taller" (pedido del cliente: un taller es donde se arreglan cosas, ellos fabrican). Las fotos `src/imgs/quienes_somos/taller_*` conservan el nombre de archivo.
+- No dar un plazo fijo de trabajo (antes decía "alrededor de 10 días"; pedido del cliente): el plazo depende de la cantidad de metros y de la distancia, y se confirma en el presupuesto.
 - "Beccar" sin tilde (pedido del cliente). No publicar datos que el cliente no autorizó (ej. cantidad de obras por mes).
 
 ## Pendientes antes de entregar al cliente
