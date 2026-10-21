@@ -132,12 +132,14 @@ Regla del proyecto: **toda imagen nueva que se suba al sitio pasa por esto antes
 
 ### Cambios SEO (oct-2026) — esperando al cliente
 
-- [ ] OK del cliente para publicar (mergear `cambios-seo-cliente` → `main`). Anotar la fecha de deploy para medir en Search Console a las ~4 semanas y pedir reindexación de la home y `/quienes-somos`.
+- [x] **Publicado el 2026-10-21** (`cambios-seo-cliente` → `main`, deploy a Ferozo OK). Medir en Search Console a las ~4 semanas (~2026-11-18).
+- [ ] Search Console: reenviar `sitemap.xml` y pedir reindexación de la home y `/quienes-somos`.
+- [x] Al deployar se vio que el IIS de Ferozo **no servía `.webp`** (404 en todas las fotos): se agregó su `mimeMap` en `web.config`. Si se usa otra extensión nueva (`.avif`, `.woff2`, etc.), declararla ahí también — Hostinger (prueba) no tiene este problema, así que no se nota hasta producción.
 - [~] Fotos (pedidas al cliente): frente de la fábrica ya puesto en Quiénes somos (2026-10-21, arriba del mapa). Faltan fotos del interior (soldadura, máquinas, producción) y el banner horizontal de Haras. Costa Esmeralda ya está.
 - [x] Respuestas del cliente (2026-10-06), aplicadas: visita sin costo hasta 40 km; presupuesto por WhatsApp sin visita obligatoria (FAQ nueva + "¿Cómo se cotiza?" en modelos); años Haras 2024 / Tigre 2025 / Talar 2023 (ficha en cada proyecto); personal con seguros reglamentarios y maquinaria; apoyo telefónico para instalaciones en el interior. No tienen promociones bancarias (no se publica).
 - [ ] Metros lineales de Haras, Tigre y Talar: el cliente tiene que buscar el historial. La garantía quedó genérica a propósito.
 - [x] Optimizar imágenes a WebP (ítem aprobado del plan) — hecho el 2026-10-06: versiones `.webp` (lado largo 1600px; `-sm` de 900px para tarjetas) al lado de cada JPG; los JPG quedan solo para `og:image`. Para fotos nuevas, generar también su `.webp`.
-- [ ] Al deployar: actualizar los `<lastmod>` del `sitemap.xml` si hubo más cambios y reenviar el sitemap en Search Console.
+- [x] `<lastmod>` del `sitemap.xml` actualizados al 2026-10-21.
 
 ### Dominio final: `jcbarandas.com.ar` (decidido)
 
